@@ -20,3 +20,10 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 2679
+  packageName: Audio Toolkit Free Version
+  packageVersion: 12.0
+  assetPath: Assets/AudioToolkit/AudioToolkit/Editor/AudioToolkit_FreeVersion_Editor.dll
+  uploadId: 761856

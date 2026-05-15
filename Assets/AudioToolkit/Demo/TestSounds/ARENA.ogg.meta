@@ -1,0 +1,17 @@
+fileFormatVersion: 1
+guid: 1477e51e048525f4681ff66dac72263c
+AudioImporter:
+  importerVersion: 4
+  format: 0
+  quality: -1
+  3d: 1
+  forceToMono: 0
+  stream: 1
+  useHardware: 0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 2679
+  packageName: Audio Toolkit Free Version
+  packageVersion: 12.0
+  assetPath: Assets/AudioToolkit/Demo/TestSounds/ARENA.ogg
+  uploadId: 761856

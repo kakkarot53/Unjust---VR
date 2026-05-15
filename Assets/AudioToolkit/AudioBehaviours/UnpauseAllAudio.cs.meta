@@ -6,3 +6,10 @@ MonoImporter:
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 2679
+  packageName: Audio Toolkit Free Version
+  packageVersion: 12.0
+  assetPath: Assets/AudioToolkit/AudioBehaviours/UnpauseAllAudio.cs
+  uploadId: 761856

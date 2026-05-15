@@ -1,2 +1,9 @@
 fileFormatVersion: 1
 guid: c65111a9744b89241beca571dea96b51
+AssetOrigin:
+  serializedVersion: 1
+  productId: 2679
+  packageName: Audio Toolkit Free Version
+  packageVersion: 12.0
+  assetPath: Assets/AudioToolkit/Demo/AudioToolkitDemo.cs
+  uploadId: 761856

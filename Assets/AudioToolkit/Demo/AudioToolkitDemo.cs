@@ -24,7 +24,7 @@ namespace CS.AudioToolkit.Demo
 
         Vector2 playlistScrollPos = Vector2.zero;
 
-        PoolableReference<AudioObject> introLoopOutroAudio;
+        AudioObject introLoopOutroAudio;
 
         void OnGUI()
         {
@@ -295,17 +295,17 @@ namespace CS.AudioToolkit.Demo
 
             if( GUI.Button( new Rect( Screen.width - ( buttonWidth + 20 ), ypos, buttonWidth, 50 ), "Play intro-loop-outro sequence\ngatling gun" ) )
             {
-                introLoopOutroAudio = new PoolableReference<AudioObject>( AudioController.Play( "IntroLoopOutro_Gun" ) );
+                introLoopOutroAudio = AudioController.Play( "IntroLoopOutro_Gun" );
             }
 
             ypos += 20;
             ypos += yposOff;
 
-            BeginDisabledGroup( !( introLoopOutroAudio != null && introLoopOutroAudio.Get() != null ) );
+            BeginDisabledGroup( !( introLoopOutroAudio != null && introLoopOutroAudio != null ) );
 
             if( GUI.Button( new Rect( Screen.width - ( buttonWidth + 20 ), ypos, buttonWidth, 30 ), "Finish gatling gun sequence" ) )
             {
-                introLoopOutroAudio.Get().FinishSequence();
+                introLoopOutroAudio.FinishSequence();
             }
 
             EndDisabledGroup();

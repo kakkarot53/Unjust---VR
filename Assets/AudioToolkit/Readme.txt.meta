@@ -1,0 +1,16 @@
+fileFormatVersion: 1
+guid: 5d742100f108bcd40963e5192f6cc51e
+labels:
+- audio
+- clockstone
+- toolkit
+- framework
+- scripts
+- pooling
+AssetOrigin:
+  serializedVersion: 1
+  productId: 2679
+  packageName: Audio Toolkit Free Version
+  packageVersion: 12.0
+  assetPath: Assets/AudioToolkit/Readme.txt
+  uploadId: 761856
