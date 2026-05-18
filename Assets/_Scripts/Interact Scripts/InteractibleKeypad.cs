@@ -5,10 +5,10 @@ using UnityEngine.UI;
 using TMPro;
 public class InteractibleKeypad : MonoBehaviour, IInteractible
 {
-    [SerializeField]
-    private CharMove playerMove;    
-    [SerializeField]
-    private FirstPersonCamera playerCam;
+    //[SerializeField]
+    //private CharMove playerMove;    
+    //[SerializeField]
+    //private FirstPersonCamera playerCam;
 
     [SerializeField]
     private GameObject KeypadPanel;
@@ -49,8 +49,8 @@ public class InteractibleKeypad : MonoBehaviour, IInteractible
             return;
 
         //enable and disable movement
-        playerMove.enabled = !playerMove.isActiveAndEnabled;
-        playerCam.enabled = !playerCam.isActiveAndEnabled;
+        //playerMove.enabled = !playerMove.isActiveAndEnabled;
+        //playerCam.enabled = !playerCam.isActiveAndEnabled;
 
         // Show or hide the keypad panel
         KeypadPanel.SetActive(!KeypadPanel.activeSelf);
@@ -83,8 +83,8 @@ public class InteractibleKeypad : MonoBehaviour, IInteractible
         {
             // Close keypad panel and re-enable player controls
             KeypadPanel.SetActive(false);
-            playerMove.enabled = true;
-            playerCam.enabled = true;
+            //playerMove.enabled = true;
+            //playerCam.enabled = true;
             // Pin is correct, unlock or trigger desired action
             // open door or smt add later
         }

@@ -69,7 +69,7 @@ public class Player_UIManager : MonoBehaviour
 
         // Button Callbacks - Pause UI
 
-        resumeButton.onClick.AddListener(() => PauseManager.Instance.PauseResumeGame());
+        //resumeButton.onClick.AddListener(() => PauseManager.Instance.PauseResumeGame());
         settingsButton.onClick.AddListener(() => ToggleMenu(settingsUIPanel.name, true, false));
         mainMenuButton.onClick.AddListener(() => {
             Time.timeScale = 1;
@@ -142,7 +142,7 @@ public class Player_UIManager : MonoBehaviour
         pauseGameOverUIPanel.SetActive(panelName.Equals(pauseGameOverUIPanel.name));
         settingsUIPanel.SetActive(panelName.Equals(settingsUIPanel.name));
 
-        PauseManager.Instance.SetCanUnpause(canUnpause);
+        //PauseManager.Instance.SetCanUnpause(canUnpause);
 
         backButton.gameObject.SetActive(showBackButton);
     }
@@ -171,7 +171,7 @@ public class Player_UIManager : MonoBehaviour
     #endregion
     
     public void KillPlayer() {
-        PauseManager.Instance.PauseResumeGame();
+        //PauseManager.Instance.PauseResumeGame();
         resumeButton.gameObject.SetActive(false);
         pauseGameOverText.text = "Game Over";
         respawnButton.gameObject.SetActive(true);
@@ -192,7 +192,7 @@ public class Player_UIManager : MonoBehaviour
     
     private void RespawnPlayer()
     {
-        PauseManager.Instance.PauseResumeGame();
+        //PauseManager.Instance.PauseResumeGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -204,7 +204,7 @@ public class Player_UIManager : MonoBehaviour
     
     private void ShowEndGameScreen()
     {
-        PauseManager.Instance.PauseResumeGame();
+        //PauseManager.Instance.PauseResumeGame();
         pauseGameOverText.text = "You Win!";
         resumeButton.gameObject.SetActive(false);
         settingsButton.gameObject.SetActive(false);
