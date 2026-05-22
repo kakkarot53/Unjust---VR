@@ -250,9 +250,7 @@
           },
           {
             "name": "Cubemap",
-            "scenes": [
-              "Assets/_Scenes/_1-2_Classroom.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -344,7 +342,9 @@
           },
           {
             "name": "LightingSettings",
-            "scenes": [],
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -584,8 +584,10 @@
           },
           {
             "name": "Texture2D",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -1096,7 +1098,9 @@
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

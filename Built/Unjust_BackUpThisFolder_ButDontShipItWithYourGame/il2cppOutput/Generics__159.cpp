@@ -24468,7 +24468,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectEqualityComparer_1__ctor_m6C780BE0
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 120970
+// Method Definition Index: 120982
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FieldCacheKey_GetHashCode_m74569DE993A91465FBD0DE3E5100F87BA28C1FDA_inline (FieldCacheKey_t9B02D3EAEC0DD9AB02BB9F41DF1E20F77CBA2343* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24476,7 +24476,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FieldCacheKey_GetHashCode
 		return L_0;
 	}
 }
-// Method Definition Index: 120977
+// Method Definition Index: 120989
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FieldsCacheKey_GetHashCode_m0948A7F91C2310A6AE3E5FA99187896549B60AB8_inline (FieldsCacheKey_tEA13CDEB7931ECE8C9D5DC49F2939DF4BF3A9441* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24484,7 +24484,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FieldsCacheKey_GetHashCod
 		return L_0;
 	}
 }
-// Method Definition Index: 120985
+// Method Definition Index: 120997
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FieldsWithAttributeCacheKey_GetHashCode_mFFF092FF2FA717E8F5142CB8D134C49B1138E2C0_inline (FieldsWithAttributeCacheKey_t2872408F923E7623F8652AF4787FFD6851AEB3BE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24492,7 +24492,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t FieldsWithAttributeCacheK
 		return L_0;
 	}
 }
-// Method Definition Index: 121017
+// Method Definition Index: 121029
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t MethodCacheKey_GetHashCode_mF0152D2A7F831E51D4FEF524FF3410CC53480EA1_inline (MethodCacheKey_tB73A18553049BB3A3BFD66C2ACE0297766664EFE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24500,7 +24500,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t MethodCacheKey_GetHashCod
 		return L_0;
 	}
 }
-// Method Definition Index: 121025
+// Method Definition Index: 121037
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t MethodsCacheKey_GetHashCode_m08BF0896D9D0C32462970AA7A5341BFEB1CA32B2_inline (MethodsCacheKey_t011C729BEF496071E6348C07695EDBDCE7F701E9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24508,7 +24508,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t MethodsCacheKey_GetHashCo
 		return L_0;
 	}
 }
-// Method Definition Index: 121033
+// Method Definition Index: 121045
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t MethodsWithAttributeCacheKey_GetHashCode_m2AC2EA4A43D825BC1AFA0431BBBC833C56E99E5F_inline (MethodsWithAttributeCacheKey_tB4813B986556F2B44648FB8452B0E7A130B5555D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24516,7 +24516,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t MethodsWithAttributeCache
 		return L_0;
 	}
 }
-// Method Definition Index: 121000
+// Method Definition Index: 121012
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PropertiesCacheKey_GetHashCode_mF7D0EC99FEC1E1E86C0E5256E272211CA2DA75F7_inline (PropertiesCacheKey_t3D52F01849F54940546964742A611E3417B21308* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24524,7 +24524,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PropertiesCacheKey_GetHas
 		return L_0;
 	}
 }
-// Method Definition Index: 121008
+// Method Definition Index: 121020
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PropertiesWithAttributeCacheKey_GetHashCode_m814F5531A1225CC6424EF0DB83411395D127C9B4_inline (PropertiesWithAttributeCacheKey_t102842B925991F2CFAD1AA1E58F1451DAA85DE33* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24532,7 +24532,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PropertiesWithAttributeCa
 		return L_0;
 	}
 }
-// Method Definition Index: 120993
+// Method Definition Index: 121005
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PropertyCacheKey_GetHashCode_mE54D1BA3D1E79A2627A012F5E0D164062E3954BE_inline (PropertyCacheKey_t39C146D36837ACAA2E05A57333BD7F59A3BA36C9* __this, const RuntimeMethod* method) 
 {
 	{

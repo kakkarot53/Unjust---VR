@@ -108,9 +108,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 256c973e57971a9499bc914a4ef87e47, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: m_RenderingLayerMask
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 256c973e57971a9499bc914a4ef87e47, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a634361aa2e8f814d877b432e6cc8538, type: 2}
+      objectReference: {fileID: 2100000, guid: da6fa5be1d522ff418defceb7e55f17e, type: 2}
     - target: {fileID: 919132149155446097, guid: 256c973e57971a9499bc914a4ef87e47, type: 3}
       propertyPath: m_Name
       value: Floor

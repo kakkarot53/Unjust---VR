@@ -517,6 +517,7 @@ UnityEngine.BoxCollider::get_size_Injected
 UnityEngine.BoxCollider::set_center_Injected
 UnityEngine.BoxCollider::set_size_Injected
 UnityEngine.Camera::GetCullingParameters_Internal_Injected
+UnityEngine.Camera::RenderToCubemapImpl_Injected
 UnityEngine.Camera::get_allowDynamicResolution_Injected
 UnityEngine.Camera::get_allowHDR_Injected
 UnityEngine.Camera::get_allowMSAA_Injected
