@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "InputSystem",
+    "maps": [
+        {
+            "name": "Interaction",
+            "id": "5caf3a94-c333-456f-b34a-ed7ce99608a7",
+            "actions": [
+                {
+                    "name": "RoomShift",
+                    "type": "Button",
+                    "id": "09d86071-5e8f-4613-864a-196523ed8a85",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "644a2824-e109-4bd7-9de0-4506bff1279c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RoomShift",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
