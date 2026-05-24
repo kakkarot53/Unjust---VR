@@ -1774,19 +1774,25 @@
           },
           {
             "name": "VFXRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "VisualEffect",
-            "scenes": [],
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "VisualEffectAsset",
-            "scenes": [],
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
