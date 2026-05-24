@@ -100,6 +100,51 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""df16fef3-f077-4103-8180-b15ceb8384af"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Right_Trigger"",
+                    ""type"": ""Button"",
+                    ""id"": ""cdd5d29c-e901-49f5-9f69-16b2490c9729"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left_Trigger"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d0180b0-fd16-46b2-9ce4-80701cdc32f3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right_Grip"",
+                    ""type"": ""Button"",
+                    ""id"": ""15af7622-a0d0-41bf-85ef-af333538c685"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left_Grip"",
+                    ""type"": ""Button"",
+                    ""id"": ""8b892fa6-a31b-4657-8125-d7641da6b268"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -113,6 +158,116 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""RoomShift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98a9706b-92c5-4ac1-ba2a-c6d8f57b025f"",
+                    ""path"": ""<XRController>{LeftHand}/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""1f555716-4d03-4728-ae98-0d9d31adefe2"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""091319ac-4647-42a7-98cd-e309c6231f3d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""11420ea7-2545-40a4-a704-1472db093e9f"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""516e89ab-608f-4a46-beee-77dbb8414704"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""8d936e52-c923-46c5-8d27-77f1e7776009"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fcfbcfde-9ddd-4213-88ad-aaf890824bce"",
+                    ""path"": ""<XRController>{RightHand}/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Trigger"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""263e307e-4627-4ec7-bddb-2201bf6e9844"",
+                    ""path"": ""<XRController>{LeftHand}/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left_Trigger"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""adbf7b5a-f90e-47be-b242-197dbcc5503d"",
+                    ""path"": ""<XRController>{RightHand}/{GripButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Grip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ec41713-510e-4dc9-8b74-ef68bc094c0f"",
+                    ""path"": ""<XRController>{LeftHand}/{GripButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left_Grip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +277,11 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         // Interaction
         m_Interaction = asset.FindActionMap("Interaction", throwIfNotFound: true);
         m_Interaction_RoomShift = m_Interaction.FindAction("RoomShift", throwIfNotFound: true);
+        m_Interaction_Move = m_Interaction.FindAction("Move", throwIfNotFound: true);
+        m_Interaction_Right_Trigger = m_Interaction.FindAction("Right_Trigger", throwIfNotFound: true);
+        m_Interaction_Left_Trigger = m_Interaction.FindAction("Left_Trigger", throwIfNotFound: true);
+        m_Interaction_Right_Grip = m_Interaction.FindAction("Right_Grip", throwIfNotFound: true);
+        m_Interaction_Left_Grip = m_Interaction.FindAction("Left_Grip", throwIfNotFound: true);
     }
 
     ~@InputSystem()
@@ -203,6 +363,11 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Interaction;
     private List<IInteractionActions> m_InteractionActionsCallbackInterfaces = new List<IInteractionActions>();
     private readonly InputAction m_Interaction_RoomShift;
+    private readonly InputAction m_Interaction_Move;
+    private readonly InputAction m_Interaction_Right_Trigger;
+    private readonly InputAction m_Interaction_Left_Trigger;
+    private readonly InputAction m_Interaction_Right_Grip;
+    private readonly InputAction m_Interaction_Left_Grip;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interaction".
     /// </summary>
@@ -218,6 +383,26 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interaction/RoomShift".
         /// </summary>
         public InputAction @RoomShift => m_Wrapper.m_Interaction_RoomShift;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Interaction_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Right_Trigger".
+        /// </summary>
+        public InputAction @Right_Trigger => m_Wrapper.m_Interaction_Right_Trigger;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Left_Trigger".
+        /// </summary>
+        public InputAction @Left_Trigger => m_Wrapper.m_Interaction_Left_Trigger;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Right_Grip".
+        /// </summary>
+        public InputAction @Right_Grip => m_Wrapper.m_Interaction_Right_Grip;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Left_Grip".
+        /// </summary>
+        public InputAction @Left_Grip => m_Wrapper.m_Interaction_Left_Grip;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -247,6 +432,21 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @RoomShift.started += instance.OnRoomShift;
             @RoomShift.performed += instance.OnRoomShift;
             @RoomShift.canceled += instance.OnRoomShift;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Right_Trigger.started += instance.OnRight_Trigger;
+            @Right_Trigger.performed += instance.OnRight_Trigger;
+            @Right_Trigger.canceled += instance.OnRight_Trigger;
+            @Left_Trigger.started += instance.OnLeft_Trigger;
+            @Left_Trigger.performed += instance.OnLeft_Trigger;
+            @Left_Trigger.canceled += instance.OnLeft_Trigger;
+            @Right_Grip.started += instance.OnRight_Grip;
+            @Right_Grip.performed += instance.OnRight_Grip;
+            @Right_Grip.canceled += instance.OnRight_Grip;
+            @Left_Grip.started += instance.OnLeft_Grip;
+            @Left_Grip.performed += instance.OnLeft_Grip;
+            @Left_Grip.canceled += instance.OnLeft_Grip;
         }
 
         /// <summary>
@@ -261,6 +461,21 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @RoomShift.started -= instance.OnRoomShift;
             @RoomShift.performed -= instance.OnRoomShift;
             @RoomShift.canceled -= instance.OnRoomShift;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Right_Trigger.started -= instance.OnRight_Trigger;
+            @Right_Trigger.performed -= instance.OnRight_Trigger;
+            @Right_Trigger.canceled -= instance.OnRight_Trigger;
+            @Left_Trigger.started -= instance.OnLeft_Trigger;
+            @Left_Trigger.performed -= instance.OnLeft_Trigger;
+            @Left_Trigger.canceled -= instance.OnLeft_Trigger;
+            @Right_Grip.started -= instance.OnRight_Grip;
+            @Right_Grip.performed -= instance.OnRight_Grip;
+            @Right_Grip.canceled -= instance.OnRight_Grip;
+            @Left_Grip.started -= instance.OnLeft_Grip;
+            @Left_Grip.performed -= instance.OnLeft_Grip;
+            @Left_Grip.canceled -= instance.OnLeft_Grip;
         }
 
         /// <summary>
@@ -308,5 +523,40 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRoomShift(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Right_Trigger" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRight_Trigger(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Left_Trigger" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeft_Trigger(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Right_Grip" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRight_Grip(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Left_Grip" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeft_Grip(InputAction.CallbackContext context);
     }
 }
