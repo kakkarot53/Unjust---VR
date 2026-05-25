@@ -33,6 +33,7 @@ public class EnvironmentChange : MonoBehaviour
     // give headache effect
     [SerializeField] private AudioSource mainEars; 
     [SerializeField] private AudioClip headachePing;
+    [Header("Headache Volume Effects")]
     [SerializeField] private float startupDur = 0.5f;           // How fast the screen distorts 
     [SerializeField] private float fadeDur = 1.2f;              // How fast the screen recovers
     [SerializeField] private float minChrome = .15f;            // Chromatic Abberation Bounds
@@ -42,11 +43,18 @@ public class EnvironmentChange : MonoBehaviour
     [SerializeField] private float minContrast = 0f;            // Contrast bounds
     [SerializeField] private float peakContrast = 60f;          
     [SerializeField] private float minSaturation = -30f;        // Saturation bounds
-    [SerializeField] private float peakSaturation = -70f;     
+    [SerializeField] private float peakSaturation = -70f;
+    [SerializeField] private float minVignette = .25f;        // Saturation bounds
+    [SerializeField] private float peakVignette = .5f;
+    //[SerializeField] private float minFocalLen = 1f;        // Depth of Field bounds
+    //[SerializeField] private float peakFocalLen = 30f;
 
     private ChromaticAberration chromaticAberration;
     private LensDistortion lensDistortion;
     private ColorAdjustments colorAdjustments;
+    private Vignette vignette;
+    //private DepthOfField depthOfField;
+
     private InputSystem input;
 
     // Cached Global ID Strings for extreme runtime efficiency in VR
@@ -90,6 +98,8 @@ public class EnvironmentChange : MonoBehaviour
             globalVolume.profile.TryGet(out chromaticAberration);
             globalVolume.profile.TryGet(out lensDistortion);
             globalVolume.profile.TryGet(out colorAdjustments);
+            globalVolume.profile.TryGet(out vignette);
+            //globalVolume.profile.TryGet(out depthOfField);
         }
 
         // Establish original boot baseline visibility states
@@ -172,9 +182,8 @@ public class EnvironmentChange : MonoBehaviour
         {
             if (l == null) continue;
 
-
             float baseline = coldLightBaselines.ContainsKey(l) ? coldLightBaselines[l] : l.intensity;
-            l.intensity = isColdState ? baseline * coldIntensityMult : baseline;
+            l.intensity = isColdState ? baseline / coldIntensityMult : baseline;
         }
 
         if (warmVolume != null)
@@ -252,6 +261,8 @@ public class EnvironmentChange : MonoBehaviour
             lensDistortion.intensity.value = Mathf.Lerp(minLensDistortion, peakLensDistortion, t);
             colorAdjustments.contrast.value = Mathf.Lerp(minContrast, peakContrast, t);
             colorAdjustments.saturation.value = Mathf.Lerp(minSaturation, peakSaturation, t);
+            vignette.intensity.value = Mathf.Lerp(minVignette, peakVignette, t);
+            //depthOfField.gaussianEnd.value = Mathf.Lerp(minFocalLen, peakFocalLen, t);
         }
         else if (glitchTimer <= totalDuration)
         {
@@ -261,6 +272,9 @@ public class EnvironmentChange : MonoBehaviour
             lensDistortion.intensity.value = Mathf.Lerp(peakLensDistortion, minLensDistortion, t);
             colorAdjustments.contrast.value = Mathf.Lerp(peakContrast, minContrast, t);
             colorAdjustments.saturation.value = Mathf.Lerp(peakSaturation, minSaturation, t);
+            vignette.intensity.value = Mathf.Lerp(peakVignette, minVignette, t);
+            //depthOfField.gaussianEnd.value = Mathf.Lerp(peakFocalLen, minFocalLen, t);
+
         }
         else
         {
@@ -269,6 +283,9 @@ public class EnvironmentChange : MonoBehaviour
             lensDistortion.intensity.value = minLensDistortion;
             colorAdjustments.contrast.value = minContrast;
             colorAdjustments.saturation.value = minSaturation;
+            vignette.intensity.value = minVignette;
+            //depthOfField.gaussianEnd.value = minFocalLen;
+
             isGlitching = false;
         }
     }
