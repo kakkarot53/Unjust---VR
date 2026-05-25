@@ -7,6 +7,7 @@ public interface IInteractible
     void Interact();
     //void FinishInteract();
     bool CanInteract();
+
 }
 public static class InteractibleExtensions
 {

@@ -14,6 +14,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Right_Trigger",
+                    "type": "Button",
+                    "id": "b4847c53-95a0-48b9-a52e-5d12a0f1a361",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left_Trigger",
+                    "type": "Button",
+                    "id": "416a880a-a2a1-4c54-be76-5fc5a6958262",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -60,6 +78,28 @@
                     "action": "RoomShift",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c97ac801-447b-4075-af23-5be0760ecc50",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right_Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "146eb01e-2244-479b-b91c-fdf6e76e7d5a",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left_Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

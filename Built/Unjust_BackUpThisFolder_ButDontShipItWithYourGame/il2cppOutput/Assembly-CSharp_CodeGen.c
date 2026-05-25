@@ -1213,6 +1213,8 @@ extern void InputSystem_FindBinding_m1737C3CC0842F84493FE0B599C1ACB8A7C8D5F74 (v
 extern void InputSystem_get_Interaction_m448EB780C8AE38E049C5DC4C9EA904EEDD41B42B (void);
 extern void InteractionActions__ctor_m0C67A58871CBB3F8473C499E21DBEC981ECA3A48 (void);
 extern void InteractionActions_get_RoomShift_mFD3775A3F83FA9CF6D3074F7A48926898DB45D18 (void);
+extern void InteractionActions_get_Right_Trigger_mAB852389A516E4BDFAF3AE398B9080BA1FFB4DAD (void);
+extern void InteractionActions_get_Left_Trigger_m888009A71C8021AD9736398A1BD7F2EFFB8CED86 (void);
 extern void InteractionActions_Get_m233B550F826CB6302CB27A89B84C971C09EDED0B (void);
 extern void InteractionActions_Enable_m1270E3D6CC2250A8D9F89309DCE32942A73B7E95 (void);
 extern void InteractionActions_Disable_m9653F6C48343BBEAC8AB2B575DDA006036845099 (void);
@@ -1298,6 +1300,22 @@ extern void InteractiblePowerBox_OpenDoor_m6D627CF63BC6801933077A29C4BAAF7CBC811
 extern void InteractiblePowerBox_MoveSwitchUp_m4B2420275463062D3C3CA128EF7A4526D7FAD002 (void);
 extern void InteractiblePowerBox_CanInteract_mD0BF78816E79B903EB6131AD8CEA0E134B676C1C (void);
 extern void InteractiblePowerBox__ctor_m1ACAC91F56DBC296BCBFD1E480BCD9EB836E4F18 (void);
+extern void BaseInteractible_Awake_m5923B1DC40E41BA28FC43283BB69B3F8851F1355 (void);
+extern void BaseInteractible_Start_m5FDA8C7281DE9D3583BCB25D5FAF97C960F25161 (void);
+extern void BaseInteractible_OnHoverEnter_mAABDEFD4ECA060EE223969CFBBC8A16B28BC4210 (void);
+extern void BaseInteractible_OnHoverExit_m33CC738049D8D38855E7B6CE0FACEEEF7AC68F94 (void);
+extern void BaseInteractible_CanInteract_mDB43D02D8CB079261B08C02BC27122A1C435ACA1 (void);
+extern void BaseInteractible_LayerMaskToLayer_mCF849D3DD570EA0C98713F937065061CBBB9367D (void);
+extern void BaseInteractible__ctor_m7369D9FCAC3AE790C0266C0CA7EF14E1E360B84E (void);
+extern void InteractibleInspect_Interact_m200189BDB74D9D5BEA56C167684A7366FFE86DF6 (void);
+extern void InteractibleInspect__ctor_m6F138C8D6F557BB9C7A13C7341A01965D2F04D5A (void);
+extern void Interactor_Awake_m9E47EF5A80EA0E4AB1F1D9073BA76A0B854264FF (void);
+extern void Interactor_TryInteract_mC63887295E9B70DB7A5D58E8CCC177836F5546FF (void);
+extern void Interactor_OnTriggerEnter_mB9C848D5A18F01341D9C76955625DDB28DE96FF9 (void);
+extern void Interactor_OnTriggerExit_m08C5194D4466DAC20F0A65D54190909F9D82D129 (void);
+extern void Interactor__ctor_m1DA9140970B004EFDDF092C29D27EECF9C3F090D (void);
+extern void Interactor_U3CAwakeU3Eb__5_0_mD705202F3A5CB5C956274387C0E90EA818949934 (void);
+extern void Interactor_U3CAwakeU3Eb__5_1_m218132863C68EAF400BE83EE10883CF0D823D793 (void);
 extern void RenderWindows_Start_m6C3E74D2D276F010BF3CD707D94C987742016A94 (void);
 extern void RenderWindows_LateUpdate_m3272EEC9E1E12D017CA0A02A476F60C21E3415FD (void);
 extern void RenderWindows__ctor_m9CDBCC66002E3B305B5066FEE3D80824BA50EC1B (void);
@@ -1655,7 +1673,7 @@ extern void AudioToolkitDemo_EndDisabledGroup_mB69DD1BB9D097AAB1ADBEFBE0D37A7234
 extern void AudioToolkitDemo_IsGUIDisabled_m3D385D13BC28A8E36574706D63B7C804D15A0AEF (void);
 extern void AudioToolkitDemo_Update_m3718F9E1055496F1E1F37FB9C5D3CE9078AF44AA (void);
 extern void AudioToolkitDemo__ctor_m1A48924B387D9434E0398AD1CF72FCA9EC43ACD8 (void);
-static Il2CppMethodPointer s_methodPointers[1653] = 
+static Il2CppMethodPointer s_methodPointers[1674] = 
 {
 	Following_Start_m8DAB4EBBCA79FB328F1B1349132755A768CA35C7,
 	Following_Update_m243F944258344ABD8BB41F2A5F68C6851AEB2605,
@@ -2863,6 +2881,8 @@ static Il2CppMethodPointer s_methodPointers[1653] =
 	InputSystem_get_Interaction_m448EB780C8AE38E049C5DC4C9EA904EEDD41B42B,
 	InteractionActions__ctor_m0C67A58871CBB3F8473C499E21DBEC981ECA3A48,
 	InteractionActions_get_RoomShift_mFD3775A3F83FA9CF6D3074F7A48926898DB45D18,
+	InteractionActions_get_Right_Trigger_mAB852389A516E4BDFAF3AE398B9080BA1FFB4DAD,
+	InteractionActions_get_Left_Trigger_m888009A71C8021AD9736398A1BD7F2EFFB8CED86,
 	InteractionActions_Get_m233B550F826CB6302CB27A89B84C971C09EDED0B,
 	InteractionActions_Enable_m1270E3D6CC2250A8D9F89309DCE32942A73B7E95,
 	InteractionActions_Disable_m9653F6C48343BBEAC8AB2B575DDA006036845099,
@@ -2872,6 +2892,8 @@ static Il2CppMethodPointer s_methodPointers[1653] =
 	InteractionActions_UnregisterCallbacks_m3FF6D0BB969D07BD39E17EEDF806A95B7F437D58,
 	InteractionActions_RemoveCallbacks_m469038FB792C6A8D313AFF05921A7BDA6B7460A5,
 	InteractionActions_SetCallbacks_mA0D45C2D5CFDA0E6C7A60BDA873A4CA8902EBD69,
+	NULL,
+	NULL,
 	NULL,
 	DialogueDataContainer_Start_m750933D2D5923D8DEA3D01F8AC59445D40AB8DBA,
 	DialogueDataContainer_Update_m3762A7C1DF38E6ACC15953E076D02A1F1094A28E,
@@ -2951,6 +2973,23 @@ static Il2CppMethodPointer s_methodPointers[1653] =
 	InteractiblePowerBox_MoveSwitchUp_m4B2420275463062D3C3CA128EF7A4526D7FAD002,
 	InteractiblePowerBox_CanInteract_mD0BF78816E79B903EB6131AD8CEA0E134B676C1C,
 	InteractiblePowerBox__ctor_m1ACAC91F56DBC296BCBFD1E480BCD9EB836E4F18,
+	BaseInteractible_Awake_m5923B1DC40E41BA28FC43283BB69B3F8851F1355,
+	BaseInteractible_Start_m5FDA8C7281DE9D3583BCB25D5FAF97C960F25161,
+	BaseInteractible_OnHoverEnter_mAABDEFD4ECA060EE223969CFBBC8A16B28BC4210,
+	BaseInteractible_OnHoverExit_m33CC738049D8D38855E7B6CE0FACEEEF7AC68F94,
+	NULL,
+	BaseInteractible_CanInteract_mDB43D02D8CB079261B08C02BC27122A1C435ACA1,
+	BaseInteractible_LayerMaskToLayer_mCF849D3DD570EA0C98713F937065061CBBB9367D,
+	BaseInteractible__ctor_m7369D9FCAC3AE790C0266C0CA7EF14E1E360B84E,
+	InteractibleInspect_Interact_m200189BDB74D9D5BEA56C167684A7366FFE86DF6,
+	InteractibleInspect__ctor_m6F138C8D6F557BB9C7A13C7341A01965D2F04D5A,
+	Interactor_Awake_m9E47EF5A80EA0E4AB1F1D9073BA76A0B854264FF,
+	Interactor_TryInteract_mC63887295E9B70DB7A5D58E8CCC177836F5546FF,
+	Interactor_OnTriggerEnter_mB9C848D5A18F01341D9C76955625DDB28DE96FF9,
+	Interactor_OnTriggerExit_m08C5194D4466DAC20F0A65D54190909F9D82D129,
+	Interactor__ctor_m1DA9140970B004EFDDF092C29D27EECF9C3F090D,
+	Interactor_U3CAwakeU3Eb__5_0_mD705202F3A5CB5C956274387C0E90EA818949934,
+	Interactor_U3CAwakeU3Eb__5_1_m218132863C68EAF400BE83EE10883CF0D823D793,
 	RenderWindows_Start_m6C3E74D2D276F010BF3CD707D94C987742016A94,
 	RenderWindows_LateUpdate_m3272EEC9E1E12D017CA0A02A476F60C21E3415FD,
 	RenderWindows__ctor_m9CDBCC66002E3B305B5066FEE3D80824BA50EC1B,
@@ -3313,6 +3352,8 @@ static Il2CppMethodPointer s_methodPointers[1653] =
 };
 extern void InteractionActions__ctor_m0C67A58871CBB3F8473C499E21DBEC981ECA3A48_AdjustorThunk (void);
 extern void InteractionActions_get_RoomShift_mFD3775A3F83FA9CF6D3074F7A48926898DB45D18_AdjustorThunk (void);
+extern void InteractionActions_get_Right_Trigger_mAB852389A516E4BDFAF3AE398B9080BA1FFB4DAD_AdjustorThunk (void);
+extern void InteractionActions_get_Left_Trigger_m888009A71C8021AD9736398A1BD7F2EFFB8CED86_AdjustorThunk (void);
 extern void InteractionActions_Get_m233B550F826CB6302CB27A89B84C971C09EDED0B_AdjustorThunk (void);
 extern void InteractionActions_Enable_m1270E3D6CC2250A8D9F89309DCE32942A73B7E95_AdjustorThunk (void);
 extern void InteractionActions_Disable_m9653F6C48343BBEAC8AB2B575DDA006036845099_AdjustorThunk (void);
@@ -3321,20 +3362,22 @@ extern void InteractionActions_AddCallbacks_mAC18CEE8D921E75E0F32826493C93F1A003
 extern void InteractionActions_UnregisterCallbacks_m3FF6D0BB969D07BD39E17EEDF806A95B7F437D58_AdjustorThunk (void);
 extern void InteractionActions_RemoveCallbacks_m469038FB792C6A8D313AFF05921A7BDA6B7460A5_AdjustorThunk (void);
 extern void InteractionActions_SetCallbacks_mA0D45C2D5CFDA0E6C7A60BDA873A4CA8902EBD69_AdjustorThunk (void);
-static Il2CppTokenAdjustorThunkPair s_adjustorThunks[10] = 
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[12] = 
 {
 	{ 0x060004B5, InteractionActions__ctor_m0C67A58871CBB3F8473C499E21DBEC981ECA3A48_AdjustorThunk },
 	{ 0x060004B6, InteractionActions_get_RoomShift_mFD3775A3F83FA9CF6D3074F7A48926898DB45D18_AdjustorThunk },
-	{ 0x060004B7, InteractionActions_Get_m233B550F826CB6302CB27A89B84C971C09EDED0B_AdjustorThunk },
-	{ 0x060004B8, InteractionActions_Enable_m1270E3D6CC2250A8D9F89309DCE32942A73B7E95_AdjustorThunk },
-	{ 0x060004B9, InteractionActions_Disable_m9653F6C48343BBEAC8AB2B575DDA006036845099_AdjustorThunk },
-	{ 0x060004BA, InteractionActions_get_enabled_m6E92CD092ADA32CE21DAA3D59AE1413AB643526E_AdjustorThunk },
-	{ 0x060004BC, InteractionActions_AddCallbacks_mAC18CEE8D921E75E0F32826493C93F1A003E7251_AdjustorThunk },
-	{ 0x060004BD, InteractionActions_UnregisterCallbacks_m3FF6D0BB969D07BD39E17EEDF806A95B7F437D58_AdjustorThunk },
-	{ 0x060004BE, InteractionActions_RemoveCallbacks_m469038FB792C6A8D313AFF05921A7BDA6B7460A5_AdjustorThunk },
-	{ 0x060004BF, InteractionActions_SetCallbacks_mA0D45C2D5CFDA0E6C7A60BDA873A4CA8902EBD69_AdjustorThunk },
+	{ 0x060004B7, InteractionActions_get_Right_Trigger_mAB852389A516E4BDFAF3AE398B9080BA1FFB4DAD_AdjustorThunk },
+	{ 0x060004B8, InteractionActions_get_Left_Trigger_m888009A71C8021AD9736398A1BD7F2EFFB8CED86_AdjustorThunk },
+	{ 0x060004B9, InteractionActions_Get_m233B550F826CB6302CB27A89B84C971C09EDED0B_AdjustorThunk },
+	{ 0x060004BA, InteractionActions_Enable_m1270E3D6CC2250A8D9F89309DCE32942A73B7E95_AdjustorThunk },
+	{ 0x060004BB, InteractionActions_Disable_m9653F6C48343BBEAC8AB2B575DDA006036845099_AdjustorThunk },
+	{ 0x060004BC, InteractionActions_get_enabled_m6E92CD092ADA32CE21DAA3D59AE1413AB643526E_AdjustorThunk },
+	{ 0x060004BE, InteractionActions_AddCallbacks_mAC18CEE8D921E75E0F32826493C93F1A003E7251_AdjustorThunk },
+	{ 0x060004BF, InteractionActions_UnregisterCallbacks_m3FF6D0BB969D07BD39E17EEDF806A95B7F437D58_AdjustorThunk },
+	{ 0x060004C0, InteractionActions_RemoveCallbacks_m469038FB792C6A8D313AFF05921A7BDA6B7460A5_AdjustorThunk },
+	{ 0x060004C1, InteractionActions_SetCallbacks_mA0D45C2D5CFDA0E6C7A60BDA873A4CA8902EBD69_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[1653] = 
+static const int32_t s_InvokerIndices[1674] = 
 {
 	20262,
 	20262,
@@ -4543,6 +4586,8 @@ static const int32_t s_InvokerIndices[1653] =
 	15557,
 	20034,
 	20034,
+	20034,
+	20034,
 	20262,
 	20262,
 	19792,
@@ -4551,6 +4596,8 @@ static const int32_t s_InvokerIndices[1653] =
 	15557,
 	15557,
 	15557,
+	-1,
+	-1,
 	-1,
 	20262,
 	20262,
@@ -4630,6 +4677,23 @@ static const int32_t s_InvokerIndices[1653] =
 	20262,
 	19792,
 	20262,
+	20262,
+	20262,
+	20262,
+	20262,
+	-1,
+	19792,
+	12850,
+	20262,
+	20262,
+	20262,
+	20262,
+	20262,
+	15557,
+	15557,
+	20262,
+	15949,
+	15949,
 	20262,
 	20262,
 	20262,
@@ -4994,9 +5058,9 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	1653,
+	1674,
 	s_methodPointers,
-	10,
+	12,
 	s_adjustorThunks,
 	s_InvokerIndices,
 	0,

@@ -100,6 +100,24 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right_Trigger"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4847c53-95a0-48b9-a52e-5d12a0f1a361"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left_Trigger"",
+                    ""type"": ""Button"",
+                    ""id"": ""416a880a-a2a1-4c54-be76-5fc5a6958262"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -146,6 +164,28 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""RoomShift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c97ac801-447b-4075-af23-5be0760ecc50"",
+                    ""path"": ""<XRController>{RightHand}/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Trigger"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""146eb01e-2244-479b-b91c-fdf6e76e7d5a"",
+                    ""path"": ""<XRController>{LeftHand}/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left_Trigger"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -155,6 +195,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         // Interaction
         m_Interaction = asset.FindActionMap("Interaction", throwIfNotFound: true);
         m_Interaction_RoomShift = m_Interaction.FindAction("RoomShift", throwIfNotFound: true);
+        m_Interaction_Right_Trigger = m_Interaction.FindAction("Right_Trigger", throwIfNotFound: true);
+        m_Interaction_Left_Trigger = m_Interaction.FindAction("Left_Trigger", throwIfNotFound: true);
     }
 
     ~@InputSystem()
@@ -236,6 +278,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Interaction;
     private List<IInteractionActions> m_InteractionActionsCallbackInterfaces = new List<IInteractionActions>();
     private readonly InputAction m_Interaction_RoomShift;
+    private readonly InputAction m_Interaction_Right_Trigger;
+    private readonly InputAction m_Interaction_Left_Trigger;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interaction".
     /// </summary>
@@ -251,6 +295,14 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interaction/RoomShift".
         /// </summary>
         public InputAction @RoomShift => m_Wrapper.m_Interaction_RoomShift;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Right_Trigger".
+        /// </summary>
+        public InputAction @Right_Trigger => m_Wrapper.m_Interaction_Right_Trigger;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Left_Trigger".
+        /// </summary>
+        public InputAction @Left_Trigger => m_Wrapper.m_Interaction_Left_Trigger;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -280,6 +332,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @RoomShift.started += instance.OnRoomShift;
             @RoomShift.performed += instance.OnRoomShift;
             @RoomShift.canceled += instance.OnRoomShift;
+            @Right_Trigger.started += instance.OnRight_Trigger;
+            @Right_Trigger.performed += instance.OnRight_Trigger;
+            @Right_Trigger.canceled += instance.OnRight_Trigger;
+            @Left_Trigger.started += instance.OnLeft_Trigger;
+            @Left_Trigger.performed += instance.OnLeft_Trigger;
+            @Left_Trigger.canceled += instance.OnLeft_Trigger;
         }
 
         /// <summary>
@@ -294,6 +352,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @RoomShift.started -= instance.OnRoomShift;
             @RoomShift.performed -= instance.OnRoomShift;
             @RoomShift.canceled -= instance.OnRoomShift;
+            @Right_Trigger.started -= instance.OnRight_Trigger;
+            @Right_Trigger.performed -= instance.OnRight_Trigger;
+            @Right_Trigger.canceled -= instance.OnRight_Trigger;
+            @Left_Trigger.started -= instance.OnLeft_Trigger;
+            @Left_Trigger.performed -= instance.OnLeft_Trigger;
+            @Left_Trigger.canceled -= instance.OnLeft_Trigger;
         }
 
         /// <summary>
@@ -341,5 +405,19 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRoomShift(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Right_Trigger" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRight_Trigger(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Left_Trigger" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeft_Trigger(InputAction.CallbackContext context);
     }
 }
