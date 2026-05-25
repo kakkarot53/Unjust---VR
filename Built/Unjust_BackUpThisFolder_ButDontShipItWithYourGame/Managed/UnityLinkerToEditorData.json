@@ -342,9 +342,7 @@
           },
           {
             "name": "LightingSettings",
-            "scenes": [
-              "Assets/_Scenes/_1-2_Classroom.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },

@@ -47,7 +47,7 @@ public class EnvironmentChange : MonoBehaviour
     [SerializeField] private float minVignette = .25f;        // Saturation bounds
     [SerializeField] private float peakVignette = .5f;
     //[SerializeField] private float minFocalLen = 1f;        // Depth of Field bounds
-    //[SerializeField] private float peakFocalLen = 30f;
+    //[SerializeField] private float peakFocalLen = 25f;
 
     private ChromaticAberration chromaticAberration;
     private LensDistortion lensDistortion;
@@ -262,7 +262,7 @@ public class EnvironmentChange : MonoBehaviour
             colorAdjustments.contrast.value = Mathf.Lerp(minContrast, peakContrast, t);
             colorAdjustments.saturation.value = Mathf.Lerp(minSaturation, peakSaturation, t);
             vignette.intensity.value = Mathf.Lerp(minVignette, peakVignette, t);
-            //depthOfField.gaussianEnd.value = Mathf.Lerp(minFocalLen, peakFocalLen, t);
+            //depthOfField.focalLength.value = Mathf.Lerp(minFocalLen, peakFocalLen, t);
         }
         else if (glitchTimer <= totalDuration)
         {
@@ -273,7 +273,8 @@ public class EnvironmentChange : MonoBehaviour
             colorAdjustments.contrast.value = Mathf.Lerp(peakContrast, minContrast, t);
             colorAdjustments.saturation.value = Mathf.Lerp(peakSaturation, minSaturation, t);
             vignette.intensity.value = Mathf.Lerp(peakVignette, minVignette, t);
-            //depthOfField.gaussianEnd.value = Mathf.Lerp(peakFocalLen, minFocalLen, t);
+            //depthOfField.focalLength.value = Mathf.Lerp(peakFocalLen, minFocalLen, t);
+
 
         }
         else
@@ -284,7 +285,7 @@ public class EnvironmentChange : MonoBehaviour
             colorAdjustments.contrast.value = minContrast;
             colorAdjustments.saturation.value = minSaturation;
             vignette.intensity.value = minVignette;
-            //depthOfField.gaussianEnd.value = minFocalLen;
+            //depthOfField.focalLength.value = minFocalLen;
 
             isGlitching = false;
         }
