@@ -5,15 +5,19 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     [Header("Layer Hover Settings")]
     [SerializeField] private LayerMask oriLayer;    // No outline effect layer
     [SerializeField] private LayerMask targetLayer; // Outline/Highlight effect layer
+    [SerializeField] private LayerMask defaultLayer; // Outline/Highlight effect layer
 
     protected int originalLayerIndex;
     protected int targetLayerIndex;
+    protected int defaultLayerIndex;
     protected bool isInteracting;
+
 
     protected virtual void Awake()
     {
         originalLayerIndex = LayerMaskToLayer(oriLayer);
         targetLayerIndex = LayerMaskToLayer(targetLayer);
+        defaultLayerIndex = LayerMaskToLayer(defaultLayer);
     }
 
     protected virtual void Start()
@@ -26,6 +30,7 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     {
         if (isInteracting) return;
         gameObject.layer = targetLayerIndex;
+
     }
 
     // Automatically handles turning the outline OFF
@@ -36,7 +41,18 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     }
 
     // This fulfills the interface, but forces child classes to handle the specifics
-    public abstract void Interact();
+    public virtual void Interact() {
+        isInteracting = !isInteracting;
+
+        if (isInteracting)
+        {
+            gameObject.layer = defaultLayer; //basically make it "uninteractible"
+        }
+        else
+        {
+            gameObject.layer = originalLayerIndex; //go back to interactible
+        }
+    }
 
     public virtual bool CanInteract()
     {

@@ -1,29 +1,20 @@
 using UnityEngine;
 using UnityEngine.Windows;
+using static UnityEngine.XR.Hands.XRHandSubsystemDescriptor;
 
 public class Interactor : MonoBehaviour
 {
     [SerializeField] private LayerMask interactingLayer;
     [SerializeField] private LayerMask highlightLayer;
 
-    private InputSystem input;
+    [SerializeField] private InteractorManager m_Interactor;
+
     private BaseInteractible target;
-    private bool canInteract;
-    private void Awake()
+    private Collider myCollider;
+
+    private void Start()
     {
-        input = new InputSystem();
-        input.Interaction.Enable();
-
-        input.Interaction.Right_Trigger.started += ctx => TryInteract();
-        input.Interaction.Left_Trigger.started += ctx => TryInteract();
-    }
-
-    private void TryInteract()
-    {
-        if (target == null || !canInteract)
-            return;
-
-        target.Interact();
+        myCollider = this.GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,10 +29,11 @@ public class Interactor : MonoBehaviour
         {
             if (other.TryGetComponent<BaseInteractible>(out BaseInteractible interactibleTarget))
             {
-                interactibleTarget.OnHoverEnter();
-                
-                canInteract = true;
+                if (target == interactibleTarget) return;
+
                 target = interactibleTarget;
+
+                m_Interactor.RegisterHoverEnter(interactibleTarget, myCollider);
             }
 
         }
@@ -59,12 +51,12 @@ public class Interactor : MonoBehaviour
         {
             if (other.TryGetComponent<BaseInteractible>(out BaseInteractible interactibleTarget))
             {
-                interactibleTarget.OnHoverExit();
+                if (target == interactibleTarget)
+                {
+                    target = null;
 
-                canInteract = false;
-                target = null;
-
-
+                    m_Interactor.RegisterHoverExit(interactibleTarget, myCollider);
+                }
             }
         }
     }

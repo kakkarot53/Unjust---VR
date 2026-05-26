@@ -118,6 +118,33 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""2b65244e-4b0c-48ca-8b63-fc36ff53b960"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""7a79d6a2-345e-40ad-8524-67d5d171c56d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pan"",
+                    ""type"": ""Value"",
+                    ""id"": ""92f56b97-cf7d-4961-9e9b-4a149829be9f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -186,6 +213,94 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""Left_Trigger"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb42c074-f414-4aba-b039-5146521be6f5"",
+                    ""path"": ""<XRController>{RightHand}/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""d4a526a6-8a6c-4093-9106-1ca6c2bad4cc"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""93d69161-6c82-4b48-8036-01e24254746f"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""5c974c5f-f8c9-4e7d-8ba4-49bad27ba666"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""9dd53b2d-bbea-4837-baee-b9215b60e007"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""24cf9173-dab7-4fe9-8907-730ab1c7db6d"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""43c46b92-3113-480a-81ae-aedf8f3cb227"",
+                    ""path"": ""<XRController>{RightHand}/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9fbe583c-d5d7-4734-b9ba-d4685779b151"",
+                    ""path"": ""<XRController>{LeftHand}/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -197,6 +312,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Interaction_RoomShift = m_Interaction.FindAction("RoomShift", throwIfNotFound: true);
         m_Interaction_Right_Trigger = m_Interaction.FindAction("Right_Trigger", throwIfNotFound: true);
         m_Interaction_Left_Trigger = m_Interaction.FindAction("Left_Trigger", throwIfNotFound: true);
+        m_Interaction_Move = m_Interaction.FindAction("Move", throwIfNotFound: true);
+        m_Interaction_Zoom = m_Interaction.FindAction("Zoom", throwIfNotFound: true);
+        m_Interaction_Pan = m_Interaction.FindAction("Pan", throwIfNotFound: true);
     }
 
     ~@InputSystem()
@@ -280,6 +398,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Interaction_RoomShift;
     private readonly InputAction m_Interaction_Right_Trigger;
     private readonly InputAction m_Interaction_Left_Trigger;
+    private readonly InputAction m_Interaction_Move;
+    private readonly InputAction m_Interaction_Zoom;
+    private readonly InputAction m_Interaction_Pan;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interaction".
     /// </summary>
@@ -303,6 +424,18 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interaction/Left_Trigger".
         /// </summary>
         public InputAction @Left_Trigger => m_Wrapper.m_Interaction_Left_Trigger;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Interaction_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Zoom".
+        /// </summary>
+        public InputAction @Zoom => m_Wrapper.m_Interaction_Zoom;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Pan".
+        /// </summary>
+        public InputAction @Pan => m_Wrapper.m_Interaction_Pan;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -338,6 +471,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Left_Trigger.started += instance.OnLeft_Trigger;
             @Left_Trigger.performed += instance.OnLeft_Trigger;
             @Left_Trigger.canceled += instance.OnLeft_Trigger;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Zoom.started += instance.OnZoom;
+            @Zoom.performed += instance.OnZoom;
+            @Zoom.canceled += instance.OnZoom;
+            @Pan.started += instance.OnPan;
+            @Pan.performed += instance.OnPan;
+            @Pan.canceled += instance.OnPan;
         }
 
         /// <summary>
@@ -358,6 +500,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Left_Trigger.started -= instance.OnLeft_Trigger;
             @Left_Trigger.performed -= instance.OnLeft_Trigger;
             @Left_Trigger.canceled -= instance.OnLeft_Trigger;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Zoom.started -= instance.OnZoom;
+            @Zoom.performed -= instance.OnZoom;
+            @Zoom.canceled -= instance.OnZoom;
+            @Pan.started -= instance.OnPan;
+            @Pan.performed -= instance.OnPan;
+            @Pan.canceled -= instance.OnPan;
         }
 
         /// <summary>
@@ -419,5 +570,26 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLeft_Trigger(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Zoom" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnZoom(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Pan" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPan(InputAction.CallbackContext context);
     }
 }
