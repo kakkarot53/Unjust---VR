@@ -11,7 +11,7 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     protected int targetLayerIndex;
     protected int defaultLayerIndex;
     protected bool isInteracting;
-
+    [SerializeField] private bool canInteract = true;
 
     protected virtual void Awake()
     {
@@ -28,6 +28,7 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     // Automatically handles turning the outline ON
     public virtual void OnHoverEnter()
     {
+        if (!canInteract) return;
         if (isInteracting) return;
         gameObject.layer = targetLayerIndex;
 
@@ -36,12 +37,15 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     // Automatically handles turning the outline OFF
     public virtual void OnHoverExit()
     {
+        if (!canInteract) return;
         if (isInteracting) return;
         gameObject.layer = originalLayerIndex;
     }
 
     // This fulfills the interface, but forces child classes to handle the specifics
     public virtual void Interact() {
+        if (!canInteract) return;
+
         isInteracting = !isInteracting;
 
         if (isInteracting)
@@ -56,7 +60,7 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
 
     public virtual bool CanInteract()
     {
-        return true;
+        return canInteract;
     }
 
     private int LayerMaskToLayer(LayerMask mask)

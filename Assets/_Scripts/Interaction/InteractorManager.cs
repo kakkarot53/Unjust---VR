@@ -4,14 +4,20 @@ using UnityEngine.Windows;
 
 public class InteractorManager : MonoBehaviour
 {
+    public static InteractorManager instance;
     private BaseInteractible currentTarget;
 
     private readonly HashSet<Collider> activeHoverColliders = new HashSet<Collider>();
     private InteractionInfoManager m_info;
     private InputSystem input;
 
+    private bool isInspecting = false;
+
     private void Awake()
     {
+        if(instance == null)
+            instance = this;
+
         input = new InputSystem();
         input.Interaction.Enable();
 
@@ -27,6 +33,10 @@ public class InteractorManager : MonoBehaviour
     {
         if (activeHoverColliders.Contains(interactorCollider) && currentTarget == interactibleTarget)
             return;
+
+        if (isInspecting)
+            return;
+
         // If shifting to a completely brand new object, force-clear the old tracker state
         if (currentTarget != null && currentTarget != interactibleTarget)
         {
@@ -61,6 +71,9 @@ public class InteractorManager : MonoBehaviour
 
         if (!activeHoverColliders.Contains(interactorCollider)) return;
 
+        if (isInspecting)
+            return;
+
         // Remove this hand from the tracking set
         activeHoverColliders.Remove(interactorCollider);
 
@@ -77,9 +90,17 @@ public class InteractorManager : MonoBehaviour
         }
     }
 
+    public void RequestInspectStatusChange(bool _b)
+    {
+        isInspecting = _b;
+    }
+
     private void TryInteract()
     {
-        if (currentTarget == null || !CanInteract())
+        if (currentTarget == null)
+            return;
+
+        if(!CanInteract())
             return;
 
         currentTarget.Interact();

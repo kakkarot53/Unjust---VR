@@ -14,6 +14,8 @@ public class Interactor : MonoBehaviour
 
     private void Start()
     {
+        m_Interactor = InteractorManager.instance;
+
         myCollider = this.GetComponent<Collider>();
     }
 

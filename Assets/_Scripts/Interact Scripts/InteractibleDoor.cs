@@ -91,7 +91,7 @@ public class InteractibleDoor : MonoBehaviour, IInteractible
 
     private void CloseDoor()
     {
-        AudioController.Play("door-close");
+        //AudioController.Play("door-close");
 
         foreach (GameObject d in doors)
         {
@@ -103,7 +103,7 @@ public class InteractibleDoor : MonoBehaviour, IInteractible
     {
         float angleMultiplier = forward ? 1 : -1;
 
-        AudioController.Play("door-open");
+        //AudioController.Play("door-open");
 
         for (int i = 0; i < doors.Length; i++)
         {
