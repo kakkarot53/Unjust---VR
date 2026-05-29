@@ -25,15 +25,17 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mesh Standard 1
   m_Shader: {fileID: -6465566751694194690, guid: 79e85552f7143784eb20b823b3483587, type: 3}
-  m_ValidKeywords:
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _ALPHATEST_ON
+  - _DISABLE_SSR_TRANSPARENT
+  - _DOUBLESIDED_ON
   - _TRIPLANAR_SPACE_OBJECT
   - _USE_BACK_COLOR
   - _USE_DISSOLVE
   - _USE_TRIPLANAR_UVS
-  m_InvalidKeywords:
-  - _DISABLE_SSR_TRANSPARENT
-  - _DOUBLESIDED_ON
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -47,6 +49,7 @@ Material:
   - TransparentBackface
   - RayTracingPrepass
   - MOTIONVECTORS
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -267,6 +270,7 @@ Material:
     - _Rotation_Vector_Lerp: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &1434149026734732389
 MonoBehaviour:
   m_ObjectHideFlags: 11
