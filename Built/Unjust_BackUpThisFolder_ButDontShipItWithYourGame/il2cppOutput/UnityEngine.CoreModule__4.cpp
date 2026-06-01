@@ -4824,8 +4824,8 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m7
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8_gshared (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* UnsafeUtility_As_TisIntPtr_t_TisGCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC_mD94F597CB91662C823496DA9FA9A7CF908734A78_gshared_inline (intptr_t* ___0_from, const RuntimeMethod* method) ;
 
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovedFromAttributeData_Set_m155005FB8BCE0569C40B02D75FFADB3FBDB7EEDD (MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F* __this, bool ___0_autoUpdateAPI, String_t* ___1_sourceNamespace, String_t* ___2_sourceAssembly, String_t* ___3_sourceClassName, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2 (Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovedFromAttributeData_Set_m155005FB8BCE0569C40B02D75FFADB3FBDB7EEDD (MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F* __this, bool ___0_autoUpdateAPI, String_t* ___1_sourceNamespace, String_t* ___2_sourceAssembly, String_t* ___3_sourceClassName, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OutStringMarshaller_GetStringAndDispose_mB15D41A9893BBC55074D4910259FA722129DB062 (ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E ___0_managedSpan, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Scene_GetPathInternal_Injected_m0973EDA6182C3BF4062CB41F4F30A74E59540E10 (int32_t ___0_sceneHandle, ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E* ___1_ret, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Scene_GetNameInternal_Injected_m70BA8B7819B75FAA10C21E971A1174369680B390 (int32_t ___0_sceneHandle, ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E* ___1_ret, const RuntimeMethod* method) ;
@@ -6001,125 +6001,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GCHandle_GetRef_mA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GCHandle_GetTarget_mE0AF851834410E2AEA6285B2497751570236C794 (intptr_t ___0_handle, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Inequality_m90EFC9C4CAD9A33E309F2DDF98EE4E1DD253637B_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* IntPtr_op_Explicit_m2728CBA081E79B97DDCF1D4FAD77B309CA1E94BF (intptr_t ___0_value, const RuntimeMethod* method) ;
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-IL2CPP_EXTERN_C void MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshal_pinvoke(const MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F& unmarshaled, MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshaled_pinvoke& marshaled)
-{
-	marshaled.___className = il2cpp_codegen_marshal_string(unmarshaled.___className);
-	marshaled.___nameSpace = il2cpp_codegen_marshal_string(unmarshaled.___nameSpace);
-	marshaled.___assembly = il2cpp_codegen_marshal_string(unmarshaled.___assembly);
-	marshaled.___classHasChanged = static_cast<int32_t>(unmarshaled.___classHasChanged);
-	marshaled.___nameSpaceHasChanged = static_cast<int32_t>(unmarshaled.___nameSpaceHasChanged);
-	marshaled.___assemblyHasChanged = static_cast<int32_t>(unmarshaled.___assemblyHasChanged);
-	marshaled.___autoUdpateAPI = static_cast<int32_t>(unmarshaled.___autoUdpateAPI);
-}
-IL2CPP_EXTERN_C void MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshal_pinvoke_back(const MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshaled_pinvoke& marshaled, MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F& unmarshaled)
-{
-	unmarshaled.___className = il2cpp_codegen_marshal_string_result(marshaled.___className);
-	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___className), (void*)il2cpp_codegen_marshal_string_result(marshaled.___className));
-	unmarshaled.___nameSpace = il2cpp_codegen_marshal_string_result(marshaled.___nameSpace);
-	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___nameSpace), (void*)il2cpp_codegen_marshal_string_result(marshaled.___nameSpace));
-	unmarshaled.___assembly = il2cpp_codegen_marshal_string_result(marshaled.___assembly);
-	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___assembly), (void*)il2cpp_codegen_marshal_string_result(marshaled.___assembly));
-	bool unmarshaledclassHasChanged_temp_3 = false;
-	unmarshaledclassHasChanged_temp_3 = static_cast<bool>(marshaled.___classHasChanged);
-	unmarshaled.___classHasChanged = unmarshaledclassHasChanged_temp_3;
-	bool unmarshalednameSpaceHasChanged_temp_4 = false;
-	unmarshalednameSpaceHasChanged_temp_4 = static_cast<bool>(marshaled.___nameSpaceHasChanged);
-	unmarshaled.___nameSpaceHasChanged = unmarshalednameSpaceHasChanged_temp_4;
-	bool unmarshaledassemblyHasChanged_temp_5 = false;
-	unmarshaledassemblyHasChanged_temp_5 = static_cast<bool>(marshaled.___assemblyHasChanged);
-	unmarshaled.___assemblyHasChanged = unmarshaledassemblyHasChanged_temp_5;
-	bool unmarshaledautoUdpateAPI_temp_6 = false;
-	unmarshaledautoUdpateAPI_temp_6 = static_cast<bool>(marshaled.___autoUdpateAPI);
-	unmarshaled.___autoUdpateAPI = unmarshaledautoUdpateAPI_temp_6;
-}
-IL2CPP_EXTERN_C void MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshal_pinvoke_cleanup(MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshaled_pinvoke& marshaled)
-{
-	il2cpp_codegen_marshal_free(marshaled.___className);
-	marshaled.___className = NULL;
-	il2cpp_codegen_marshal_free(marshaled.___nameSpace);
-	marshaled.___nameSpace = NULL;
-	il2cpp_codegen_marshal_free(marshaled.___assembly);
-	marshaled.___assembly = NULL;
-}
-IL2CPP_EXTERN_C void MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshal_com(const MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F& unmarshaled, MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshaled_com& marshaled)
-{
-	marshaled.___className = il2cpp_codegen_marshal_bstring(unmarshaled.___className);
-	marshaled.___nameSpace = il2cpp_codegen_marshal_bstring(unmarshaled.___nameSpace);
-	marshaled.___assembly = il2cpp_codegen_marshal_bstring(unmarshaled.___assembly);
-	marshaled.___classHasChanged = static_cast<int32_t>(unmarshaled.___classHasChanged);
-	marshaled.___nameSpaceHasChanged = static_cast<int32_t>(unmarshaled.___nameSpaceHasChanged);
-	marshaled.___assemblyHasChanged = static_cast<int32_t>(unmarshaled.___assemblyHasChanged);
-	marshaled.___autoUdpateAPI = static_cast<int32_t>(unmarshaled.___autoUdpateAPI);
-}
-IL2CPP_EXTERN_C void MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshal_com_back(const MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshaled_com& marshaled, MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F& unmarshaled)
-{
-	unmarshaled.___className = il2cpp_codegen_marshal_bstring_result(marshaled.___className);
-	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___className), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___className));
-	unmarshaled.___nameSpace = il2cpp_codegen_marshal_bstring_result(marshaled.___nameSpace);
-	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___nameSpace), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___nameSpace));
-	unmarshaled.___assembly = il2cpp_codegen_marshal_bstring_result(marshaled.___assembly);
-	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___assembly), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___assembly));
-	bool unmarshaledclassHasChanged_temp_3 = false;
-	unmarshaledclassHasChanged_temp_3 = static_cast<bool>(marshaled.___classHasChanged);
-	unmarshaled.___classHasChanged = unmarshaledclassHasChanged_temp_3;
-	bool unmarshalednameSpaceHasChanged_temp_4 = false;
-	unmarshalednameSpaceHasChanged_temp_4 = static_cast<bool>(marshaled.___nameSpaceHasChanged);
-	unmarshaled.___nameSpaceHasChanged = unmarshalednameSpaceHasChanged_temp_4;
-	bool unmarshaledassemblyHasChanged_temp_5 = false;
-	unmarshaledassemblyHasChanged_temp_5 = static_cast<bool>(marshaled.___assemblyHasChanged);
-	unmarshaled.___assemblyHasChanged = unmarshaledassemblyHasChanged_temp_5;
-	bool unmarshaledautoUdpateAPI_temp_6 = false;
-	unmarshaledautoUdpateAPI_temp_6 = static_cast<bool>(marshaled.___autoUdpateAPI);
-	unmarshaled.___autoUdpateAPI = unmarshaledautoUdpateAPI_temp_6;
-}
-IL2CPP_EXTERN_C void MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshal_com_cleanup(MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F_marshaled_com& marshaled)
-{
-	il2cpp_codegen_marshal_free_bstring(marshaled.___className);
-	marshaled.___className = NULL;
-	il2cpp_codegen_marshal_free_bstring(marshaled.___nameSpace);
-	marshaled.___nameSpace = NULL;
-	il2cpp_codegen_marshal_free_bstring(marshaled.___assembly);
-	marshaled.___assembly = NULL;
-}
-// Method Definition Index: 65979
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovedFromAttributeData_Set_m155005FB8BCE0569C40B02D75FFADB3FBDB7EEDD (MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F* __this, bool ___0_autoUpdateAPI, String_t* ___1_sourceNamespace, String_t* ___2_sourceAssembly, String_t* ___3_sourceClassName, const RuntimeMethod* method) 
-{
-	{
-		String_t* L_0 = ___3_sourceClassName;
-		__this->___className = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___className), (void*)L_0);
-		String_t* L_1 = __this->___className;
-		__this->___classHasChanged = (bool)((!(((RuntimeObject*)(String_t*)L_1) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		String_t* L_2 = ___1_sourceNamespace;
-		__this->___nameSpace = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___nameSpace), (void*)L_2);
-		String_t* L_3 = __this->___nameSpace;
-		__this->___nameSpaceHasChanged = (bool)((!(((RuntimeObject*)(String_t*)L_3) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		String_t* L_4 = ___2_sourceAssembly;
-		__this->___assembly = L_4;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___assembly), (void*)L_4);
-		String_t* L_5 = __this->___assembly;
-		__this->___assemblyHasChanged = (bool)((!(((RuntimeObject*)(String_t*)L_5) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		bool L_6 = ___0_autoUpdateAPI;
-		__this->___autoUdpateAPI = L_6;
-		return;
-	}
-}
-IL2CPP_EXTERN_C  void MovedFromAttributeData_Set_m155005FB8BCE0569C40B02D75FFADB3FBDB7EEDD_AdjustorThunk (RuntimeObject* __this, bool ___0_autoUpdateAPI, String_t* ___1_sourceNamespace, String_t* ___2_sourceAssembly, String_t* ___3_sourceClassName, const RuntimeMethod* method)
-{
-	MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<MovedFromAttributeData_t03CC6A15A3D30385AF3C6E10FA273DE13D874A2F*>(__this + _offset);
-	MovedFromAttributeData_Set_m155005FB8BCE0569C40B02D75FFADB3FBDB7EEDD(_thisAdjusted, ___0_autoUpdateAPI, ___1_sourceNamespace, ___2_sourceAssembly, ___3_sourceClassName, method);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -40338,7 +40219,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BuildSettings_set_relativeOr
 		return;
 	}
 }
-// Method Definition Index: 64421
+// Method Definition Index: 64423
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40391,7 +40272,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t BindingsMarshaller_Conve
 		return L_1;
 	}
 }
-// Method Definition Index: 64529
+// Method Definition Index: 64531
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -40442,7 +40323,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 64514
+// Method Definition Index: 64516
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -40479,7 +40360,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 64510
+// Method Definition Index: 64512
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -40516,7 +40397,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 64552
+// Method Definition Index: 64554
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{

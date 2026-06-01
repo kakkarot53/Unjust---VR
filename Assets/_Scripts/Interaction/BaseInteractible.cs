@@ -58,6 +58,11 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
         }
     }
 
+    public virtual void SetCanInteract(bool state)
+    {
+        canInteract = state;
+    }
+
     public virtual bool CanInteract()
     {
         return canInteract;
