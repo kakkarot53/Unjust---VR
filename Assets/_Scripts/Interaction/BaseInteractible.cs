@@ -7,6 +7,8 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     [SerializeField] private LayerMask targetLayer; // Outline/Highlight effect layer
     [SerializeField] private LayerMask defaultLayer; // Outline/Highlight effect layer
 
+    [SerializeField] private GameObject[] changeExtraObj;
+
     protected int originalLayerIndex;
     protected int targetLayerIndex;
     protected int defaultLayerIndex;
@@ -23,6 +25,13 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     protected virtual void Start()
     {
         gameObject.layer = originalLayerIndex;
+        if (changeExtraObj.Length > 0)
+        {
+            foreach (GameObject g in changeExtraObj)
+            {
+                g.layer = originalLayerIndex;
+            }
+        }
     }
 
     // Automatically handles turning the outline ON
@@ -31,7 +40,13 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
         if (!canInteract) return;
         if (isInteracting) return;
         gameObject.layer = targetLayerIndex;
-
+        if (changeExtraObj.Length > 0)
+        {
+            foreach (GameObject g in changeExtraObj)
+            {
+                g.layer = targetLayerIndex;
+            }
+        }
     }
 
     // Automatically handles turning the outline OFF
@@ -40,6 +55,13 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
         if (!canInteract) return;
         if (isInteracting) return;
         gameObject.layer = originalLayerIndex;
+        if (changeExtraObj.Length > 0)
+        {
+            foreach (GameObject g in changeExtraObj)
+            {
+                g.layer = originalLayerIndex;
+            }
+        }
     }
 
     // This fulfills the interface, but forces child classes to handle the specifics
@@ -51,10 +73,25 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
         if (isInteracting)
         {
             gameObject.layer = defaultLayer; //basically make it "uninteractible"
+            if (changeExtraObj.Length > 0)
+            {
+                foreach (GameObject g in changeExtraObj)
+                {
+                    g.layer = defaultLayer;
+                }
+            }
         }
         else
         {
             gameObject.layer = originalLayerIndex; //go back to interactible
+
+            if (changeExtraObj.Length > 0)
+            {
+                foreach (GameObject g in changeExtraObj)
+                {
+                    g.layer = originalLayerIndex;
+                }
+            }
         }
     }
 
