@@ -1095,6 +1095,7 @@ struct SendOrPostCallback_t5C292A12062F24027A98492F52ECFE9802AA6F0E;
 struct SerializationBinder_tB959BF0F4EF3F8611E5891A7011DD99F9FD69E2A;
 struct SeverityEntry_t56063DA49413480E6D9C6B192419F7CEAEBB20FF;
 struct Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692;
+struct ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C;
 struct ShowcaseList_t36EB83A8E64A99A2ED95BA05D4B6BC163CB9D11F;
 struct SimplexDistribution_t30F6C0A9090142251F0D6ADB68CF0126CF4D73F3;
 struct SimulatedResponse_t6C399FEE83BD05DF775EA5C7D8C3D15DF2EE5B8E;
@@ -22484,6 +22485,8 @@ struct SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358  : public MonoB
 	InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* ___televisions;
 	InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* ___startDoor;
 	InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* ___finishDoor;
+	Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* ___vol;
+	ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* ___shadows;
 	int32_t ___disabledCount;
 };
 struct TestSceneUsage_t73B40A469D9B9E78E35E4B0F44CCD2DEE2C0A380  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -29986,9 +29989,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable13538[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable13539[2] = 
 {
 	static_cast<int32_t>(offsetof(SquareCookie_tCE989F8335B20B0E03BA4D11809758DB9FCCF9F8, ___textureSize)),static_cast<int32_t>(offsetof(SquareCookie_tCE989F8335B20B0E03BA4D11809758DB9FCCF9F8, ___squareSize)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable13540[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable13540[6] = 
 {
-	static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___televisions)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___startDoor)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___finishDoor)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___disabledCount)),};
+	static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___televisions)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___startDoor)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___finishDoor)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___vol)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___shadows)),static_cast<int32_t>(offsetof(SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358, ___disabledCount)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable13541[11] = 
 {
 	static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___HMD)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___L_Cont)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___R_Cont)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___L_Hand)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___R_Hand)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___allTransform)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___rc)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___lc)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___rh)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___lh)),static_cast<int32_t>(offsetof(TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4, ___allController)),};
