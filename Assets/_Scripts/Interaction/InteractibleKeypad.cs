@@ -29,6 +29,9 @@ public class InteractibleKeypad : BaseInteractible
     [SerializeField] Color correctValue;
     [SerializeField] Color incorrectValue;
 
+    [Header("flashlight")]
+    [SerializeField] Light playerFlash;
+
     private Collider myCollider;
     private Vector3 oripos;
     private Vector3 oriScale;
@@ -86,7 +89,6 @@ public class InteractibleKeypad : BaseInteractible
         }
         else
         {
-            OnCorrectPassword?.Invoke();
 
             //make bg normal
             dimmingCanvas.SetActive(false);
@@ -100,7 +102,7 @@ public class InteractibleKeypad : BaseInteractible
 
             //make sure buttons colliders are disabled so doesnt distrupt this one
             SetButtonsInteractionState(false);
-            this.SetCanInteract(false);
+
         }
     }
 
@@ -166,6 +168,11 @@ public class InteractibleKeypad : BaseInteractible
             pinText.text = keypadValue;
 
             StartCoroutine(AutoQuitFocusDelay());
+
+            Interact();
+
+            OnCorrectPassword?.Invoke();
+            this.SetCanInteract(false);
 
             return true;
         }

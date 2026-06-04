@@ -23,6 +23,8 @@ public class InteractibleDoor : BaseInteractible
     {
         base.Start();
 
+        if(m_Key == null)
+            return;
         m_Key.TryGetComponent<InteractibleKeypad>(out m_keypad);
         if(m_keypad != null)
         {

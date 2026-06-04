@@ -13,6 +13,12 @@ public class InteractibleTV : BaseInteractible
     [SerializeField] private AudioSource audSrc;       //this is the light that goes INwards
 
     private Coroutine powerRoutine;
+    private SyncedTVManager m_sync;
+
+    public void SetManager(SyncedTVManager mng)
+    {
+        m_sync = mng;
+    }
 
     public void SetTvVisualState(bool state)
     {
@@ -26,6 +32,7 @@ public class InteractibleTV : BaseInteractible
         base.Interact();
         if (isInteracting)
         {
+            m_sync.AddDisabledCount();
             if (powerRoutine != null) StopCoroutine(powerRoutine);
             powerRoutine = StartCoroutine(HandlePowerTransition(false));
 

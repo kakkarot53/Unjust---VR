@@ -12,6 +12,9 @@ public class InspectManager : MonoBehaviour
     [SerializeField] private float minScaleFactor = 0.4f; 
     [SerializeField] private float maxScaleFactor = 2.5f;
 
+    [Header("FlashLight")]
+    [SerializeField] private Light flashLight;
+
     private InteractibleInspect currTarget;
     private InputSystem input;
     private Transform cameraTransform;
@@ -40,6 +43,8 @@ public class InspectManager : MonoBehaviour
     private void Start()
     {
         infoCanvas.SetActive(false);
+        flashLight.enabled = false;
+
     }
 
     public void StartInspection(InteractibleInspect target)
@@ -47,6 +52,7 @@ public class InspectManager : MonoBehaviour
         currTarget = target;
         infoCanvas.SetActive(true);
         originalObjectScale = currTarget.transform.localScale;
+        flashLight.enabled = true;
     }
 
     public void StopInspection(InteractibleInspect target)
@@ -55,8 +61,11 @@ public class InspectManager : MonoBehaviour
         {
             currTarget.transform.localScale = originalObjectScale;
             currTarget = null;
+
         }
         infoCanvas.SetActive(false);
+        flashLight.enabled = false;
+
     }
 
     private void Update()
