@@ -41,7 +41,7 @@ public class InteractibleKeypad : BaseInteractible
     private Coroutine lerpRoutine;
 
     public Action OnCorrectPassword;
-
+    
     protected override void Start()
     {
         base.Start();
@@ -57,7 +57,14 @@ public class InteractibleKeypad : BaseInteractible
 
         if (indicatorLight != null) indicatorLight.color = Color.black; // Keep light turned off initially
 
-        //make sure all buttons subscribe to this so called manager
+        StartCoroutine(InitializeButtonsDelayed());
+    }
+
+    private IEnumerator InitializeButtonsDelayed()
+    {
+        // Wait until the very next frame so every button component is guaranteed to be Awake
+        yield return null;
+
         foreach (InteractibleKeypadButton button in buttons)
         {
             button.ButtonSetup(this);
@@ -73,6 +80,8 @@ public class InteractibleKeypad : BaseInteractible
 
         if (isInteracting)
         {
+            playerFlash.enabled = true;
+
             //make bg darker
             dimmingCanvas.SetActive(true);
             //disable movement
@@ -81,7 +90,10 @@ public class InteractibleKeypad : BaseInteractible
             myCollider.enabled = false;
 
             //put the object in front of player
-            Quaternion targetInspectRotation = Quaternion.Euler(inspectRotationOffset);
+            Vector3 directionToPlayer = Camera.main.transform.position - inspectAnchor.position;
+            Quaternion lookAtRotation = Quaternion.LookRotation(directionToPlayer);
+            Quaternion targetInspectRotation = lookAtRotation * Quaternion.Euler(inspectRotationOffset); 
+            
             lerpRoutine = StartCoroutine(TransitionObject(inspectAnchor.position, targetInspectRotation, targetScale, lightRangeAfterZoom));
             
             //make sure buttons can interact
@@ -89,6 +101,7 @@ public class InteractibleKeypad : BaseInteractible
         }
         else
         {
+            playerFlash.enabled = false;
 
             //make bg normal
             dimmingCanvas.SetActive(false);

@@ -24,6 +24,9 @@ public class InteractibleKeypadButton : BaseInteractible
             return;
         SetCanInteract(false);
         m_keypad = _k;
+
+        Debug.Log($"{stringValue} is set up");
+
     }
 
     public override void SetCanInteract(bool state)
@@ -62,6 +65,7 @@ public class InteractibleKeypadButton : BaseInteractible
                         gameObject.layer = originalLayerIndex;
                     });
             });
+
         }
     }
 

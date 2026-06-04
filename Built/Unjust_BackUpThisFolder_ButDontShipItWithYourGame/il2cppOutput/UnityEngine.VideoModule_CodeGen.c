@@ -17,6 +17,7 @@ extern void VideoPlayer_InvokeFrameDroppedCallback_Internal_m6E6B6353404AF76AB16
 extern void VideoPlayer_InvokeErrorReceivedCallback_Internal_m91E59ED70189824AB2C5D0AEB47742130EE98574 (void);
 extern void VideoPlayer_InvokeSeekCompletedCallback_Internal_m62AEB9826ACE95B88CC60220375C1C7EF5EEEE1F (void);
 extern void VideoPlayer_InvokeClockResyncOccurredCallback_Internal_m743B8421E9538761141364EBDCEBC673BA58D8C6 (void);
+extern void VideoPlayer__ctor_m309536693DD1F20C0D1E6ABBF5FC48858746C6B6 (void);
 extern void EventHandler__ctor_mFCF62E0BB29DD3D2B2F1306BD8657E374CF60903 (void);
 extern void EventHandler_Invoke_m8A3288B6DF1FE2699A58EA22D0B830BB20E94E15 (void);
 extern void ErrorEventHandler__ctor_m78073CD72C64AAFAF54A01702919A847185F4C58 (void);
@@ -25,7 +26,7 @@ extern void FrameReadyEventHandler__ctor_mD875F736BCA2A2128427AB0546B5081ED3B22D
 extern void FrameReadyEventHandler_Invoke_m73FF71F81A620194421226D8A98C64FB82E7B235 (void);
 extern void TimeEventHandler__ctor_m7BF78A616C8FF71B3A7CA62B1A03446A5C581309 (void);
 extern void TimeEventHandler_Invoke_m2327761543815FB7181FFF73E87FC5EC0F84349D (void);
-static Il2CppMethodPointer s_methodPointers[18] = 
+static Il2CppMethodPointer s_methodPointers[19] = 
 {
 	VideoClipPlayable_GetHandle_m1D990903234220E9FE756F2DA895650EBDC1415D,
 	VideoClipPlayable_Equals_mDBA2CCE1368B628829B065EA8DEDE84512B2723E,
@@ -37,6 +38,7 @@ static Il2CppMethodPointer s_methodPointers[18] =
 	VideoPlayer_InvokeErrorReceivedCallback_Internal_m91E59ED70189824AB2C5D0AEB47742130EE98574,
 	VideoPlayer_InvokeSeekCompletedCallback_Internal_m62AEB9826ACE95B88CC60220375C1C7EF5EEEE1F,
 	VideoPlayer_InvokeClockResyncOccurredCallback_Internal_m743B8421E9538761141364EBDCEBC673BA58D8C6,
+	VideoPlayer__ctor_m309536693DD1F20C0D1E6ABBF5FC48858746C6B6,
 	EventHandler__ctor_mFCF62E0BB29DD3D2B2F1306BD8657E374CF60903,
 	EventHandler_Invoke_m8A3288B6DF1FE2699A58EA22D0B830BB20E94E15,
 	ErrorEventHandler__ctor_m78073CD72C64AAFAF54A01702919A847185F4C58,
@@ -53,32 +55,33 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] =
 	{ 0x06000001, VideoClipPlayable_GetHandle_m1D990903234220E9FE756F2DA895650EBDC1415D_AdjustorThunk },
 	{ 0x06000002, VideoClipPlayable_Equals_mDBA2CCE1368B628829B065EA8DEDE84512B2723E_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[18] = 
+static const int32_t s_InvokerIndices[19] = 
 {
-	20392,
-	11677,
-	31868,
+	20402,
+	11687,
+	31877,
+	28676,
+	31877,
+	31877,
+	31877,
+	28683,
+	31877,
 	28667,
-	31868,
-	31868,
-	31868,
-	28674,
-	31868,
-	28658,
-	8400,
-	15823,
-	8400,
+	20609,
+	8410,
+	15833,
+	8410,
+	8419,
+	8410,
 	8409,
-	8400,
+	8410,
 	8399,
-	8400,
-	8389,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VideoModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_VideoModule_CodeGenModule = 
 {
 	"UnityEngine.VideoModule.dll",
-	18,
+	19,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,

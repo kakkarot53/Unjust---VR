@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b96dc66eb004762478647bb643e7989a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2325222
+      value: -1.5716643
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b96dc66eb004762478647bb643e7989a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0029999763
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b96dc66eb004762478647bb643e7989a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5910325
+      value: -10.910098
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b96dc66eb004762478647bb643e7989a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b96dc66eb004762478647bb643e7989a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b96dc66eb004762478647bb643e7989a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -96,6 +96,6 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6264831526926562434, guid: b96dc66eb004762478647bb643e7989a, type: 3}

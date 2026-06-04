@@ -314,7 +314,9 @@
           },
           {
             "name": "LODGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -876,7 +878,9 @@
         "dependencies": [
           {
             "name": "PlayableDirector",
-            "scenes": [],
+            "scenes": [
+              "Assets/_Scenes/_1-2_Classroom.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           }

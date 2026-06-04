@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.384818
+      value: -1.457
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.659568
+      value: -10.116
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.949345
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70710677
+      value: -0.3142357
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -36.629
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7b08ad66227c144caa60a8426e70022, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -96,6 +96,6 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6317106008045385693, guid: c7b08ad66227c144caa60a8426e70022, type: 3}

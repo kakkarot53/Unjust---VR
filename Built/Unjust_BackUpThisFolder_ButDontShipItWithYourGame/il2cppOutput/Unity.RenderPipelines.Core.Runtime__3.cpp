@@ -31521,11 +31521,11 @@ IL_003d:
 		return L_9;
 	}
 }
-// Method Definition Index: 79759
+// Method Definition Index: 79760
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint4_t6C69CBFAE9BF0F727D52B68779D4A3F0DBA8D5C9 uint4_op_Implicit_m194DE3172FAB8E0625B0F5826454FE3C91DA68DF_inline (uint32_t ___0_v, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/uint4.gen.cs:240>
+		//<source_info:./Library/PackageCache/com.unity.mathematics@19a9377c4ffa/Unity.Mathematics/uint4.gen.cs:240>
 		uint32_t L_0 = ___0_v;
 		uint4_t6C69CBFAE9BF0F727D52B68779D4A3F0DBA8D5C9 L_1;
 		memset((&L_1), 0, sizeof(L_1));
@@ -32436,23 +32436,23 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 79750
+// Method Definition Index: 79751
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void uint4__ctor_m0927237EB810FB562DE9A12B3A3942BCE672656F_inline (uint4_t6C69CBFAE9BF0F727D52B68779D4A3F0DBA8D5C9* __this, uint32_t ___0_v, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/uint4.gen.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.mathematics@19a9377c4ffa/Unity.Mathematics/uint4.gen.cs:141>
 		uint32_t L_0 = ___0_v;
 		__this->___x = L_0;
-		//<source_info:./Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/uint4.gen.cs:142>
+		//<source_info:./Library/PackageCache/com.unity.mathematics@19a9377c4ffa/Unity.Mathematics/uint4.gen.cs:142>
 		uint32_t L_1 = ___0_v;
 		__this->___y = L_1;
-		//<source_info:./Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/uint4.gen.cs:143>
+		//<source_info:./Library/PackageCache/com.unity.mathematics@19a9377c4ffa/Unity.Mathematics/uint4.gen.cs:143>
 		uint32_t L_2 = ___0_v;
 		__this->___z = L_2;
-		//<source_info:./Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/uint4.gen.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.mathematics@19a9377c4ffa/Unity.Mathematics/uint4.gen.cs:144>
 		uint32_t L_3 = ___0_v;
 		__this->___w = L_3;
-		//<source_info:./Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/uint4.gen.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.mathematics@19a9377c4ffa/Unity.Mathematics/uint4.gen.cs:145>
 		return;
 	}
 }

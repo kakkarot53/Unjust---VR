@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.37944192
+      value: -5.055
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000011920929
+      value: 0.89050835
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4643307
+      value: -6.739
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.13445285
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -15.454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -88,10 +88,10 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8937665938935388488, guid: 27128f87a4a79b645a3dac03f583feeb, type: 3}

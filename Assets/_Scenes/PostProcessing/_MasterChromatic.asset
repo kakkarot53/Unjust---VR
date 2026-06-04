@@ -92,8 +92,8 @@ MonoBehaviour:
   - {fileID: 3017258560909078540}
   - {fileID: 9077076228117971615}
   - {fileID: -8646236710502266548}
-  - {fileID: -2216478112846852430}
   - {fileID: 5133700524041557208}
+  - {fileID: -2216478112846852430}
 --- !u!114 &530768218071151727
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -170,7 +170,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: -6
   saturation:
     m_OverrideState: 1
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
   m_Name: ShadowsMidtonesHighlights
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
-  active: 0
+  active: 1
   shadows:
     m_OverrideState: 1
     m_Value: {x: 0.9472066, y: 0.9664259, z: 1, w: -0.8251271}

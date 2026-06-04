@@ -8437,7 +8437,7 @@ IL2CPP_EXTERN_C  void JointInfo__ctor_m4EBFD7943401A947321FAB4BBC30EC8C0D3BBC23_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80618
+// Method Definition Index: 80619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonConverter_1_WriteJson_mF9CAA7613E24CBA7A24DFBA6B1D32D0361E11D89_gshared (JsonConverter_1_t4C2784CE1A9B0B3026D2009AFCF01619C88B508C* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8506,7 +8506,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 80620
+// Method Definition Index: 80621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonConverter_1_ReadJson_m0058E65E0918A64C3ED049A72A8BC9ED580AD84E_gshared (JsonConverter_1_t4C2784CE1A9B0B3026D2009AFCF01619C88B508C* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_tEFD278F3E159D314417438658A8E3E88DA23AADE = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1));
@@ -8604,7 +8604,7 @@ IL_0046:
 		return L_18;
 	}
 }
-// Method Definition Index: 80622
+// Method Definition Index: 80623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonConverter_1_CanConvert_mA1458D754523951B036A22EFEC20796F41B04A5F_gshared (JsonConverter_1_t4C2784CE1A9B0B3026D2009AFCF01619C88B508C* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	{
@@ -8619,7 +8619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonConverter_1_CanConvert_mA1458D754523
 		return L_3;
 	}
 }
-// Method Definition Index: 80623
+// Method Definition Index: 80624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonConverter_1__ctor_m7ED503C340F5D2F730507A67A7E838E67809816E_gshared (JsonConverter_1_t4C2784CE1A9B0B3026D2009AFCF01619C88B508C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8635,25 +8635,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonConverter_1__ctor_m7ED503C340F5D2F73
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89818
+// Method Definition Index: 89834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC KVPair_2_get_Null_m8DBECDEC86B8C7E8013F037D79E92BBA9B806535_gshared (const RuntimeMethod* method) 
 {
 	KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:63>
 		il2cpp_codegen_initobj((&V_0), sizeof(KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC));
 		(&V_0)->___m_Index = (-1);
 		KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 89819
+// Method Definition Index: 89835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KVPair_2_get_Key_m164ABF64B3546739DCAAC8739B80C54CCCF282D8_gshared (KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:73>
 		int32_t L_0 = __this->___m_Index;
 		if ((((int32_t)L_0) == ((int32_t)(-1))))
 		{
@@ -8661,7 +8661,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KVPair_2_get_Key_m164ABF64B3546739DCA
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:75>
 		HashMapHelper_1_t51F726D16732CD16EFBBB3DE324B481A05388D2B* L_1 = __this->___m_Data;
 		NullCheck(L_1);
 		int32_t* L_2 = L_1->___Keys;
@@ -8673,7 +8673,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KVPair_2_get_Key_m164ABF64B3546739DCA
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:78>
 		il2cpp_codegen_initobj((&V_0), sizeof(int32_t));
 		int32_t L_6 = V_0;
 		return L_6;
@@ -8688,11 +8688,11 @@ IL2CPP_EXTERN_C  int32_t KVPair_2_get_Key_m164ABF64B3546739DCAAC8739B80C54CCCF28
 	_returnValue = KVPair_2_get_Key_m164ABF64B3546739DCAAC8739B80C54CCCF282D8(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 89820
+// Method Definition Index: 89836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t* KVPair_2_get_Value_m0B1B55DB40AF78F68D4802958B1625CFED722B34_gshared (KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:94>
 		HashMapHelper_1_t51F726D16732CD16EFBBB3DE324B481A05388D2B* L_0 = __this->___m_Data;
 		NullCheck(L_0);
 		uint8_t* L_1 = L_0->___Ptr;
@@ -8712,11 +8712,11 @@ IL2CPP_EXTERN_C  int32_t* KVPair_2_get_Value_m0B1B55DB40AF78F68D4802958B1625CFED
 	_returnValue = KVPair_2_get_Value_m0B1B55DB40AF78F68D4802958B1625CFED722B34(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 89821
+// Method Definition Index: 89837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_mD94A90FC6A43D3F6497625B4E72D98397F836B3D_gshared (KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC* __this, int32_t* ___0_key, int32_t* ___1_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:106>
 		int32_t L_0 = __this->___m_Index;
 		if ((((int32_t)L_0) == ((int32_t)(-1))))
 		{
@@ -8724,7 +8724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_mD94A90FC6A43D3F649
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:108>
 		int32_t* L_1 = ___0_key;
 		HashMapHelper_1_t51F726D16732CD16EFBBB3DE324B481A05388D2B* L_2 = __this->___m_Data;
 		NullCheck(L_2);
@@ -8733,7 +8733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_mD94A90FC6A43D3F649
 		uint32_t L_5 = sizeof(int32_t);
 		int32_t L_6 = (*(int32_t*)((int32_t*)il2cpp_codegen_add((intptr_t)L_3, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_4), (int32_t)L_5)))));
 		*(int32_t*)L_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:109>
 		int32_t* L_7 = ___1_value;
 		HashMapHelper_1_t51F726D16732CD16EFBBB3DE324B481A05388D2B* L_8 = __this->___m_Data;
 		NullCheck(L_8);
@@ -8742,19 +8742,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_mD94A90FC6A43D3F649
 		int32_t L_11;
 		L_11 = UnsafeUtility_ReadArrayElement_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mFBA66C06ECEB0A2BC1AAE634B6E6BB436F957084_inline((void*)L_9, L_10, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
 		*(int32_t*)L_7 = L_11;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:110>
 		return (bool)1;
 	}
 
 IL_004c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:113>
 		int32_t* L_12 = ___0_key;
 		il2cpp_codegen_initobj(L_12, sizeof(int32_t));
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:114>
 		int32_t* L_13 = ___1_value;
 		il2cpp_codegen_initobj(L_13, sizeof(int32_t));
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:115>
 		return (bool)0;
 	}
 }
@@ -8775,20 +8775,20 @@ IL2CPP_EXTERN_C  bool KVPair_2_GetKeyValue_mD94A90FC6A43D3F6497625B4E72D98397F83
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89818
+// Method Definition Index: 89834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA KVPair_2_get_Null_m95F67B3B164BEA5086D3EA24F6A309DCEC2FD3E0_gshared (const RuntimeMethod* method) 
 {
 	KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:63>
 		il2cpp_codegen_initobj((&V_0), sizeof(KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA));
 		(&V_0)->___m_Index = (-1);
 		KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 89819
+// Method Definition Index: 89835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KVPair_2_get_Key_mED89D3602B012281C2C837349C34191B0875115C_gshared (KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 4));
@@ -8797,7 +8797,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KVPair_2_get_Key_mED89D3602B012281C2C837
 	Il2CppFullySharedGenericStruct V_0 = alloca(SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
 	memset(V_0, 0, SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:73>
 		int32_t L_0 = __this->___m_Index;
 		if ((((int32_t)L_0) == ((int32_t)(-1))))
 		{
@@ -8805,7 +8805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KVPair_2_get_Key_mED89D3602B012281C2C837
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:75>
 		HashMapHelper_1_t7364EEBCB4B3DE1B66766FEB2C1829C7F6CFE4BC* L_1 = __this->___m_Data;
 		NullCheck(L_1);
 		Il2CppFullySharedGenericStruct* L_2 = L_1->___Keys;
@@ -8818,7 +8818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KVPair_2_get_Key_mED89D3602B012281C2C837
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:78>
 		il2cpp_codegen_initobj((Il2CppFullySharedGenericStruct*)V_0, SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
 		il2cpp_codegen_memcpy(L_6, V_0, SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
 		il2cpp_codegen_memcpy(il2cppRetVal, L_6, SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
@@ -8833,12 +8833,12 @@ IL2CPP_EXTERN_C  void KVPair_2_get_Key_mED89D3602B012281C2C837349C34191B0875115C
 	KVPair_2_get_Key_mED89D3602B012281C2C837349C34191B0875115C(_thisAdjusted, il2cppRetVal, method);
 	return;
 }
-// Method Definition Index: 89820
+// Method Definition Index: 89836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* KVPair_2_get_Value_mC94F9A68A6FADF40DC6A14F23C4FF284241A6D88_gshared (KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA* __this, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TValue_t07BAD9681A6887A56CE27B7BA46659F1E8B4AA45 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 5));
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:94>
 		HashMapHelper_1_t7364EEBCB4B3DE1B66766FEB2C1829C7F6CFE4BC* L_0 = __this->___m_Data;
 		NullCheck(L_0);
 		uint8_t* L_1 = L_0->___Ptr;
@@ -8858,7 +8858,7 @@ IL2CPP_EXTERN_C  Il2CppFullySharedGenericStruct* KVPair_2_get_Value_mC94F9A68A6F
 	_returnValue = KVPair_2_get_Value_mC94F9A68A6FADF40DC6A14F23C4FF284241A6D88(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 89821
+// Method Definition Index: 89837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_m43218BA6923AF63C42703F1422152DA798742288_gshared (KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA* __this, Il2CppFullySharedGenericStruct* ___0_key, Il2CppFullySharedGenericStruct* ___1_value, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 4));
@@ -8866,7 +8866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_m43218BA6923AF63C42
 	const Il2CppFullySharedGenericStruct L_6 = alloca(SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
 	const Il2CppFullySharedGenericStruct L_11 = alloca(SizeOf_TValue_t07BAD9681A6887A56CE27B7BA46659F1E8B4AA45);
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:106>
 		int32_t L_0 = __this->___m_Index;
 		if ((((int32_t)L_0) == ((int32_t)(-1))))
 		{
@@ -8874,7 +8874,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_m43218BA6923AF63C42
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:108>
 		Il2CppFullySharedGenericStruct* L_1 = ___0_key;
 		HashMapHelper_1_t7364EEBCB4B3DE1B66766FEB2C1829C7F6CFE4BC* L_2 = __this->___m_Data;
 		NullCheck(L_2);
@@ -8884,7 +8884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_m43218BA6923AF63C42
 		il2cpp_codegen_memcpy(L_6, ((Il2CppFullySharedGenericStruct*)il2cpp_codegen_add((intptr_t)L_3, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_4), (int32_t)L_5)))), SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
 		il2cpp_codegen_memcpy((Il2CppFullySharedGenericStruct*)L_1, L_6, SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
 		Il2CppCodeGenWriteBarrierForClass(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 4), (void**)(Il2CppFullySharedGenericStruct*)L_1, (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:109>
 		Il2CppFullySharedGenericStruct* L_7 = ___1_value;
 		HashMapHelper_1_t7364EEBCB4B3DE1B66766FEB2C1829C7F6CFE4BC* L_8 = __this->___m_Data;
 		NullCheck(L_8);
@@ -8893,19 +8893,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_m43218BA6923AF63C42
 		InvokerActionInvoker3< void*, int32_t, Il2CppFullySharedGenericStruct* >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9), NULL, (void*)L_9, L_10, (Il2CppFullySharedGenericStruct*)L_11);
 		il2cpp_codegen_memcpy((Il2CppFullySharedGenericStruct*)L_7, L_11, SizeOf_TValue_t07BAD9681A6887A56CE27B7BA46659F1E8B4AA45);
 		Il2CppCodeGenWriteBarrierForClass(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 5), (void**)(Il2CppFullySharedGenericStruct*)L_7, (void*)L_11);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:110>
 		return (bool)1;
 	}
 
 IL_004c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:113>
 		Il2CppFullySharedGenericStruct* L_12 = ___0_key;
 		il2cpp_codegen_initobj(L_12, SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:114>
 		Il2CppFullySharedGenericStruct* L_13 = ___1_value;
 		il2cpp_codegen_initobj(L_13, SizeOf_TValue_t07BAD9681A6887A56CE27B7BA46659F1E8B4AA45);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeHashMap.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeHashMap.cs:115>
 		return (bool)0;
 	}
 }

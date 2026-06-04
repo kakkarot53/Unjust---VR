@@ -51,7 +51,10 @@ public class InteractibleInspect : BaseInteractible
             m_move.RequestPlayerMovementEnable(false);
 
             //put the object in front of player
-            Quaternion targetInspectRotation = Quaternion.Euler(inspectRotationOffset);
+            Vector3 directionToPlayer = Camera.main.transform.position - inspectAnchor.position;
+            Quaternion lookAtRotation = Quaternion.LookRotation(directionToPlayer);
+            Quaternion targetInspectRotation = lookAtRotation * Quaternion.Euler(inspectRotationOffset); 
+            
             lerpRoutine = StartCoroutine(TransitionObject(inspectAnchor.position, targetInspectRotation, true));
 
             m_interact.RequestInspectStatusChange(true);

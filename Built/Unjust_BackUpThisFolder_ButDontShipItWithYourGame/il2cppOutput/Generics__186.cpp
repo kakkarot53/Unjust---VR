@@ -3063,7 +3063,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SortComparer_EndInvoke_m4747830CECFFD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90356
+// Method Definition Index: 90373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 SortJobDefer_2_Schedule_mB75384614976E2ECF4F25943615BF38317BE2814_gshared (SortJobDefer_2_t6A8BA1AB187A6861F4A0BBB96B6C75E98D845F5A* __this, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___0_inputDeps, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_SegmentSort_t99A687B0EA9D524DD63F96A313FA869410B592E6 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0));
@@ -3082,7 +3082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE0
 	SegmentSortMerge_tF039AAEBE13FCFD17842E252416205B44F704642 V_3 = alloca(SizeOf_SegmentSortMerge_t99ACB8BA23DC8E818A5C5763D46B72B9329D36F6);
 	memset(V_3, 0, SizeOf_SegmentSortMerge_t99ACB8BA23DC8E818A5C5763D46B72B9329D36F6);
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1261>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1261>
 		il2cpp_codegen_initobj((SegmentSort_t77C08041BA5AEB4123630C4F2B1E3931CA05E8EB*)V_2, SizeOf_SegmentSort_t99A687B0EA9D524DD63F96A313FA869410B592E6);
 		NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1 L_0 = *(NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 1),0));
 		il2cpp_codegen_write_instance_field_data<NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1>((SegmentSort_t77C08041BA5AEB4123630C4F2B1E3931CA05E8EB*)V_2, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0),0), L_0);
@@ -3093,13 +3093,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE0
 		il2cpp_codegen_write_instance_field_data<int32_t>((SegmentSort_t77C08041BA5AEB4123630C4F2B1E3931CA05E8EB*)V_2, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0),3), ((int32_t)1024));
 		il2cpp_codegen_memcpy(L_3, V_2, SizeOf_SegmentSort_t99A687B0EA9D524DD63F96A313FA869410B592E6);
 		il2cpp_codegen_memcpy(V_0, L_3, SizeOf_SegmentSort_t99A687B0EA9D524DD63F96A313FA869410B592E6);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1262>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1262>
 		NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1 L_4 = *(NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 1),0));
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_5 = ___0_inputDeps;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_6;
 		L_6 = ((  JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 (*) (SegmentSort_t77C08041BA5AEB4123630C4F2B1E3931CA05E8EB*, NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1, int32_t, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 5)))((SegmentSort_t77C08041BA5AEB4123630C4F2B1E3931CA05E8EB*)V_0, L_4, ((int32_t)1024), L_5, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 5));
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1263>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1263>
 		il2cpp_codegen_initobj((SegmentSortMerge_tF039AAEBE13FCFD17842E252416205B44F704642*)V_3, SizeOf_SegmentSortMerge_t99ACB8BA23DC8E818A5C5763D46B72B9329D36F6);
 		NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1 L_7 = *(NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1*)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 1),0));
 		il2cpp_codegen_write_instance_field_data<NativeList_1_tC1434025FAC1738D2E1A0029AA90EC61D91370C1>((SegmentSortMerge_tF039AAEBE13FCFD17842E252416205B44F704642*)V_3, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 7),0), L_7);
@@ -3107,11 +3107,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE0
 		il2cpp_codegen_write_instance_field_data((SegmentSortMerge_tF039AAEBE13FCFD17842E252416205B44F704642*)V_3, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 7),1), L_8, SizeOf_U_t7BFE24CC61438A33AAAC525AFA4B9BCAA5CEB07A);
 		il2cpp_codegen_write_instance_field_data<int32_t>((SegmentSortMerge_tF039AAEBE13FCFD17842E252416205B44F704642*)V_3, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 7),2), ((int32_t)1024));
 		il2cpp_codegen_memcpy(L_9, V_3, SizeOf_SegmentSortMerge_t99ACB8BA23DC8E818A5C5763D46B72B9329D36F6);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1264>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1264>
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_10 = V_1;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_11;
 		L_11 = InvokerFuncInvoker2< JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08, SegmentSortMerge_tF039AAEBE13FCFD17842E252416205B44F704642, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 8)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 8), NULL, L_9, L_10);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1266>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1266>
 		return L_11;
 	}
 }
@@ -3132,7 +3132,7 @@ IL2CPP_EXTERN_C  JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 SortJobDefe
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90353
+// Method Definition Index: 90370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 SortJob_2_Schedule_m22719A523B631BE6909546A645D7FE71F71286E8_gshared (SortJob_2_tF5A8EBE6C2885BA7F056EE208E1F67DAB0B69B03* __this, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___0_inputDeps, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -3146,7 +3146,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE0
 	SegmentSortMerge_t160AB9A147325BBCD9FD17052EA70C51F2678ADE V_6;
 	memset((&V_6), 0, sizeof(V_6));
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1127>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1127>
 		int32_t L_0 = __this->___Length;
 		if (L_0)
 		{
@@ -3154,30 +3154,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE0
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1128>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1128>
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_1 = ___0_inputDeps;
 		return L_1;
 	}
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1129>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1129>
 		int32_t L_2 = __this->___Length;
 		V_0 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_2, ((int32_t)1023)))/((int32_t)1024)));
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1132>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1132>
 		int32_t L_3;
 		L_3 = JobsUtility_get_ThreadIndexCount_m88A954344398143540618B35943F863B92465676(NULL);
 		V_1 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1136>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1136>
 		int32_t L_4 = V_1;
 		int32_t L_5;
 		L_5 = math_max_m9083201D37A8ED0157B127B5878D9B7F3A2A40BE_inline(1, L_4, NULL);
 		V_2 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1137>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1137>
 		int32_t L_6 = V_0;
 		int32_t L_7 = V_2;
 		V_3 = ((int32_t)(L_6/L_7));
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1138>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1138>
 		il2cpp_codegen_initobj((&V_5), sizeof(SegmentSort_tE56792C563A7271D5083D5DB4768DCD86B9E38E8));
 		int32_t* L_8 = __this->___Data;
 		(&V_5)->___Data = L_8;
@@ -3187,14 +3187,14 @@ IL_000a:
 		(&V_5)->___Length = L_10;
 		(&V_5)->___SegmentWidth = ((int32_t)1024);
 		SegmentSort_tE56792C563A7271D5083D5DB4768DCD86B9E38E8 L_11 = V_5;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1139>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1139>
 		int32_t L_12 = V_0;
 		int32_t L_13 = V_3;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = ___0_inputDeps;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15;
 		L_15 = IJobParallelForExtensions_Schedule_TisSegmentSort_tE56792C563A7271D5083D5DB4768DCD86B9E38E8_m0CA4D069610D41262CBEE7D3567CCD0592CAE77B(L_11, L_12, L_13, L_14, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4));
 		V_4 = L_15;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1140>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1140>
 		il2cpp_codegen_initobj((&V_6), sizeof(SegmentSortMerge_t160AB9A147325BBCD9FD17052EA70C51F2678ADE));
 		int32_t* L_16 = __this->___Data;
 		(&V_6)->___Data = L_16;
@@ -3204,11 +3204,11 @@ IL_000a:
 		(&V_6)->___Length = L_18;
 		(&V_6)->___SegmentWidth = ((int32_t)1024);
 		SegmentSortMerge_t160AB9A147325BBCD9FD17052EA70C51F2678ADE L_19 = V_6;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1141>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1141>
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_20 = V_4;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_21;
 		L_21 = IJobExtensions_Schedule_TisSegmentSortMerge_t160AB9A147325BBCD9FD17052EA70C51F2678ADE_mA4BB52B8C50E9D7BE3C869F9F191B4B6249D127C(L_19, L_20, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1142>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1142>
 		return L_21;
 	}
 }
@@ -3229,7 +3229,7 @@ IL2CPP_EXTERN_C  JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 SortJob_2_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90353
+// Method Definition Index: 90370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 SortJob_2_Schedule_m998B8D3F60028D49ED6C4FDCD51C0D7DDE0A06D8_gshared (SortJob_2_tDB67B50B08B8389A927E0B7A9511837C077A6F4A* __this, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___0_inputDeps, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_SegmentSort_t0236B47D56F52C406634EB3ED7298778FF08A3B7 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 1));
@@ -3250,7 +3250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE0
 	SegmentSortMerge_t7F8682B81EA201C79A53AD5EAF006B5F8615A74B V_6 = alloca(SizeOf_SegmentSortMerge_t8F21EAAD459DA0454C80E22FED2D1A864A121F6D);
 	memset(V_6, 0, SizeOf_SegmentSortMerge_t8F21EAAD459DA0454C80E22FED2D1A864A121F6D);
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1127>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1127>
 		int32_t L_0 = *(int32_t*)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0),2));
 		if (L_0)
 		{
@@ -3258,30 +3258,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE0
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1128>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1128>
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_1 = ___0_inputDeps;
 		return L_1;
 	}
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1129>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1129>
 		int32_t L_2 = *(int32_t*)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0),2));
 		V_0 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_2, ((int32_t)1023)))/((int32_t)1024)));
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1132>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1132>
 		int32_t L_3;
 		L_3 = JobsUtility_get_ThreadIndexCount_m88A954344398143540618B35943F863B92465676(NULL);
 		V_1 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1136>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1136>
 		int32_t L_4 = V_1;
 		int32_t L_5;
 		L_5 = math_max_m9083201D37A8ED0157B127B5878D9B7F3A2A40BE_inline(1, L_4, NULL);
 		V_2 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1137>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1137>
 		int32_t L_6 = V_0;
 		int32_t L_7 = V_2;
 		V_3 = ((int32_t)(L_6/L_7));
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1138>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1138>
 		il2cpp_codegen_initobj((SegmentSort_tFC9B424627D4B0067FF3CC4718431C1A8F57DDE7*)V_5, SizeOf_SegmentSort_t0236B47D56F52C406634EB3ED7298778FF08A3B7);
 		Il2CppFullySharedGenericStruct* L_8 = *(Il2CppFullySharedGenericStruct**)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0),0));
 		il2cpp_codegen_write_instance_field_data<Il2CppFullySharedGenericStruct*>((SegmentSort_tFC9B424627D4B0067FF3CC4718431C1A8F57DDE7*)V_5, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 1),0), L_8);
@@ -3291,14 +3291,14 @@ IL_000a:
 		il2cpp_codegen_write_instance_field_data<int32_t>((SegmentSort_tFC9B424627D4B0067FF3CC4718431C1A8F57DDE7*)V_5, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 1),2), L_10);
 		il2cpp_codegen_write_instance_field_data<int32_t>((SegmentSort_tFC9B424627D4B0067FF3CC4718431C1A8F57DDE7*)V_5, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 1),3), ((int32_t)1024));
 		il2cpp_codegen_memcpy(L_11, V_5, SizeOf_SegmentSort_t0236B47D56F52C406634EB3ED7298778FF08A3B7);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1139>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1139>
 		int32_t L_12 = V_0;
 		int32_t L_13 = V_3;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = ___0_inputDeps;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15;
 		L_15 = InvokerFuncInvoker4< JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08, SegmentSort_tFC9B424627D4B0067FF3CC4718431C1A8F57DDE7, int32_t, int32_t, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4), NULL, L_11, L_12, L_13, L_14);
 		V_4 = L_15;
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1140>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1140>
 		il2cpp_codegen_initobj((SegmentSortMerge_t7F8682B81EA201C79A53AD5EAF006B5F8615A74B*)V_6, SizeOf_SegmentSortMerge_t8F21EAAD459DA0454C80E22FED2D1A864A121F6D);
 		Il2CppFullySharedGenericStruct* L_16 = *(Il2CppFullySharedGenericStruct**)il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0),0));
 		il2cpp_codegen_write_instance_field_data<Il2CppFullySharedGenericStruct*>((SegmentSortMerge_t7F8682B81EA201C79A53AD5EAF006B5F8615A74B*)V_6, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 5),0), L_16);
@@ -3308,11 +3308,11 @@ IL_000a:
 		il2cpp_codegen_write_instance_field_data<int32_t>((SegmentSortMerge_t7F8682B81EA201C79A53AD5EAF006B5F8615A74B*)V_6, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 5),2), L_18);
 		il2cpp_codegen_write_instance_field_data<int32_t>((SegmentSortMerge_t7F8682B81EA201C79A53AD5EAF006B5F8615A74B*)V_6, il2cpp_rgctx_field(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 5),3), ((int32_t)1024));
 		il2cpp_codegen_memcpy(L_19, V_6, SizeOf_SegmentSortMerge_t8F21EAAD459DA0454C80E22FED2D1A864A121F6D);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1141>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1141>
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_20 = V_4;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_21;
 		L_21 = InvokerFuncInvoker2< JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08, SegmentSortMerge_t7F8682B81EA201C79A53AD5EAF006B5F8615A74B, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6), NULL, L_19, L_20);
-		//<source_info:./Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections/NativeSort.cs:1142>
+		//<source_info:./Library/PackageCache/com.unity.collections@9796e5ee0d9e/Unity.Collections/NativeSort.cs:1142>
 		return L_21;
 	}
 }
@@ -19750,11 +19750,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Span_1_tDADAC65069DFE6B57C458109115ECD795ED39
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 71904
+// Method Definition Index: 71905
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t math_max_m9083201D37A8ED0157B127B5878D9B7F3A2A40BE_inline (int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.mathematics@8017b507cc74/Unity.Mathematics/math.cs:987>
+		//<source_info:./Library/PackageCache/com.unity.mathematics@19a9377c4ffa/Unity.Mathematics/math.cs:987>
 		int32_t L_0 = ___0_x;
 		int32_t L_1 = ___1_y;
 		if ((((int32_t)L_0) > ((int32_t)L_1)))
