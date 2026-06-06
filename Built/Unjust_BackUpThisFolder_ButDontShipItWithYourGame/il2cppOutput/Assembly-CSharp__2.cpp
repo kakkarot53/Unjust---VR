@@ -641,7 +641,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral66341B56B0DF5D2B9828F53BCC8EA02586D6A73F
 IL2CPP_EXTERN_C String_t* _stringLiteral69FD9483EE5683D4D06DA358E767C28190B93AD1;
 IL2CPP_EXTERN_C String_t* _stringLiteral6EB32374D421D7193B561D1779EB29816613AB39;
 IL2CPP_EXTERN_C String_t* _stringLiteral6FC9B5CF850A2BDCD1A7E812A87D51AD8F06A4E7;
-IL2CPP_EXTERN_C String_t* _stringLiteral74039B74E251F28993E69E92CC79772CF330391E;
 IL2CPP_EXTERN_C String_t* _stringLiteral750B5D4A4264FD334A67884AAB0BE66CEFBFD9B0;
 IL2CPP_EXTERN_C String_t* _stringLiteral76C690EAAE279AD30529B27E4A118A2C6308A575;
 IL2CPP_EXTERN_C String_t* _stringLiteral7A2E89F4A48195A2B91F565785D53689439A9FB3;
@@ -717,7 +716,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mEAD45137700A8BD1AB81EC997EA39EBC61608E29_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m48CDF2833781B20387F3D0F7D17D9263085577FC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* EnvironmentChange_U3CAwakeU3Eb__36_0_mC34ACA008488551E2721E449180A82B955EB33FC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* EnvironmentChange_U3CAwakeU3Eb__37_0_m7EC54620E9A275EE2B1437CBFF36CD0B0DD817D9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* FollowingTests_moveFollow_m5F6E84EE09965EAE8FDEB71ADA78DA8408C17516_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m026EB44DB6238F13E2AFBECF1FBBE924CB1B040A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_TryGetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mF43BB12CD42D366843337AF225C559E1A33CFCEB_RuntimeMethod_var;
@@ -3824,6 +3823,7 @@ struct EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471  : public Mon
 	LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6* ___lensDistortion;
 	ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86* ___colorAdjustments;
 	Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC* ___vignette;
+	ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* ___shadows;
 	InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563* ___input;
 	bool ___isColdState;
 	float ___glitchTimer;
@@ -4009,8 +4009,8 @@ struct SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358  : public MonoB
 	InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* ___televisions;
 	InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* ___startDoor;
 	InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* ___finishDoor;
-	Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* ___vol;
-	ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* ___shadows;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___extraDecor;
+	EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* ___m_post;
 	int32_t ___disabledCount;
 };
 struct Testing240_t707F7276B3B373715783321442AF97893516ACB9  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -6042,6 +6042,10 @@ inline bool VolumeProfile_TryGet_TisVignette_t77147DD5FEEB4476AF22BD98255F801073
 {
 	return ((  bool (*) (VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1*, Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC**, const RuntimeMethod*))VolumeProfile_TryGet_TisRuntimeObject_m6394BC3A9A95358ECE114A783689654E1E2DAC44_gshared)(__this, ___0_component, method);
 }
+inline bool VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D (VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* __this, ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C** ___0_component, const RuntimeMethod* method)
+{
+	return ((  bool (*) (VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1*, ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C**, const RuntimeMethod*))VolumeProfile_TryGet_TisRuntimeObject_m6394BC3A9A95358ECE114A783689654E1E2DAC44_gshared)(__this, ___0_component, method);
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_SetGroupState_m255CEBEABFBAF9D6ABB5A74A6E4221BEE84E4734 (EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* __this, GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___0_array, bool ___1_state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_CacheLightBaselines_m07CA8B6CB61C896DC1102754356FCD72639FA59C (EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* __this, LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* ___0_lights, Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* ___1_targetDictionary, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_m2B3950D5D8FE98F77940ADC0C08032A432CB4A11 (EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* __this, const RuntimeMethod* method) ;
@@ -6203,11 +6207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D__ctor_m3BA82E87442B7F69E118477
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D_SetPixels_mAE0CDFA15FA96F840D7FFADC31405D8AF20D9073 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* ___0_colors, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D_Apply_mA014182C9EE0BBF6EEE3B286854F29E50EB972DC (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, const RuntimeMethod* method) ;
-inline bool VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D (VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* __this, ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C** ___0_component, const RuntimeMethod* method)
-{
-	return ((  bool (*) (VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1*, ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C**, const RuntimeMethod*))VolumeProfile_TryGet_TisRuntimeObject_m6394BC3A9A95358ECE114A783689654E1E2DAC44_gshared)(__this, ___0_component, method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_SetactiveStateExtraDecor_mACBE593B21D4458D193AB2A43EA8503842C7725A (SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358* __this, bool ___0_active, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Component_CompareTag_mE6F8897E84F12DF12D302FFC4D58204D51096FC5 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, String_t* ___0_tag, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InteractibleDoor_CloseDoor_mA0B7A0BD7FA695FBB4B5476D53BDCA8FFFC5C2A9 (InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InteractibleTV_SetManager_mDF458D48ECC7748277AB8DCED5D234F773892187_inline (InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* __this, SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358* ___0_mng, const RuntimeMethod* method) ;
@@ -18971,16 +18971,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_Awake_mDFFBCBFCC5C319F
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EnvironmentChange_U3CAwakeU3Eb__36_0_mC34ACA008488551E2721E449180A82B955EB33FC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EnvironmentChange_U3CAwakeU3Eb__37_0_m7EC54620E9A275EE2B1437CBFF36CD0B0DD817D9_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F_m01AA3D5FEBD16BC5FDE19D8D71A1483C29EF3A5F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86_m7D49CE05708BE8B30880D2A50E2BB895F3708D90_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisLensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6_mC8E5B111EFF35DA84B66BDCC2A03AA9E07B1B7E5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisVignette_t77147DD5FEEB4476AF22BD98255F8010738985DC_mE8244CE93377BC8821F5278FE70551C4B60D7D7E_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	InteractionActions_tD3FDFCAF35435255EFE5970036720AE283A631A4 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:79>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:80>
 		EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* L_0 = ((EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_StaticFields*)il2cpp_codegen_static_fields_for(EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -18991,137 +18996,136 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_Awake_mDFFBCBFCC5C319F
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:80>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:81>
 		((EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_StaticFields*)il2cpp_codegen_static_fields_for(EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_il2cpp_TypeInfo_var))->___instance = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&((EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_StaticFields*)il2cpp_codegen_static_fields_for(EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_il2cpp_TypeInfo_var))->___instance), (void*)__this);
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:85>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:86>
 		InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563* L_2 = (InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563*)il2cpp_codegen_object_new(InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563_il2cpp_TypeInfo_var);
 		InputSystem__ctor_m172C3F8B560157DA97E05A29C8E724CBEB107963(L_2, NULL);
 		__this->___input = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___input), (void*)L_2);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:86>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:87>
 		InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563* L_3 = __this->___input;
 		NullCheck(L_3);
 		InteractionActions_tD3FDFCAF35435255EFE5970036720AE283A631A4 L_4;
 		L_4 = InputSystem_get_Interaction_m448EB780C8AE38E049C5DC4C9EA904EEDD41B42B(L_3, NULL);
 		V_0 = L_4;
 		InteractionActions_Enable_m1270E3D6CC2250A8D9F89309DCE32942A73B7E95((&V_0), NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:88>
 		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:89>
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:90>
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:91>
-		InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563* L_5 = __this->___input;
-		NullCheck(L_5);
-		InteractionActions_tD3FDFCAF35435255EFE5970036720AE283A631A4 L_6;
-		L_6 = InputSystem_get_Interaction_m448EB780C8AE38E049C5DC4C9EA904EEDD41B42B(L_5, NULL);
-		V_0 = L_6;
-		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_7;
-		L_7 = InteractionActions_get_RoomShift_mFD3775A3F83FA9CF6D3074F7A48926898DB45D18((&V_0), NULL);
-		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_8 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
-		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_8, __this, (intptr_t)((void*)EnvironmentChange_U3CAwakeU3Eb__36_0_mC34ACA008488551E2721E449180A82B955EB33FC_RuntimeMethod_var), NULL);
+		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_5 = __this->___globalVolume;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_00c8;
+		}
+	}
+	{
+		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_7 = __this->___globalVolume;
 		NullCheck(L_7);
-		InputAction_add_started_m850C46EBBEEFB3F9760AA83BFD6ECA00850657E5(L_7, L_8, NULL);
+		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_8;
+		L_8 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_7, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_9)
+		{
+			goto IL_00c8;
+		}
+	}
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:91>
+		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_10 = __this->___globalVolume;
+		NullCheck(L_10);
+		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_11;
+		L_11 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_10, NULL);
+		ChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F** L_12 = (ChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F**)(&__this->___chromaticAberration);
+		NullCheck(L_11);
+		bool L_13;
+		L_13 = VolumeProfile_TryGet_TisChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F_m01AA3D5FEBD16BC5FDE19D8D71A1483C29EF3A5F(L_11, L_12, VolumeProfile_TryGet_TisChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F_m01AA3D5FEBD16BC5FDE19D8D71A1483C29EF3A5F_RuntimeMethod_var);
 		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:92>
+		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_14 = __this->___globalVolume;
+		NullCheck(L_14);
+		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_15;
+		L_15 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_14, NULL);
+		LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6** L_16 = (LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6**)(&__this->___lensDistortion);
+		NullCheck(L_15);
+		bool L_17;
+		L_17 = VolumeProfile_TryGet_TisLensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6_mC8E5B111EFF35DA84B66BDCC2A03AA9E07B1B7E5(L_15, L_16, VolumeProfile_TryGet_TisLensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6_mC8E5B111EFF35DA84B66BDCC2A03AA9E07B1B7E5_RuntimeMethod_var);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:93>
+		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_18 = __this->___globalVolume;
+		NullCheck(L_18);
+		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_19;
+		L_19 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_18, NULL);
+		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86** L_20 = (ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86**)(&__this->___colorAdjustments);
+		NullCheck(L_19);
+		bool L_21;
+		L_21 = VolumeProfile_TryGet_TisColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86_m7D49CE05708BE8B30880D2A50E2BB895F3708D90(L_19, L_20, VolumeProfile_TryGet_TisColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86_m7D49CE05708BE8B30880D2A50E2BB895F3708D90_RuntimeMethod_var);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:94>
+		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_22 = __this->___globalVolume;
+		NullCheck(L_22);
+		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_23;
+		L_23 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_22, NULL);
+		Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC** L_24 = (Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC**)(&__this->___vignette);
+		NullCheck(L_23);
+		bool L_25;
+		L_25 = VolumeProfile_TryGet_TisVignette_t77147DD5FEEB4476AF22BD98255F8010738985DC_mE8244CE93377BC8821F5278FE70551C4B60D7D7E(L_23, L_24, VolumeProfile_TryGet_TisVignette_t77147DD5FEEB4476AF22BD98255F8010738985DC_mE8244CE93377BC8821F5278FE70551C4B60D7D7E_RuntimeMethod_var);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:95>
+		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_26 = __this->___globalVolume;
+		NullCheck(L_26);
+		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_27;
+		L_27 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_26, NULL);
+		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C** L_28 = (ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C**)(&__this->___shadows);
+		NullCheck(L_27);
+		bool L_29;
+		L_29 = VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D(L_27, L_28, VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D_RuntimeMethod_var);
+	}
+
+IL_00c8:
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:100>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:101>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:102>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:103>
+		InputSystem_tA37119576B0F22E64D065F2C2E728B80E2E0A563* L_30 = __this->___input;
+		NullCheck(L_30);
+		InteractionActions_tD3FDFCAF35435255EFE5970036720AE283A631A4 L_31;
+		L_31 = InputSystem_get_Interaction_m448EB780C8AE38E049C5DC4C9EA904EEDD41B42B(L_30, NULL);
+		V_0 = L_31;
+		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_32;
+		L_32 = InteractionActions_get_RoomShift_mFD3775A3F83FA9CF6D3074F7A48926898DB45D18((&V_0), NULL);
+		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_33 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
+		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_33, __this, (intptr_t)((void*)EnvironmentChange_U3CAwakeU3Eb__37_0_m7EC54620E9A275EE2B1437CBFF36CD0B0DD817D9_RuntimeMethod_var), NULL);
+		NullCheck(L_32);
+		InputAction_add_started_m850C46EBBEEFB3F9760AA83BFD6ECA00850657E5(L_32, L_33, NULL);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:104>
 		return;
 	}
 }
 // Method Definition Index: 105124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_Start_m86B74609FF44097E889B9ED591E67FAA94B81E0A (EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F_m01AA3D5FEBD16BC5FDE19D8D71A1483C29EF3A5F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86_m7D49CE05708BE8B30880D2A50E2BB895F3708D90_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisLensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6_mC8E5B111EFF35DA84B66BDCC2A03AA9E07B1B7E5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisVignette_t77147DD5FEEB4476AF22BD98255F8010738985DC_mE8244CE93377BC8821F5278FE70551C4B60D7D7E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:96>
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_0 = __this->___globalVolume;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_1)
-		{
-			goto IL_007d;
-		}
-	}
-	{
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_2 = __this->___globalVolume;
-		NullCheck(L_2);
-		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_3;
-		L_3 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_4)
-		{
-			goto IL_007d;
-		}
-	}
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:98>
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_5 = __this->___globalVolume;
-		NullCheck(L_5);
-		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_6;
-		L_6 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_5, NULL);
-		ChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F** L_7 = (ChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F**)(&__this->___chromaticAberration);
-		NullCheck(L_6);
-		bool L_8;
-		L_8 = VolumeProfile_TryGet_TisChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F_m01AA3D5FEBD16BC5FDE19D8D71A1483C29EF3A5F(L_6, L_7, VolumeProfile_TryGet_TisChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F_m01AA3D5FEBD16BC5FDE19D8D71A1483C29EF3A5F_RuntimeMethod_var);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:99>
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_9 = __this->___globalVolume;
-		NullCheck(L_9);
-		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_10;
-		L_10 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_9, NULL);
-		LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6** L_11 = (LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6**)(&__this->___lensDistortion);
-		NullCheck(L_10);
-		bool L_12;
-		L_12 = VolumeProfile_TryGet_TisLensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6_mC8E5B111EFF35DA84B66BDCC2A03AA9E07B1B7E5(L_10, L_11, VolumeProfile_TryGet_TisLensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6_mC8E5B111EFF35DA84B66BDCC2A03AA9E07B1B7E5_RuntimeMethod_var);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:100>
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_13 = __this->___globalVolume;
-		NullCheck(L_13);
-		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_14;
-		L_14 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_13, NULL);
-		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86** L_15 = (ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86**)(&__this->___colorAdjustments);
-		NullCheck(L_14);
-		bool L_16;
-		L_16 = VolumeProfile_TryGet_TisColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86_m7D49CE05708BE8B30880D2A50E2BB895F3708D90(L_14, L_15, VolumeProfile_TryGet_TisColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86_m7D49CE05708BE8B30880D2A50E2BB895F3708D90_RuntimeMethod_var);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:101>
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_17 = __this->___globalVolume;
-		NullCheck(L_17);
-		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_18;
-		L_18 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_17, NULL);
-		Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC** L_19 = (Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC**)(&__this->___vignette);
-		NullCheck(L_18);
-		bool L_20;
-		L_20 = VolumeProfile_TryGet_TisVignette_t77147DD5FEEB4476AF22BD98255F8010738985DC_mE8244CE93377BC8821F5278FE70551C4B60D7D7E(L_18, L_19, VolumeProfile_TryGet_TisVignette_t77147DD5FEEB4476AF22BD98255F8010738985DC_mE8244CE93377BC8821F5278FE70551C4B60D7D7E_RuntimeMethod_var);
-	}
-
-IL_007d:
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:106>
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_21 = __this->___warmGameObjs;
-		EnvironmentChange_SetGroupState_m255CEBEABFBAF9D6ABB5A74A6E4221BEE84E4734(__this, L_21, (bool)1, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:107>
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_22 = __this->___coldGameObjs;
-		EnvironmentChange_SetGroupState_m255CEBEABFBAF9D6ABB5A74A6E4221BEE84E4734(__this, L_22, (bool)0, NULL);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:109>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0 = __this->___warmGameObjs;
+		EnvironmentChange_SetGroupState_m255CEBEABFBAF9D6ABB5A74A6E4221BEE84E4734(__this, L_0, (bool)1, NULL);
 		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:110>
-		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_23 = __this->___warmLights;
-		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_24 = __this->___warmLightBaselines;
-		EnvironmentChange_CacheLightBaselines_m07CA8B6CB61C896DC1102754356FCD72639FA59C(__this, L_23, L_24, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:111>
-		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_25 = __this->___coldLights;
-		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_26 = __this->___coldLightBaselines;
-		EnvironmentChange_CacheLightBaselines_m07CA8B6CB61C896DC1102754356FCD72639FA59C(__this, L_25, L_26, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:118>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___coldGameObjs;
+		EnvironmentChange_SetGroupState_m255CEBEABFBAF9D6ABB5A74A6E4221BEE84E4734(__this, L_1, (bool)0, NULL);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:113>
+		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_2 = __this->___warmLights;
+		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_3 = __this->___warmLightBaselines;
+		EnvironmentChange_CacheLightBaselines_m07CA8B6CB61C896DC1102754356FCD72639FA59C(__this, L_2, L_3, NULL);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:114>
+		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_4 = __this->___coldLights;
+		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_5 = __this->___coldLightBaselines;
+		EnvironmentChange_CacheLightBaselines_m07CA8B6CB61C896DC1102754356FCD72639FA59C(__this, L_4, L_5, NULL);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:121>
 		return;
 	}
 }
@@ -19129,7 +19133,7 @@ IL_007d:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_Update_mAABBA1A1A2A59C2B6C185829CD1D4E7F086D8F8F (EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:122>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:125>
 		bool L_0 = __this->___isGlitching;
 		if (!L_0)
 		{
@@ -19137,13 +19141,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_Update_mAABBA1A1A2A59C
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:124>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:127>
 		EnvironmentChange_AnimateHeadacheEffect_m2B3950D5D8FE98F77940ADC0C08032A432CB4A11(__this, NULL);
 	}
 
 IL_000e:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:131>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:134>
 		return;
 	}
 }
@@ -19157,7 +19161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_TriggerDimensionShift_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:139>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:142>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___mainEars;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19178,7 +19182,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_TriggerDimensionShift_
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:141>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:144>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___mainEars;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_5 = __this->___headachePing;
 		NullCheck(L_4);
@@ -19187,9 +19191,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_TriggerDimensionShift_
 
 IL_002d:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:151>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:154>
 		EnvironmentChange_TemperatureShift_mF9B5686B3CBA8728159C4D67D0038E3D224DC33B(__this, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:152>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:155>
 		return;
 	}
 }
@@ -19236,10 +19240,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_TemperatureShift_mF9B5
 	int32_t G_B46_0 = 0;
 	Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* G_B46_1 = NULL;
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:156>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:159>
 		bool L_0 = __this->___isColdState;
 		__this->___isColdState = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:159>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:162>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___warmGameObjs;
 		if (!L_1)
 		{
@@ -19254,7 +19258,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_TemperatureShift_mF9B5
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:161>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:164>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_3 = __this->___warmGameObjs;
 		V_0 = L_3;
 		V_1 = 0;
@@ -19263,14 +19267,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_TemperatureShift_mF9B5
 
 IL_002a:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:161>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:164>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_4 = V_0;
 		int32_t L_5 = V_1;
 		NullCheck(L_4);
 		int32_t L_6 = L_5;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
 		V_2 = L_7;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:163>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:166>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -19281,7 +19285,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:163>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:166>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = V_2;
 		bool L_11 = __this->___isColdState;
 		NullCheck(L_10);
@@ -19296,7 +19300,7 @@ IL_0046:
 
 IL_004a:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:161>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:164>
 		int32_t L_13 = V_1;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_14 = V_0;
 		NullCheck(L_14);
@@ -19306,7 +19310,7 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:165>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:168>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_15 = __this->___coldGameObjs;
 		V_0 = L_15;
 		V_1 = 0;
@@ -19315,14 +19319,14 @@ IL_004a:
 
 IL_005b:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:165>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:168>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_16 = V_0;
 		int32_t L_17 = V_1;
 		NullCheck(L_16);
 		int32_t L_18 = L_17;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
 		V_3 = L_19;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:167>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:170>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -19333,7 +19337,7 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:167>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:170>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = V_3;
 		bool L_23 = __this->___isColdState;
 		NullCheck(L_22);
@@ -19348,7 +19352,7 @@ IL_0074:
 
 IL_0078:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:165>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:168>
 		int32_t L_25 = V_1;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_26 = V_0;
 		NullCheck(L_26);
@@ -19360,7 +19364,7 @@ IL_0078:
 
 IL_007e:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:172>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:175>
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_27 = __this->___warmLights;
 		V_4 = L_27;
 		V_1 = 0;
@@ -19369,14 +19373,14 @@ IL_007e:
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:172>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:175>
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_28 = V_4;
 		int32_t L_29 = V_1;
 		NullCheck(L_28);
 		int32_t L_30 = L_29;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_31 = (L_28)->GetAt(static_cast<il2cpp_array_size_t>(L_30));
 		V_5 = L_31;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:174>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:177>
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_32 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_33;
@@ -19387,7 +19391,7 @@ IL_008a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:175>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:178>
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_34 = V_5;
 		bool L_35 = __this->___isColdState;
 		if (L_35)
@@ -19415,7 +19419,7 @@ IL_00b2:
 	{
 		NullCheck(G_B17_1);
 		Light_set_colorTemperature_m566435E6BA75779C19F6B0BACDC37192D9CC4C43(G_B17_1, G_B17_0, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:177>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:180>
 		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_38 = __this->___warmLightBaselines;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_39 = V_5;
 		NullCheck(L_38);
@@ -19448,7 +19452,7 @@ IL_00cf:
 IL_00dc:
 	{
 		V_6 = G_B20_0;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:178>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:181>
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_46 = V_5;
 		bool L_47 = __this->___isColdState;
 		if (L_47)
@@ -19487,7 +19491,7 @@ IL_00fa:
 
 IL_00fe:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:172>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:175>
 		int32_t L_52 = V_1;
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_53 = V_4;
 		NullCheck(L_53);
@@ -19497,7 +19501,7 @@ IL_00fe:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:181>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:184>
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_54 = __this->___coldLights;
 		V_4 = L_54;
 		V_1 = 0;
@@ -19506,14 +19510,14 @@ IL_00fe:
 
 IL_0111:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:181>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:184>
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_55 = V_4;
 		int32_t L_56 = V_1;
 		NullCheck(L_55);
 		int32_t L_57 = L_56;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_58 = (L_55)->GetAt(static_cast<il2cpp_array_size_t>(L_57));
 		V_7 = L_58;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:183>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:186>
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_59 = V_7;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_60;
@@ -19524,7 +19528,7 @@ IL_0111:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:185>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:188>
 		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_61 = __this->___coldLightBaselines;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_62 = V_7;
 		NullCheck(L_61);
@@ -19557,7 +19561,7 @@ IL_0139:
 IL_0146:
 	{
 		V_8 = G_B31_0;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:186>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:189>
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_69 = V_7;
 		bool L_70 = __this->___isColdState;
 		if (L_70)
@@ -19596,7 +19600,7 @@ IL_0164:
 
 IL_0168:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:181>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:184>
 		int32_t L_75 = V_1;
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_76 = V_4;
 		NullCheck(L_76);
@@ -19606,7 +19610,7 @@ IL_0168:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:189>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:192>
 		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_77 = __this->___warmVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_78;
@@ -19617,7 +19621,7 @@ IL_0168:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:191>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:194>
 		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_79 = __this->___warmVolume;
 		bool L_80 = __this->___isColdState;
 		if (L_80)
@@ -19647,7 +19651,7 @@ IL_018f:
 
 IL_0195:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:193>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:196>
 		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_81 = __this->___coldVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_82;
@@ -19658,7 +19662,7 @@ IL_0195:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:195>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:198>
 		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_83 = __this->___coldVolume;
 		bool L_84 = __this->___isColdState;
 		if (L_84)
@@ -19688,7 +19692,7 @@ IL_01b5:
 
 IL_01bb:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:197>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:200>
 		return;
 	}
 }
@@ -19702,7 +19706,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_StartHeadacheEffect_m5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:245>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:248>
 		bool L_0 = __this->___isGlitching;
 		if (L_0)
 		{
@@ -19722,17 +19726,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_StartHeadacheEffect_m5
 
 IL_0016:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:245>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:248>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:247>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:250>
 		__this->___isGlitching = (bool)1;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:248>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:251>
 		__this->___glitchTimer = (0.0f);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:249>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:252>
 		return;
 	}
 }
@@ -19743,16 +19747,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:253>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:256>
 		float L_0 = __this->___glitchTimer;
 		float L_1;
 		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___glitchTimer = ((float)il2cpp_codegen_add(L_0, L_1));
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:254>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:257>
 		float L_2 = __this->___startupDur;
 		float L_3 = __this->___fadeDur;
 		V_0 = ((float)il2cpp_codegen_add(L_2, L_3));
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:256>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:259>
 		float L_4 = __this->___glitchTimer;
 		float L_5 = __this->___startupDur;
 		if ((!(((float)L_4) <= ((float)L_5))))
@@ -19761,11 +19765,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:259>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:262>
 		float L_6 = __this->___glitchTimer;
 		float L_7 = __this->___startupDur;
 		V_1 = ((float)(L_6/L_7));
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:260>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:263>
 		ChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F* L_8 = __this->___chromaticAberration;
 		NullCheck(L_8);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_9 = L_8->___intensity;
@@ -19776,7 +19780,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_
 		L_13 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_10, L_11, L_12, NULL);
 		NullCheck(L_9);
 		VirtualActionInvoker1< float >::Invoke(15, L_9, L_13);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:261>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:264>
 		LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6* L_14 = __this->___lensDistortion;
 		NullCheck(L_14);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_15 = L_14->___intensity;
@@ -19787,7 +19791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_
 		L_19 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_16, L_17, L_18, NULL);
 		NullCheck(L_15);
 		VirtualActionInvoker1< float >::Invoke(15, L_15, L_19);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:262>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:265>
 		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86* L_20 = __this->___colorAdjustments;
 		NullCheck(L_20);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_21 = L_20->___contrast;
@@ -19798,7 +19802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_
 		L_25 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_22, L_23, L_24, NULL);
 		NullCheck(L_21);
 		VirtualActionInvoker1< float >::Invoke(15, L_21, L_25);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:263>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:266>
 		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86* L_26 = __this->___colorAdjustments;
 		NullCheck(L_26);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_27 = L_26->___saturation;
@@ -19809,7 +19813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_
 		L_31 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_28, L_29, L_30, NULL);
 		NullCheck(L_27);
 		VirtualActionInvoker1< float >::Invoke(15, L_27, L_31);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:264>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:267>
 		Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC* L_32 = __this->___vignette;
 		NullCheck(L_32);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_33 = L_32->___intensity;
@@ -19825,7 +19829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_AnimateHeadacheEffect_
 
 IL_00ea:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:267>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:270>
 		float L_38 = __this->___glitchTimer;
 		float L_39 = V_0;
 		if ((!(((float)L_38) <= ((float)L_39))))
@@ -19834,12 +19838,12 @@ IL_00ea:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:270>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:273>
 		float L_40 = __this->___glitchTimer;
 		float L_41 = __this->___startupDur;
 		float L_42 = __this->___fadeDur;
 		V_2 = ((float)(((float)il2cpp_codegen_subtract(L_40, L_41))/L_42));
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:271>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:274>
 		ChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F* L_43 = __this->___chromaticAberration;
 		NullCheck(L_43);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_44 = L_43->___intensity;
@@ -19850,7 +19854,7 @@ IL_00ea:
 		L_48 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_45, L_46, L_47, NULL);
 		NullCheck(L_44);
 		VirtualActionInvoker1< float >::Invoke(15, L_44, L_48);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:272>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:275>
 		LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6* L_49 = __this->___lensDistortion;
 		NullCheck(L_49);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_50 = L_49->___intensity;
@@ -19861,7 +19865,7 @@ IL_00ea:
 		L_54 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_51, L_52, L_53, NULL);
 		NullCheck(L_50);
 		VirtualActionInvoker1< float >::Invoke(15, L_50, L_54);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:273>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:276>
 		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86* L_55 = __this->___colorAdjustments;
 		NullCheck(L_55);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_56 = L_55->___contrast;
@@ -19872,7 +19876,7 @@ IL_00ea:
 		L_60 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_57, L_58, L_59, NULL);
 		NullCheck(L_56);
 		VirtualActionInvoker1< float >::Invoke(15, L_56, L_60);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:274>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:277>
 		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86* L_61 = __this->___colorAdjustments;
 		NullCheck(L_61);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_62 = L_61->___saturation;
@@ -19883,7 +19887,7 @@ IL_00ea:
 		L_66 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_63, L_64, L_65, NULL);
 		NullCheck(L_62);
 		VirtualActionInvoker1< float >::Invoke(15, L_62, L_66);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:275>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:278>
 		Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC* L_67 = __this->___vignette;
 		NullCheck(L_67);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_68 = L_67->___intensity;
@@ -19899,44 +19903,44 @@ IL_00ea:
 
 IL_01b6:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:283>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:286>
 		ChromaticAberration_t84EAB576773C3AD4DE77A13952B487F9DA10DA9F* L_73 = __this->___chromaticAberration;
 		NullCheck(L_73);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_74 = L_73->___intensity;
 		float L_75 = __this->___minChrome;
 		NullCheck(L_74);
 		VirtualActionInvoker1< float >::Invoke(15, L_74, L_75);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:284>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:287>
 		LensDistortion_t54FF310512B37DD2D9DBEEF9DA9DDF1F0A2082C6* L_76 = __this->___lensDistortion;
 		NullCheck(L_76);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_77 = L_76->___intensity;
 		float L_78 = __this->___minLensDistortion;
 		NullCheck(L_77);
 		VirtualActionInvoker1< float >::Invoke(15, L_77, L_78);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:285>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:288>
 		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86* L_79 = __this->___colorAdjustments;
 		NullCheck(L_79);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_80 = L_79->___contrast;
 		float L_81 = __this->___minContrast;
 		NullCheck(L_80);
 		VirtualActionInvoker1< float >::Invoke(15, L_80, L_81);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:286>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:289>
 		ColorAdjustments_t97EE64C6DB384E5F6BC48C3FA13C207E8FC87A86* L_82 = __this->___colorAdjustments;
 		NullCheck(L_82);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_83 = L_82->___saturation;
 		float L_84 = __this->___minSaturation;
 		NullCheck(L_83);
 		VirtualActionInvoker1< float >::Invoke(15, L_83, L_84);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:287>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:290>
 		Vignette_t77147DD5FEEB4476AF22BD98255F8010738985DC* L_85 = __this->___vignette;
 		NullCheck(L_85);
 		ClampedFloatParameter_tCD9F742962EAA50F658BC77595AB025D9EF8DEB8* L_86 = L_85->___intensity;
 		float L_87 = __this->___minVignette;
 		NullCheck(L_86);
 		VirtualActionInvoker1< float >::Invoke(15, L_86, L_87);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:290>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:293>
 		__this->___isGlitching = (bool)0;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:292>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:295>
 		return;
 	}
 }
@@ -19955,7 +19959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_CacheLightBaselines_m0
 	int32_t V_1 = 0;
 	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:297>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:300>
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_0 = ___0_lights;
 		if (L_0)
 		{
@@ -19963,13 +19967,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_CacheLightBaselines_m0
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:297>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:300>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:298>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:301>
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_1 = ___0_lights;
 		V_0 = L_1;
 		V_1 = 0;
@@ -19978,14 +19982,14 @@ IL_0004:
 
 IL_000a:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:298>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:301>
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_2 = V_0;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		V_2 = L_5;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:300>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:303>
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_6 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -20007,7 +20011,7 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:302>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:305>
 		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_11 = ___1_targetDictionary;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_12 = V_2;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_13 = V_2;
@@ -20026,7 +20030,7 @@ IL_002d:
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:298>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:301>
 		int32_t L_16 = V_1;
 		LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* L_17 = V_0;
 		NullCheck(L_17);
@@ -20036,7 +20040,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:305>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:308>
 		return;
 	}
 }
@@ -20053,7 +20057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_SetGroupState_m255CEBE
 	int32_t V_1 = 0;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:309>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:312>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0 = ___0_array;
 		if (L_0)
 		{
@@ -20061,13 +20065,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_SetGroupState_m255CEBE
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:309>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:312>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:310>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:313>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = ___0_array;
 		V_0 = L_1;
 		V_1 = 0;
@@ -20076,14 +20080,14 @@ IL_0004:
 
 IL_000a:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:310>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:313>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_2 = V_0;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		V_2 = L_5;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:312>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:315>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -20094,7 +20098,7 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:312>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:315>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = V_2;
 		bool L_9 = ___1_state;
 		NullCheck(L_8);
@@ -20109,7 +20113,7 @@ IL_001e:
 
 IL_0022:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:310>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:313>
 		int32_t L_11 = V_1;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_12 = V_0;
 		NullCheck(L_12);
@@ -20119,7 +20123,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:314>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:317>
 		return;
 	}
 }
@@ -20160,12 +20164,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange__ctor_m408711B2E84CE45
 		__this->___minVignette = (0.25f);
 		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:48>
 		__this->___peakVignette = (0.5f);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:72>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:73>
 		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_0 = (Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D*)il2cpp_codegen_object_new(Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mFF296AAE6982595E3979C78B655F99A1730F9996(L_0, Dictionary_2__ctor_mFF296AAE6982595E3979C78B655F99A1730F9996_RuntimeMethod_var);
 		__this->___warmLightBaselines = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___warmLightBaselines), (void*)L_0);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:73>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:74>
 		Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D* L_1 = (Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D*)il2cpp_codegen_object_new(Dictionary_2_tEFC64899C462EAB497F5E9E323075CCE07C7809D_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mFF296AAE6982595E3979C78B655F99A1730F9996(L_1, Dictionary_2__ctor_mFF296AAE6982595E3979C78B655F99A1730F9996_RuntimeMethod_var);
 		__this->___coldLightBaselines = L_1;
@@ -20175,14 +20179,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange__ctor_m408711B2E84CE45
 	}
 }
 // Method Definition Index: 105133
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_U3CAwakeU3Eb__36_0_mC34ACA008488551E2721E449180A82B955EB33FC (EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_ctx, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnvironmentChange_U3CAwakeU3Eb__37_0_m7EC54620E9A275EE2B1437CBFF36CD0B0DD817D9 (EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_ctx, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:89>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:101>
 		EnvironmentChange_TriggerDimensionShift_mB041355E1B0D646EF7A589A5D2CACE6BE603F4AF(__this, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:90>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:102>
 		EnvironmentChange_StartHeadacheEffect_m56399E104778BBE497E9DFA2440E3B2EBAD4D301(__this, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:91>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/EnvironmentChange.cs:103>
 		return;
 	}
 }
@@ -25615,134 +25619,93 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_Start_mFB97EF40B73CFF1F0
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral74039B74E251F28993E69E92CC79772CF330391E);
 		s_Il2CppMethodInitialized = true;
 	}
 	InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* V_0 = NULL;
 	int32_t V_1 = 0;
 	InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:18>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:20>
 		__this->___disabledCount = 0;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:21>
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_0 = __this->___vol;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_1)
-		{
-			goto IL_003f;
-		}
-	}
-	{
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_2 = __this->___vol;
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:22>
+		EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* L_0 = ((EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_StaticFields*)il2cpp_codegen_static_fields_for(EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471_il2cpp_TypeInfo_var))->___instance;
+		__this->___m_post = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_post), (void*)L_0);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:24>
+		EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* L_1 = __this->___m_post;
+		NullCheck(L_1);
+		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* L_2 = L_1->___shadows;
 		NullCheck(L_2);
-		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_3;
-		L_3 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_4)
-		{
-			goto IL_003f;
-		}
-	}
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:23>
-		Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* L_5 = __this->___vol;
-		NullCheck(L_5);
-		VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* L_6;
-		L_6 = Volume_get_profile_mB157C4D67D52CE6D3E8211D6587B0EF71102E43D(L_5, NULL);
-		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C** L_7 = (ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C**)(&__this->___shadows);
-		NullCheck(L_6);
-		bool L_8;
-		L_8 = VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D(L_6, L_7, VolumeProfile_TryGet_TisShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C_mEC85709E39259A922CC5DEE1485F99B2E62E485D_RuntimeMethod_var);
+		((VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1*)L_2)->___active = (bool)0;
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:25>
+		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_3 = __this->___televisions;
+		V_0 = L_3;
+		V_1 = 0;
+		goto IL_0046;
 	}
 
-IL_003f:
+IL_002e:
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:25>
+		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_4 = V_0;
+		int32_t L_5 = V_1;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		V_2 = L_7;
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:27>
+		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_8 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_9)
+		{
+			goto IL_0042;
+		}
+	}
 	{
 		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:27>
-		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* L_9 = __this->___shadows;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_10;
-		L_10 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_10)
-		{
-			goto IL_005b;
-		}
-	}
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:29>
-		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* L_11 = __this->___shadows;
-		NullCheck(L_11);
-		((VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1*)L_11)->___active = (bool)0;
-		goto IL_0065;
+		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_10 = V_2;
+		NullCheck(L_10);
+		InteractibleTV_SetTvVisualState_m0BBAFE76298A7AB02EAA36B5F2A9E9843E6E6E2A(L_10, (bool)0, NULL);
 	}
 
-IL_005b:
+IL_0042:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:33>
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral74039B74E251F28993E69E92CC79772CF330391E, NULL);
+		int32_t L_11 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
-IL_0065:
+IL_0046:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:36>
-		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_12 = __this->___televisions;
-		V_0 = L_12;
-		V_1 = 0;
-		goto IL_0088;
-	}
-
-IL_0070:
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:36>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:25>
+		int32_t L_12 = V_1;
 		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_13 = V_0;
-		int32_t L_14 = V_1;
 		NullCheck(L_13);
-		int32_t L_15 = L_14;
-		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_16 = (L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
-		V_2 = L_16;
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:38>
-		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_17 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_18;
-		L_18 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_17, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_18)
+		if ((((int32_t)L_12) < ((int32_t)((int32_t)(((RuntimeArray*)L_13)->max_length)))))
 		{
-			goto IL_0084;
+			goto IL_002e;
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:38>
-		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_19 = V_2;
-		NullCheck(L_19);
-		InteractibleTV_SetTvVisualState_m0BBAFE76298A7AB02EAA36B5F2A9E9843E6E6E2A(L_19, (bool)0, NULL);
-	}
-
-IL_0084:
-	{
-		int32_t L_20 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_20, 1));
-	}
-
-IL_0088:
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:36>
-		int32_t L_21 = V_1;
-		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_22 = V_0;
-		NullCheck(L_22);
-		if ((((int32_t)L_21) < ((int32_t)((int32_t)(((RuntimeArray*)L_22)->max_length)))))
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:30>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_14 = __this->___extraDecor;
+		NullCheck(L_14);
+		if (!(((RuntimeArray*)L_14)->max_length))
 		{
-			goto IL_0070;
+			goto IL_005c;
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:40>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:31>
+		SyncedTVManager_SetactiveStateExtraDecor_mACBE593B21D4458D193AB2A43EA8503842C7725A(__this, (bool)0, NULL);
+	}
+
+IL_005c:
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:32>
 		return;
 	}
 }
@@ -25759,7 +25722,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_OnTriggerEnter_m83B25D5B
 	InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:44>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:36>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_other;
 		NullCheck(L_0);
 		bool L_1;
@@ -25770,7 +25733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_OnTriggerEnter_m83B25D5B
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:46>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:38>
 		InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* L_2 = __this->___startDoor;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -25781,7 +25744,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_OnTriggerEnter_m83B25D5B
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:47>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:39>
 		InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* L_4 = __this->___startDoor;
 		NullCheck(L_4);
 		InteractibleDoor_CloseDoor_mA0B7A0BD7FA695FBB4B5476D53BDCA8FFFC5C2A9(L_4, NULL);
@@ -25789,7 +25752,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_OnTriggerEnter_m83B25D5B
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:48>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:40>
 		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_5 = __this->___televisions;
 		V_0 = L_5;
 		V_1 = 0;
@@ -25798,17 +25761,17 @@ IL_0026:
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:48>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:40>
 		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_6 = V_0;
 		int32_t L_7 = V_1;
 		NullCheck(L_6);
 		int32_t L_8 = L_7;
 		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:50>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:42>
 		InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB* L_10 = L_9;
 		NullCheck(L_10);
 		InteractibleTV_SetTvVisualState_m0BBAFE76298A7AB02EAA36B5F2A9E9843E6E6E2A(L_10, (bool)1, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:51>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:43>
 		NullCheck(L_10);
 		InteractibleTV_SetManager_mDF458D48ECC7748277AB8DCED5D234F773892187_inline(L_10, __this, NULL);
 		int32_t L_11 = V_1;
@@ -25817,7 +25780,7 @@ IL_0031:
 
 IL_0045:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:48>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:40>
 		int32_t L_12 = V_1;
 		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_13 = V_0;
 		NullCheck(L_13);
@@ -25829,26 +25792,13 @@ IL_0045:
 
 IL_004b:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:55>
-		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* L_14 = __this->___shadows;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_15;
-		L_15 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_14, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_15)
-		{
-			goto IL_0065;
-		}
-	}
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:57>
-		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* L_16 = __this->___shadows;
-		NullCheck(L_16);
-		((VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1*)L_16)->___active = (bool)1;
-	}
-
-IL_0065:
-	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:59>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:47>
+		EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* L_14 = __this->___m_post;
+		NullCheck(L_14);
+		ShadowsMidtonesHighlights_t1B261DC3A02B7225CD79AA452B82B6218145B44C* L_15 = L_14->___shadows;
+		NullCheck(L_15);
+		((VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1*)L_15)->___active = (bool)1;
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:48>
 		return;
 	}
 }
@@ -25856,12 +25806,12 @@ IL_0065:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_AddDisabledCount_m7CE4BE29E68ABBFDAC2F99FB8F47EF0016D57438 (SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:63>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:52>
 		int32_t L_0 = __this->___disabledCount;
 		__this->___disabledCount = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:64>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:53>
 		SyncedTVManager_CheckCount_m01B62552F01FEAB97C7535C0F8532D2B06FEB58F(__this, NULL);
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:65>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:54>
 		return;
 	}
 }
@@ -25875,13 +25825,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_CheckCount_m01B62552F01F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:69>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:58>
 		int32_t L_0 = __this->___disabledCount;
 		InteractibleTVU5BU5D_tB452D1626DED78E13047C55C2193235EFA111B78* L_1 = __this->___televisions;
 		NullCheck(L_1);
 		if ((((int32_t)L_0) < ((int32_t)((int32_t)(((RuntimeArray*)L_1)->max_length)))))
 		{
-			goto IL_0029;
+			goto IL_0030;
 		}
 	}
 	{
@@ -25891,23 +25841,70 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_CheckCount_m01B62552F01F
 		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_3)
 		{
-			goto IL_0029;
+			goto IL_0030;
 		}
 	}
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:71>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:60>
 		InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* L_4 = __this->___finishDoor;
 		NullCheck(L_4);
 		InteractibleDoor_OpenDoor_m9086067F5ACD28E8F3D498011C05E7C8544D46D6(L_4, NULL);
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:62>
+		SyncedTVManager_SetactiveStateExtraDecor_mACBE593B21D4458D193AB2A43EA8503842C7725A(__this, (bool)1, NULL);
 	}
 
-IL_0029:
+IL_0030:
 	{
-		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:73>
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:64>
 		return;
 	}
 }
 // Method Definition Index: 105260
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager_SetactiveStateExtraDecor_mACBE593B21D4458D193AB2A43EA8503842C7725A (SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358* __this, bool ___0_active, const RuntimeMethod* method) 
+{
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:68>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0 = __this->___extraDecor;
+		V_0 = L_0;
+		V_1 = 0;
+		goto IL_0018;
+	}
+
+IL_000b:
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:68>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = V_0;
+		int32_t L_2 = V_1;
+		NullCheck(L_1);
+		int32_t L_3 = L_2;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:70>
+		bool L_5 = ___0_active;
+		NullCheck(L_4);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, L_5, NULL);
+		int32_t L_6 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_6, 1));
+	}
+
+IL_0018:
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:68>
+		int32_t L_7 = V_1;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_8 = V_0;
+		NullCheck(L_8);
+		if ((((int32_t)L_7) < ((int32_t)((int32_t)(((RuntimeArray*)L_8)->max_length)))))
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		//<source_info:D:/Unity Stuff/Unjust - VR/Assets/_Scripts/SyncedTVManager.cs:72>
+		return;
+	}
+}
+// Method Definition Index: 105261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager__ctor_mC6833CE640927EA4730B4C81E2DDE6923BF0FE61 (SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25923,7 +25920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SyncedTVManager__ctor_mC6833CE640927EA47
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 105261
+// Method Definition Index: 105262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TrackingManager_Awake_m5F2CB6404D2F7BEFD6CEAFA83F234044F8FBFC7E (TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25975,7 +25972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TrackingManager_Awake_m5F2CB6404D2F7BEFD
 		return;
 	}
 }
-// Method Definition Index: 105262
+// Method Definition Index: 105263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TrackingManager__ctor_mF9FBEF321E444D08A6A378BD501AB15544A39BF8 (TrackingManager_t21AA6BEEAFC039EE41D300647CFCC4B0B63C0AC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26014,7 +26011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TrackingManager__ctor_mF9FBEF321E444D08A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 105263
+// Method Definition Index: 105264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFollow_OnEnable_m7307BB96525C6FB542AA440D1BF0B21D15D16D81 (UIFollow_t7E0F5732164D9008B58D3205939BEDBAA2A01051* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26052,7 +26049,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 105264
+// Method Definition Index: 105265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFollow_Update_m3171BE61F012D56F66D656D8611E3D4920AEC9AD (UIFollow_t7E0F5732164D9008B58D3205939BEDBAA2A01051* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26087,7 +26084,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 105265
+// Method Definition Index: 105266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFollow_HandlePosition_m70A574640E0713F661056BDE84746A3741438CC4 (UIFollow_t7E0F5732164D9008B58D3205939BEDBAA2A01051* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -26191,7 +26188,7 @@ IL_009c:
 		return;
 	}
 }
-// Method Definition Index: 105266
+// Method Definition Index: 105267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFollow_HandleRotation_m67B518E334328CB45FC4695B29D6ED9D63089BA2 (UIFollow_t7E0F5732164D9008B58D3205939BEDBAA2A01051* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -26252,7 +26249,7 @@ IL_004e:
 		return;
 	}
 }
-// Method Definition Index: 105267
+// Method Definition Index: 105268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFollow__ctor_m3719B3F39666A79BE698A4B2ED41410F3CD22381 (UIFollow_t7E0F5732164D9008B58D3205939BEDBAA2A01051* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26281,7 +26278,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFollow__ctor_m3719B3F39666A79BE698A4B2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 105268
+// Method Definition Index: 105269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Interactible_Key_Interact_mC24675125E1392CA13AF935ABCF9043B9804A166 (Interactible_Key_tE951BECC00A6FC2577FFAAB885DFDD4882EAB648* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26329,7 +26326,7 @@ IL_001e:
 		return;
 	}
 }
-// Method Definition Index: 105269
+// Method Definition Index: 105270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Interactible_Key_CanInteract_m2611B1ECA890B2AECE099C3D9C7BB53A251F5DA4 (Interactible_Key_tE951BECC00A6FC2577FFAAB885DFDD4882EAB648* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26356,7 +26353,7 @@ IL_001f:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 105270
+// Method Definition Index: 105271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Interactible_Key__ctor_m9808429CB1932AB8FABEA2F086AB716186B48F75 (Interactible_Key_tE951BECC00A6FC2577FFAAB885DFDD4882EAB648* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26372,7 +26369,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Interactible_Key__ctor_m9808429CB1932AB8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 105271
+// Method Definition Index: 105272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleInventory_Awake_m702C3B711D19C85B0EE96042BF16CE7194087FE4 (SimpleInventory_tA308C76CBCEB50F98A195FDAC691384B48FF4D3D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26396,7 +26393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleInventory_Awake_m702C3B711D19C85B0
 		return;
 	}
 }
-// Method Definition Index: 105272
+// Method Definition Index: 105273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleInventory_AddItem_mC12D9A50FCD8C57A9BBA8D1E6ED628D1E342DE72 (SimpleInventory_tA308C76CBCEB50F98A195FDAC691384B48FF4D3D* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26478,7 +26475,7 @@ IL_0075:
 		return;
 	}
 }
-// Method Definition Index: 105273
+// Method Definition Index: 105274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SimpleInventory_CheckKey_m557E62D0AD48D78AB20554CB80D90329FD0F82E8 (SimpleInventory_tA308C76CBCEB50F98A195FDAC691384B48FF4D3D* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26570,7 +26567,7 @@ IL_003c:
 		return L_6;
 	}
 }
-// Method Definition Index: 105274
+// Method Definition Index: 105275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleInventory__ctor_m1E33B3A36E309B37F009FB1EE134B24841E9E112 (SimpleInventory_tA308C76CBCEB50F98A195FDAC691384B48FF4D3D* __this, const RuntimeMethod* method) 
 {
 	{

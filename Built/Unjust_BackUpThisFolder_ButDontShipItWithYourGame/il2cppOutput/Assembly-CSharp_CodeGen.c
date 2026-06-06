@@ -1295,7 +1295,7 @@ extern void EnvironmentChange_AnimateHeadacheEffect_m2B3950D5D8FE98F77940ADC0C08
 extern void EnvironmentChange_CacheLightBaselines_m07CA8B6CB61C896DC1102754356FCD72639FA59C (void);
 extern void EnvironmentChange_SetGroupState_m255CEBEABFBAF9D6ABB5A74A6E4221BEE84E4734 (void);
 extern void EnvironmentChange__ctor_m408711B2E84CE45CCD57E0E25C3A419C224EA7DF (void);
-extern void EnvironmentChange_U3CAwakeU3Eb__36_0_mC34ACA008488551E2721E449180A82B955EB33FC (void);
+extern void EnvironmentChange_U3CAwakeU3Eb__37_0_m7EC54620E9A275EE2B1437CBFF36CD0B0DD817D9 (void);
 extern void BaseInteractible_Awake_m5923B1DC40E41BA28FC43283BB69B3F8851F1355 (void);
 extern void BaseInteractible_Start_m5FDA8C7281DE9D3583BCB25D5FAF97C960F25161 (void);
 extern void BaseInteractible_OnHoverEnter_mAABDEFD4ECA060EE223969CFBBC8A16B28BC4210 (void);
@@ -1420,6 +1420,7 @@ extern void SyncedTVManager_Start_mFB97EF40B73CFF1F041DA24C31E394FFC7CEFDC2 (voi
 extern void SyncedTVManager_OnTriggerEnter_m83B25D5B3A279737B2DA3CAFF314F90BBE930FF4 (void);
 extern void SyncedTVManager_AddDisabledCount_m7CE4BE29E68ABBFDAC2F99FB8F47EF0016D57438 (void);
 extern void SyncedTVManager_CheckCount_m01B62552F01FEAB97C7535C0F8532D2B06FEB58F (void);
+extern void SyncedTVManager_SetactiveStateExtraDecor_mACBE593B21D4458D193AB2A43EA8503842C7725A (void);
 extern void SyncedTVManager__ctor_mC6833CE640927EA4730B4C81E2DDE6923BF0FE61 (void);
 extern void TrackingManager_Awake_m5F2CB6404D2F7BEFD6CEAFA83F234044F8FBFC7E (void);
 extern void TrackingManager__ctor_mF9FBEF321E444D08A6A378BD501AB15544A39BF8 (void);
@@ -1776,7 +1777,7 @@ extern void AudioToolkitDemo_IsGUIDisabled_m3D385D13BC28A8E36574706D63B7C804D15A
 extern void AudioToolkitDemo_Update_m3718F9E1055496F1E1F37FB9C5D3CE9078AF44AA (void);
 extern void AudioToolkitDemo__ctor_m1A48924B387D9434E0398AD1CF72FCA9EC43ACD8 (void);
 extern void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876 (void);
-static Il2CppMethodPointer s_methodPointers[1779] = 
+static Il2CppMethodPointer s_methodPointers[1780] = 
 {
 	Following_Start_m8DAB4EBBCA79FB328F1B1349132755A768CA35C7,
 	Following_Update_m243F944258344ABD8BB41F2A5F68C6851AEB2605,
@@ -3072,7 +3073,7 @@ static Il2CppMethodPointer s_methodPointers[1779] =
 	EnvironmentChange_CacheLightBaselines_m07CA8B6CB61C896DC1102754356FCD72639FA59C,
 	EnvironmentChange_SetGroupState_m255CEBEABFBAF9D6ABB5A74A6E4221BEE84E4734,
 	EnvironmentChange__ctor_m408711B2E84CE45CCD57E0E25C3A419C224EA7DF,
-	EnvironmentChange_U3CAwakeU3Eb__36_0_mC34ACA008488551E2721E449180A82B955EB33FC,
+	EnvironmentChange_U3CAwakeU3Eb__37_0_m7EC54620E9A275EE2B1437CBFF36CD0B0DD817D9,
 	BaseInteractible_Awake_m5923B1DC40E41BA28FC43283BB69B3F8851F1355,
 	BaseInteractible_Start_m5FDA8C7281DE9D3583BCB25D5FAF97C960F25161,
 	BaseInteractible_OnHoverEnter_mAABDEFD4ECA060EE223969CFBBC8A16B28BC4210,
@@ -3199,6 +3200,7 @@ static Il2CppMethodPointer s_methodPointers[1779] =
 	SyncedTVManager_OnTriggerEnter_m83B25D5B3A279737B2DA3CAFF314F90BBE930FF4,
 	SyncedTVManager_AddDisabledCount_m7CE4BE29E68ABBFDAC2F99FB8F47EF0016D57438,
 	SyncedTVManager_CheckCount_m01B62552F01FEAB97C7535C0F8532D2B06FEB58F,
+	SyncedTVManager_SetactiveStateExtraDecor_mACBE593B21D4458D193AB2A43EA8503842C7725A,
 	SyncedTVManager__ctor_mC6833CE640927EA4730B4C81E2DDE6923BF0FE61,
 	TrackingManager_Awake_m5F2CB6404D2F7BEFD6CEAFA83F234044F8FBFC7E,
 	TrackingManager__ctor_mF9FBEF321E444D08A6A378BD501AB15544A39BF8,
@@ -3591,7 +3593,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[15] =
 	{ 0x060004C3, InteractionActions_RemoveCallbacks_m469038FB792C6A8D313AFF05921A7BDA6B7460A5_AdjustorThunk },
 	{ 0x060004C4, InteractionActions_SetCallbacks_mA0D45C2D5CFDA0E6C7A60BDA873A4CA8902EBD69_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[1779] = 
+static const int32_t s_InvokerIndices[1780] = 
 {
 	20609,
 	20609,
@@ -5014,6 +5016,7 @@ static const int32_t s_InvokerIndices[1779] =
 	15833,
 	20609,
 	20609,
+	15594,
 	20609,
 	20609,
 	20609,
@@ -5377,7 +5380,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	1779,
+	1780,
 	s_methodPointers,
 	15,
 	s_adjustorThunks,

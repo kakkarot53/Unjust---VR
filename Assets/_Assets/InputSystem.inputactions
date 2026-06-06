@@ -16,6 +16,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "ChangeLevel",
+                    "type": "Button",
+                    "id": "465208f4-a945-4579-a3b2-e0e7eb715b1d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Right_Trigger",
                     "type": "Button",
                     "id": "b4847c53-95a0-48b9-a52e-5d12a0f1a361",
@@ -55,6 +64,15 @@
                     "name": "Pan",
                     "type": "Value",
                     "id": "92f56b97-cf7d-4961-9e9b-4a149829be9f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "16ade14a-3c43-423d-a4de-3bda8c9ff7a2",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -250,13 +268,90 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "faf98a12-e685-4f53-a37a-9e6a979ca534",
+                    "name": "One Modifier",
+                    "id": "009e9f1a-c4b6-4dea-8603-67f75ef9eceb",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pan",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "64bc13f4-5669-4035-88fc-9d1eb4987c09",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pan",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "86e1974d-aeca-41a3-b72a-7b1bde282504",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Pan",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "77673024-e16c-431d-b9f2-ae640edd6be7",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "One Modifier",
+                    "id": "01eed6e4-1990-4533-a4c4-efc1366facb4",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeLevel",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "41424298-af01-42fd-88c7-fcd9d0e6091f",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "1badd7e7-2829-4670-87ac-b3aa37d6da0c",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "55e36a4b-0f68-496e-afee-c7075d19a489",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

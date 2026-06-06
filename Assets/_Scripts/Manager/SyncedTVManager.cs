@@ -9,34 +9,38 @@ public class SyncedTVManager : MonoBehaviour
     [SerializeField] private InteractibleDoor startDoor;
     [SerializeField] private InteractibleDoor finishDoor;
 
-    [SerializeField] private Volume vol;
-    private ShadowsMidtonesHighlights shadows;
+    [Header("extra lights")]
+    [SerializeField] private GameObject[] extraDecor;
+
+    private EnvironmentChange m_post;
 
     private int disabledCount;
+
+    UnjustGameManager m_game;
+
     private void Start()
     {
+        m_game = UnjustGameManager.instance;
+        m_post = EnvironmentChange.instance;
+
+        m_game.OnRoomChange += SetupHall;
+    }
+
+    private void SetupHall(int _i)
+    {
+        //make sure setup runs on room 1 so when player enter hall its all good
+        if (_i != 1)
+            return;
+
         disabledCount = 0;
-
-        // FIX: Extract the effect safely directly from the Volume's Profile Asset
-        if (vol != null && vol.profile != null)
-        {
-            vol.profile.TryGet<ShadowsMidtonesHighlights>(out shadows);
-        }
-
-        // Safely verify we found the asset override profile before altering flags
-        if (shadows != null)
-        {
-            shadows.active = false;
-        }
-        else
-        {
-            Debug.LogError("<color=red>[Post-Processing Error]</color> ShadowsMidtonesHighlights override not found inside the assigned Volume Profile!");
-        }
-
+        m_post.shadows.active = false;
         foreach (InteractibleTV t in televisions)
         {
             if (t != null) t.SetTvVisualState(false);
         }
+
+        if (extraDecor.Length > 0)
+            SetactiveStateExtraDecor(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,10 +56,7 @@ public class SyncedTVManager : MonoBehaviour
             }
         }
 
-        if (shadows != null)
-        {
-            shadows.active = true;
-        }
+        m_post.shadows.active = true;
     }
 
     public void AddDisabledCount()
@@ -69,6 +70,16 @@ public class SyncedTVManager : MonoBehaviour
         if(disabledCount >= televisions.Length && finishDoor != null)
         {
             finishDoor.OpenDoor();
+
+            SetactiveStateExtraDecor(true);
+        }
+    }
+
+    private void SetactiveStateExtraDecor(bool active)
+    {
+        foreach(GameObject g in extraDecor)
+        {
+            g.SetActive(active);
         }
     }
 }
