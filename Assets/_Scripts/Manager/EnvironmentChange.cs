@@ -270,8 +270,11 @@ public class EnvironmentChange : MonoBehaviour
                 if (isColdState == true)
                     TemperatureShift();
                 break;
+            case 2:
+                if (shadows != null) shadows.active = true;
+                break;
             case 3:
-                shadows.active = false;
+                if (shadows != null) shadows.active = false;
                 break;
         }
     }

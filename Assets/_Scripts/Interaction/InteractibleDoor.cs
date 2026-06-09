@@ -70,4 +70,11 @@ public class InteractibleDoor : BaseInteractible
 
         }
     }
-}
+
+    protected override void ResetInteractibleState(int _id)
+    {
+        base.ResetInteractibleState(_id);
+
+        CloseDoor();
+    }
+    }

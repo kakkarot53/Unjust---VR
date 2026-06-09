@@ -13,85 +13,69 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
     protected int targetLayerIndex;
     protected int defaultLayerIndex;
     protected bool isInteracting;
-    [SerializeField] private bool canInteract = true;
+    [SerializeField] private bool canInteract = true;   //can player initially interact with this
+    [SerializeField] private protected int levelID;               //when to fully reset it to the initial canInteract
+    protected bool oriCanInteract;
+
+    private UnjustGameManager m_game;
 
     protected virtual void Awake()
     {
         originalLayerIndex = LayerMaskToLayer(oriLayer);
         targetLayerIndex = LayerMaskToLayer(targetLayer);
-        defaultLayerIndex = LayerMaskToLayer(defaultLayer);
+        defaultLayerIndex = LayerMaskToLayer(defaultLayer); // Cached index numerical representation
     }
 
     protected virtual void Start()
     {
-        gameObject.layer = originalLayerIndex;
-        if (changeExtraObj.Length > 0)
+        m_game = UnjustGameManager.instance;
+
+        if (m_game != null)
         {
-            foreach (GameObject g in changeExtraObj)
-            {
-                g.layer = originalLayerIndex;
-            }
+            m_game.OnRoomChange += ResetInteractibleState;
+        }
+
+        oriCanInteract = canInteract;
+        ResetToDefaultLayerState();
+    }
+
+    // VR Pro-Tip: Always unsubscribe from global managers when destroyed to avoid phantom memory bugs!
+    protected virtual void OnDestroy()
+    {
+        if (m_game != null)
+        {
+            m_game.OnRoomChange -= ResetInteractibleState;
         }
     }
 
-    // Automatically handles turning the outline ON
     public virtual void OnHoverEnter()
     {
-        if (!canInteract) return;
-        if (isInteracting) return;
-        gameObject.layer = targetLayerIndex;
-        if (changeExtraObj.Length > 0)
-        {
-            foreach (GameObject g in changeExtraObj)
-            {
-                g.layer = targetLayerIndex;
-            }
-        }
+        if (!canInteract || isInteracting) return;
+
+        SetLayerOnAll(targetLayerIndex);
     }
 
-    // Automatically handles turning the outline OFF
     public virtual void OnHoverExit()
     {
-        if (!canInteract) return;
-        if (isInteracting) return;
-        gameObject.layer = originalLayerIndex;
-        if (changeExtraObj.Length > 0)
-        {
-            foreach (GameObject g in changeExtraObj)
-            {
-                g.layer = originalLayerIndex;
-            }
-        }
+        if (!canInteract || isInteracting) return;
+
+        SetLayerOnAll(originalLayerIndex);
     }
 
-    // This fulfills the interface, but forces child classes to handle the specifics
-    public virtual void Interact() {
+    public virtual void Interact()
+    {
         if (!canInteract) return;
 
         isInteracting = !isInteracting;
 
         if (isInteracting)
         {
-            gameObject.layer = defaultLayer; //basically make it "uninteractible"
-            if (changeExtraObj.Length > 0)
-            {
-                foreach (GameObject g in changeExtraObj)
-                {
-                    g.layer = defaultLayer;
-                }
-            }
+            // FIX: Use the cached index (defaultLayerIndex) instead of the LayerMask container (defaultLayer)!
+            SetLayerOnAll(defaultLayerIndex);
         }
         else
         {
-            gameObject.layer = originalLayerIndex; //go back to interactible
-
-            if (changeExtraObj.Length > 0)
-            {
-                foreach (GameObject g in changeExtraObj)
-                {
-                    g.layer = originalLayerIndex;
-                }
-            }
+            SetLayerOnAll(originalLayerIndex);
         }
     }
 
@@ -117,5 +101,36 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
             layer++;
         }
         return layer;
+    }
+
+    private void SetLayerOnAll(int targetIndex)
+    {
+        gameObject.layer = targetIndex;
+        if (changeExtraObj != null && changeExtraObj.Length > 0)
+        {
+            foreach (GameObject g in changeExtraObj)
+            {
+                if (g != null) g.layer = targetIndex;
+            }
+        }
+    }
+
+    private void ResetToDefaultLayerState()
+    {
+        SetLayerOnAll(originalLayerIndex);
+    }
+
+    protected virtual void ResetInteractibleState(int _id)
+    {
+        if (_id == levelID)
+        {
+            canInteract = oriCanInteract;
+
+            // FIX: Revert the operational states back to absolute default baselines
+            isInteracting = false;
+            ResetToDefaultLayerState();
+
+            //Debug.Log($"<color=cyan>[Reset]</color> {gameObject.name} fully cleared logic flags and returned to original layout layer indices.");
+        }
     }
 }

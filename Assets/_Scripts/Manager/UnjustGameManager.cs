@@ -33,7 +33,7 @@ public class UnjustGameManager : MonoBehaviour
 
         input.Interaction.ChangeLevel.started += ctx => {
             trialCounter++;
-            if (trialCounter > roomDatabase.Count)
+            if (trialCounter >= roomDatabase.Count)
                 trialCounter = 1;
 
             RequestChangeRoom(trialCounter, true);
@@ -43,7 +43,18 @@ public class UnjustGameManager : MonoBehaviour
     private void Start()
     {
         m_env = EnvironmentChange.instance;
+
+        trialCounter = 1;
         RequestChangeRoom(1, true);
+    }
+
+    // Safety fix: Unsubscribe or disable input to prevent garbage collection memory leaks
+    private void OnDestroy()
+    {
+        if (input != null)
+        {
+            input.Interaction.Disable();
+        }
     }
 
     public void UpdatePlayerLocationData(int index)
@@ -80,6 +91,8 @@ public class UnjustGameManager : MonoBehaviour
         }
 
         currentRoomIndex = roomIndex;
+        trialCounter = roomIndex;
+
         OnRoomChange?.Invoke(currentRoomIndex);
     }
 
@@ -87,6 +100,7 @@ public class UnjustGameManager : MonoBehaviour
     public void InformRoomChange(int roomIndex)
     {
         currentRoomIndex = roomIndex;
+        trialCounter = roomIndex;
         OnRoomChange?.Invoke(currentRoomIndex);
     }
 

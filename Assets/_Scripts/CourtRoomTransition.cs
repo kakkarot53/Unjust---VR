@@ -84,7 +84,7 @@ public class CourtRoomTransition : MonoBehaviour
         }
         EnvironmentChange.instance.colorAdjustments.postExposure.value = startPost;
 
-        // Clean up this transition manager gameobject completely
-        Destroy(gameObject);
+        // Clean up this transition manager gameobject
+        this.gameObject.SetActive(false);
     }
 }
