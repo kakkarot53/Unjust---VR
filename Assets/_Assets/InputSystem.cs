@@ -163,6 +163,24 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Right_Grip"",
+                    ""type"": ""Button"",
+                    ""id"": ""d70b3351-06cb-4be0-a28d-fcb652870252"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left_Grip"",
+                    ""type"": ""Button"",
+                    ""id"": ""7b59e367-cae5-428e-b451-60a426c66ed4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -214,17 +232,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""c97ac801-447b-4075-af23-5be0760ecc50"",
                     ""path"": ""<XRController>{RightHand}/{TriggerButton}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Right_Trigger"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3abb94a8-95ce-40ed-aaa1-357ac49d317d"",
-                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -440,6 +447,39 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a512e21e-aa7c-4063-bd61-d660e72d9939"",
+                    ""path"": ""<XRController>{RightHand}/{GripButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Grip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""033bc111-fa4e-4333-b3bb-4487fecd5f92"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Grip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a702cd6d-c20c-4c0d-bb76-415294f96b7e"",
+                    ""path"": ""<XRController>{LeftHand}/{GripButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left_Grip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -456,6 +496,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Interaction_Zoom = m_Interaction.FindAction("Zoom", throwIfNotFound: true);
         m_Interaction_Pan = m_Interaction.FindAction("Pan", throwIfNotFound: true);
         m_Interaction_Look = m_Interaction.FindAction("Look", throwIfNotFound: true);
+        m_Interaction_Right_Grip = m_Interaction.FindAction("Right_Grip", throwIfNotFound: true);
+        m_Interaction_Left_Grip = m_Interaction.FindAction("Left_Grip", throwIfNotFound: true);
     }
 
     ~@InputSystem()
@@ -544,6 +586,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Interaction_Zoom;
     private readonly InputAction m_Interaction_Pan;
     private readonly InputAction m_Interaction_Look;
+    private readonly InputAction m_Interaction_Right_Grip;
+    private readonly InputAction m_Interaction_Left_Grip;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interaction".
     /// </summary>
@@ -587,6 +631,14 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interaction/Look".
         /// </summary>
         public InputAction @Look => m_Wrapper.m_Interaction_Look;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Right_Grip".
+        /// </summary>
+        public InputAction @Right_Grip => m_Wrapper.m_Interaction_Right_Grip;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Left_Grip".
+        /// </summary>
+        public InputAction @Left_Grip => m_Wrapper.m_Interaction_Left_Grip;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -637,6 +689,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Right_Grip.started += instance.OnRight_Grip;
+            @Right_Grip.performed += instance.OnRight_Grip;
+            @Right_Grip.canceled += instance.OnRight_Grip;
+            @Left_Grip.started += instance.OnLeft_Grip;
+            @Left_Grip.performed += instance.OnLeft_Grip;
+            @Left_Grip.canceled += instance.OnLeft_Grip;
         }
 
         /// <summary>
@@ -672,6 +730,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Right_Grip.started -= instance.OnRight_Grip;
+            @Right_Grip.performed -= instance.OnRight_Grip;
+            @Right_Grip.canceled -= instance.OnRight_Grip;
+            @Left_Grip.started -= instance.OnLeft_Grip;
+            @Left_Grip.performed -= instance.OnLeft_Grip;
+            @Left_Grip.canceled -= instance.OnLeft_Grip;
         }
 
         /// <summary>
@@ -768,5 +832,19 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Right_Grip" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRight_Grip(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Left_Grip" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeft_Grip(InputAction.CallbackContext context);
     }
 }

@@ -14,6 +14,13 @@ public class InteractibleTV : BaseInteractible
 
     private Coroutine powerRoutine;
     private SyncedTVManager m_sync;
+    private float scaleMult;
+
+    protected override void Start()
+    {
+        base.Start();
+        scaleMult = this.transform.localScale.x;
+    }
 
     public void SetManager(SyncedTVManager mng)
     {
@@ -24,7 +31,48 @@ public class InteractibleTV : BaseInteractible
     {
         if (videoEffect != null) videoEffect.SetActive(state);
         if (localVideoRenderer != null) localVideoRenderer.enabled = state;
+        
+        if (state)
+        {
+            localVideoRenderer.time = 0;
+            localVideoRenderer.Play();
+        }
+        else
+        {
+            localVideoRenderer.Stop();
+        }
+
         if (audSrc != null) audSrc.mute = !state;
+    }
+
+    //fuck it just reset it explicitly idk the stack's order
+    protected override void ResetInteractibleState(int _id)
+    {
+        base.ResetInteractibleState(_id);
+
+        if (_id == levelID)
+        {
+            if (powerRoutine != null)
+            {
+                StopCoroutine(powerRoutine);
+                powerRoutine = null;
+            }
+
+            SetTvVisualState(false);
+
+            if (tvProjectionLight != null)
+            {
+                tvProjectionLight.intensity = 0f;
+                tvProjectionLight.range = 0f;
+            }
+            if (tvEffectLight != null)
+            {
+                tvEffectLight.intensity = 0f;
+                tvEffectLight.range = 0f;
+            }
+
+            Debug.Log($"<color=lime>[TV Reset]</color> {gameObject.name} successfully self-cleared physical lighting configurations.");
+        }
     }
 
     public override void Interact()
@@ -46,11 +94,11 @@ public class InteractibleTV : BaseInteractible
         if (turningOn)
         {
             // 1. Instantly spike the neon power up flash
-            tvProjectionLight.intensity = 5.5f;
-            tvProjectionLight.range = 3f;
+            tvProjectionLight.intensity = 5.5f * scaleMult;
+            tvProjectionLight.range = 3f * scaleMult;
 
-            tvEffectLight.intensity = 0.5f;
-            tvEffectLight.range = 0.55f; 
+            tvEffectLight.intensity = 1.6f * scaleMult;
+            tvEffectLight.range = 0.55f * scaleMult; 
 
             // 2. Wait half a second for screen boot simulation
             yield return new WaitForSeconds(0.5f);

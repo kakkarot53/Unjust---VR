@@ -119,6 +119,59 @@ public class InteractibleKeypad : BaseInteractible
         }
     }
 
+    protected override void ResetInteractibleState(int _id)
+    {
+        // 1. Run base class logic first to reset layers, isInteracting, and basic canInteract flags
+        base.ResetInteractibleState(_id);
+
+        // 2. Check if this is our targeted level index wipe
+        if (_id == levelID)
+        {
+            // Stop any camera zooming transitions happening mid-frame
+            if (lerpRoutine != null)
+            {
+                StopCoroutine(lerpRoutine);
+                lerpRoutine = null;
+            }
+
+            // Clean up gameplay state dependencies
+            if (playerFlash != null) playerFlash.enabled = false;
+            if (dimmingCanvas != null) dimmingCanvas.SetActive(false);
+
+            if (myCollider != null) myCollider.enabled = true;
+
+            // FIX: Ensure the player can walk again if they reset the room while inspecting the pad!
+            if (m_move != null)
+            {
+                m_move.RequestPlayerMovementEnable(true);
+            }
+
+            // Snap the physical 3D layout back to the starting wall position/rotation instantly
+            if (parentAnchor != null)
+            {
+                parentAnchor.transform.position = oripos;
+                parentAnchor.transform.rotation = oriRot;
+                parentAnchor.transform.localScale = oriScale;
+            }
+
+            // Restore the status lights back to absolute default dark setting
+            if (indicatorLight != null)
+            {
+                indicatorLight.color = Color.black;
+                indicatorLight.range = orilightRange;
+            }
+
+            // Clear text data buffers completely
+            keypadValue = "";
+            if (pinText != null) pinText.text = "8888";
+
+            // Allow the buttons to be interactible again next time the pad is picked up
+            SetButtonsInteractionState(false);
+
+            Debug.Log($"<color=lime>[Keypad Reset]</color> {gameObject.name} physical transforms, buffers, and player constraints successfully restored.");
+        }
+    }
+
     private void SetButtonsInteractionState(bool state)
     {
         foreach (InteractibleKeypadButton button in buttons)

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
+using static UnityEngine.XR.Hands.XRHandSubsystemDescriptor;
 
 public class UnjustGameManager : MonoBehaviour
 {
@@ -15,13 +16,14 @@ public class UnjustGameManager : MonoBehaviour
     [Header("Room Database Management")]
     [SerializeField] private List<RoomData> roomDatabase = new List<RoomData>();
 
-    public int currentRoomIndex = 1;
+    public int currentRoomIndex = 0;
     private EnvironmentChange m_env;
+    private InteractionInfoManager m_info;
 
     public static UnjustGameManager instance;
     private InputSystem input;
 
-    private int trialCounter = 1;
+    private int trialCounter = 0;
 
     public Action<int> OnRoomChange;
     private void Awake()
@@ -33,8 +35,9 @@ public class UnjustGameManager : MonoBehaviour
 
         input.Interaction.ChangeLevel.started += ctx => {
             trialCounter++;
-            if (trialCounter > roomDatabase.Count)
-                trialCounter = 1;
+            // Safety Check: Bounds loop control back to index 0 cleanly
+            if (trialCounter >= roomDatabase.Count)
+                trialCounter = 0;
 
             RequestChangeRoom(trialCounter, true);
         };
@@ -43,7 +46,19 @@ public class UnjustGameManager : MonoBehaviour
     private void Start()
     {
         m_env = EnvironmentChange.instance;
-        RequestChangeRoom(1, true);
+        m_info = InteractionInfoManager.instance;
+
+        trialCounter = 0;
+        RequestChangeRoom(0, true);
+    }
+
+    // Safety fix: Unsubscribe or disable input to prevent garbage collection memory leaks
+    private void OnDestroy()
+    {
+        if (input != null)
+        {
+            input.Interaction.Disable();
+        }
     }
 
     public void UpdatePlayerLocationData(int index)
@@ -54,7 +69,7 @@ public class UnjustGameManager : MonoBehaviour
     //used if player can NOT walk to the next room
     public void RequestChangeRoom(int roomIndex, bool teleport)
     {
-        if (roomIndex < 1 || roomIndex >= roomDatabase.Count)
+        if (roomIndex < 0 || roomIndex >= roomDatabase.Count)
             return;
 
         // enable disable room
@@ -80,6 +95,10 @@ public class UnjustGameManager : MonoBehaviour
         }
 
         currentRoomIndex = roomIndex;
+        trialCounter = roomIndex;
+
+        TriggerRoomTutorials(roomIndex);
+
         OnRoomChange?.Invoke(currentRoomIndex);
     }
 
@@ -87,7 +106,32 @@ public class UnjustGameManager : MonoBehaviour
     public void InformRoomChange(int roomIndex)
     {
         currentRoomIndex = roomIndex;
+        trialCounter = roomIndex;
         OnRoomChange?.Invoke(currentRoomIndex);
+
+    }
+
+    //just in case i need this later
+    private void TriggerRoomTutorials(int roomIndex)
+    {
+        if (m_info == null)
+        {
+            Debug.LogWarning("[UnjustGameManager] InteractionInfoManager instance is missing!");
+            return;
+        }
+
+        if (roomIndex == 0)
+        {
+            m_info.ClearAllSpawnedElements();
+            m_info.AddText("Use ");
+            m_info.AddSprite("rstick");
+            m_info.AddText(" to move around");
+            m_info.RequestInfoDisappear(15f, 1f);
+        }
+        else
+        {
+            m_info.ClearAllSpawnedElements();
+        }
     }
 
     public void TeleportPlayer(Transform targetLandingAnchor)

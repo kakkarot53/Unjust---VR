@@ -12,18 +12,30 @@ public class SyncedTVManager : MonoBehaviour
     [Header("extra lights")]
     [SerializeField] private GameObject[] extraDecor;
 
-    private EnvironmentChange m_post;
-
     private int disabledCount;
-
     UnjustGameManager m_game;
 
     private void Start()
     {
         m_game = UnjustGameManager.instance;
-        m_post = EnvironmentChange.instance;
 
         m_game.OnRoomChange += SetupHall;
+
+        if(televisions.Length<=0)
+            return;
+
+        foreach (InteractibleTV t in televisions)
+        {
+            t.SetManager(this);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (m_game != null)
+        {
+            m_game.OnRoomChange -= SetupHall;
+        }
     }
 
     private void SetupHall(int _i)
@@ -33,7 +45,6 @@ public class SyncedTVManager : MonoBehaviour
             return;
 
         disabledCount = 0;
-        m_post.shadows.active = false;
         foreach (InteractibleTV t in televisions)
         {
             if (t != null) t.SetTvVisualState(false);
@@ -45,18 +56,21 @@ public class SyncedTVManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!startDoor.isOpen)
+            return;
+
         if (other.CompareTag("Player"))
         {
             if (startDoor != null)
                 startDoor.CloseDoor();
+
+            m_game.InformRoomChange(2);
+
             foreach (InteractibleTV t in televisions)
             {
-                t.SetTvVisualState(true);
-                t.SetManager(this);
+                t.StartCoroutine(t.HandlePowerTransition(true));
             }
         }
-
-        m_post.shadows.active = true;
     }
 
     public void AddDisabledCount()

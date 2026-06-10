@@ -19,8 +19,6 @@ public class InspectManager : MonoBehaviour
     private InputSystem input;
     private Transform cameraTransform;
 
-    private Vector3 initialAnchorPosition;
-    private float currentZoomOffset = 0f;
     private Vector3 originalObjectScale;
 
     private void Awake()

@@ -13,10 +13,27 @@ public class CourtRoomTransition : MonoBehaviour
     private bool isTransitioning = false;
     private Coroutine timeoutCoroutine;
 
-    private void Start()
+    private void OnEnable()
     {
-        // Start counting down immediately when this transition zone wakes up / door opens
+        // FIX 1: Reset state variables so the script knows it's allowed to run again
+        isTransitioning = false;
+
+        // FIX 2: Safety check to ensure we don't double-start a coroutine
+        if (timeoutCoroutine != null)
+        {
+            StopCoroutine(timeoutCoroutine);
+        }
+
         timeoutCoroutine = StartCoroutine(TimeoutFallbackRoutine());
+    }
+
+    private void OnDisable()
+    {
+        if (timeoutCoroutine != null)
+        {
+            StopCoroutine(timeoutCoroutine);
+            timeoutCoroutine = null; // Clear reference
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -84,7 +101,7 @@ public class CourtRoomTransition : MonoBehaviour
         }
         EnvironmentChange.instance.colorAdjustments.postExposure.value = startPost;
 
-        // Clean up this transition manager gameobject completely
-        Destroy(gameObject);
+        // Clean up this transition manager gameobject
+        this.gameObject.SetActive(false);
     }
 }
