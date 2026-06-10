@@ -78,6 +78,11 @@ public abstract class BaseInteractible : MonoBehaviour, IInteractible
             SetLayerOnAll(originalLayerIndex);
         }
     }
+    //use overload for grip
+    public virtual void Interact(Transform interactorTransform)
+    {
+        Interact();
+    }
 
     public virtual void SetCanInteract(bool state)
     {

@@ -11,12 +11,14 @@ public class Interactor : MonoBehaviour
 
     private BaseInteractible target;
     private Collider myCollider;
+    private Transform myTransform;
 
     private void Start()
     {
         m_Interactor = InteractorManager.instance;
 
         myCollider = this.GetComponent<Collider>();
+        myTransform = this.GetComponent<Transform>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +37,7 @@ public class Interactor : MonoBehaviour
 
                 target = interactibleTarget;
 
-                m_Interactor.RegisterHoverEnter(interactibleTarget, myCollider);
+                m_Interactor.RegisterHoverEnter(interactibleTarget, myCollider, myTransform);
             }
 
         }
@@ -57,7 +59,7 @@ public class Interactor : MonoBehaviour
                 {
                     target = null;
 
-                    m_Interactor.RegisterHoverExit(interactibleTarget, myCollider);
+                    m_Interactor.RegisterHoverExit(interactibleTarget, myCollider, myTransform);
                 }
             }
         }
