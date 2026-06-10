@@ -49,17 +49,14 @@ public class EnvironmentChange : MonoBehaviour
     //[SerializeField] private float minFocalLen = 1f;        // Depth of Field bounds
     //[SerializeField] private float peakFocalLen = 25f;
 
-    private ChromaticAberration chromaticAberration;
-    private LensDistortion lensDistortion;
-    private ColorAdjustments colorAdjustments;
-    private Vignette vignette;
+    public ChromaticAberration chromaticAberration;
+    public LensDistortion lensDistortion;
+    public ColorAdjustments colorAdjustments;
+    public Vignette vignette;
+    public ShadowsMidtonesHighlights shadows;
     //private DepthOfField depthOfField;
 
     private InputSystem input;
-
-    // Cached Global ID Strings for extreme runtime efficiency in VR
-    //private int sphereCenterID;
-    //private int sphereRadiusID;
 
     private bool isColdState = false;
 
@@ -73,17 +70,25 @@ public class EnvironmentChange : MonoBehaviour
     private Dictionary<Light, float> coldLightBaselines = new Dictionary<Light, float>();
 
     public static EnvironmentChange instance;
-
+    private UnjustGameManager m_Game;
     private void Awake()
     {
         if(instance == null)
             instance = this;
 
-        //sphereCenterID = Shader.PropertyToID("_SphereCenter");
-        //sphereRadiusID = Shader.PropertyToID("_SphereRad");
-
         input = new InputSystem();
         input.Interaction.Enable();
+
+        if (globalVolume != null && globalVolume.profile != null)
+        {
+            globalVolume.profile.TryGet(out chromaticAberration);
+            globalVolume.profile.TryGet(out lensDistortion);
+            globalVolume.profile.TryGet(out colorAdjustments);
+            globalVolume.profile.TryGet(out vignette);
+            globalVolume.profile.TryGet(out shadows);
+
+            //globalVolume.profile.TryGet(out depthOfField);
+        }
 
         input.Interaction.RoomShift.started += ctx => {
             TriggerDimensionShift();
@@ -93,14 +98,7 @@ public class EnvironmentChange : MonoBehaviour
 
     private void Start()
     {
-        if (globalVolume != null && globalVolume.profile != null)
-        {
-            globalVolume.profile.TryGet(out chromaticAberration);
-            globalVolume.profile.TryGet(out lensDistortion);
-            globalVolume.profile.TryGet(out colorAdjustments);
-            globalVolume.profile.TryGet(out vignette);
-            //globalVolume.profile.TryGet(out depthOfField);
-        }
+        m_Game = UnjustGameManager.instance;
 
         // Establish original boot baseline visibility states
         SetGroupState(warmGameObjs, true);
@@ -110,11 +108,7 @@ public class EnvironmentChange : MonoBehaviour
         CacheLightBaselines(warmLights, warmLightBaselines);
         CacheLightBaselines(coldLights, coldLightBaselines);
 
-        // Clear out global shader memory values on boot
-        //Shader.SetGlobalVector(sphereCenterID, sphereCenter);
-        //Shader.SetGlobalFloat(sphereRadiusID, 0f);
-
-        //if (waveCollider != null) waveCollider.radius = 0f;
+        m_Game.OnRoomChange += ChangePost;
     }
 
     private void Update()
@@ -124,10 +118,6 @@ public class EnvironmentChange : MonoBehaviour
             AnimateHeadacheEffect();
         }
 
-        //if (isWaveExpanding)
-        //{
-        //    AnimateWaveExpansion();
-        //}
     }
     #region shifting effects
     public void TriggerDimensionShift()
@@ -151,7 +141,7 @@ public class EnvironmentChange : MonoBehaviour
         TemperatureShift();
     }
 
-    private void TemperatureShift()
+    public void TemperatureShift()
     {
         isColdState = !isColdState;
 
@@ -196,47 +186,6 @@ public class EnvironmentChange : MonoBehaviour
         }
     }
 
-    //private void AnimateWaveExpansion()
-    //{
-    //    if (waveRadius < maxRadius)
-    //    {
-    //        waveRadius += expansionSpeed * Time.deltaTime;
-
-    //        float progress = Mathf.Clamp01(waveRadius / maxRadius);
-
-    //        // --- FIXED: VOLUME ATMOSPHERE WEIGHT LERPING LIVE ---
-    //        if (warmVolume != null)
-    //        {
-    //            warmVolume.weight = isColdState ? 0 : 1;//Mathf.Lerp(1f, 0f, progress) : Mathf.Lerp(0f, 1f, progress);
-    //        }
-    //        if (coldVolume != null)
-    //        {
-    //            coldVolume.weight = isColdState ? 1 : 0;//Mathf.Lerp(0f, 1f, progress) : Mathf.Lerp(1f, 0f, progress);
-    //        }
-
-    //        // Sync physical trigger physics engine bounds
-    //        if (waveCollider != null)
-    //        {
-    //            waveCollider.radius = waveRadius / Mathf.Max(transform.lossyScale.x, 0.001f);
-    //        }
-
-    //        // Sync Particle system nodes
-    //        if (roomVFX != null)
-    //        {
-    //            roomVFX.SetVector3("SphereCenter", sphereCenter);
-    //            roomVFX.SetFloat("SphereRadius", waveRadius);
-    //        }
-
-    //        // Send global values to your customized Shader Graph materials
-    //        Shader.SetGlobalVector(sphereCenterID, sphereCenter);
-    //        Shader.SetGlobalFloat(sphereRadiusID, waveRadius);
-    //    }
-    //    else
-    //    {
-    //        // Reset wave attributes once max size is achieved
-    //        isWaveExpanding = false;
-    //    }
-    //}
     #endregion
 
     #region headache effect
@@ -310,6 +259,20 @@ public class EnvironmentChange : MonoBehaviour
         foreach (GameObject obj in array)
         {
             if (obj != null) obj.SetActive(state);
+        }
+    }
+
+    private void ChangePost(int _i)
+    {
+        switch (_i)
+        {
+            case 1:
+                if (isColdState == true)
+                    TemperatureShift();
+                break;
+            case 3:
+                shadows.active = false;
+                break;
         }
     }
 }

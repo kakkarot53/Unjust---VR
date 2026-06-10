@@ -25,7 +25,7 @@ public class InteractibleKeypadButton : BaseInteractible
         SetCanInteract(false);
         m_keypad = _k;
 
-        Debug.Log($"{stringValue} is set up");
+        //Debug.Log($"{stringValue} is set up");
 
     }
 

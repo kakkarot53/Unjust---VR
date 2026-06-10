@@ -102,6 +102,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""ChangeLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""465208f4-a945-4579-a3b2-e0e7eb715b1d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Right_Trigger"",
                     ""type"": ""Button"",
                     ""id"": ""b4847c53-95a0-48b9-a52e-5d12a0f1a361"",
@@ -141,6 +150,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""name"": ""Pan"",
                     ""type"": ""Value"",
                     ""id"": ""92f56b97-cf7d-4961-9e9b-4a149829be9f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""16ade14a-3c43-423d-a4de-3bda8c9ff7a2"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -336,13 +354,90 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""faf98a12-e685-4f53-a37a-9e6a979ca534"",
+                    ""name"": ""One Modifier"",
+                    ""id"": ""009e9f1a-c4b6-4dea-8603-67f75ef9eceb"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pan"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""64bc13f4-5669-4035-88fc-9d1eb4987c09"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""86e1974d-aeca-41a3-b72a-7b1bde282504"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77673024-e16c-431d-b9f2-ae640edd6be7"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""01eed6e4-1990-4533-a4c4-efc1366facb4"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeLevel"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""41424298-af01-42fd-88c7-fcd9d0e6091f"",
+                    ""path"": ""<XRController>{RightHand}/primaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""1badd7e7-2829-4670-87ac-b3aa37d6da0c"",
+                    ""path"": ""<XRController>{RightHand}/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""55e36a4b-0f68-496e-afee-c7075d19a489"",
+                    ""path"": ""<Pointer>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -354,11 +449,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         // Interaction
         m_Interaction = asset.FindActionMap("Interaction", throwIfNotFound: true);
         m_Interaction_RoomShift = m_Interaction.FindAction("RoomShift", throwIfNotFound: true);
+        m_Interaction_ChangeLevel = m_Interaction.FindAction("ChangeLevel", throwIfNotFound: true);
         m_Interaction_Right_Trigger = m_Interaction.FindAction("Right_Trigger", throwIfNotFound: true);
         m_Interaction_Left_Trigger = m_Interaction.FindAction("Left_Trigger", throwIfNotFound: true);
         m_Interaction_Move = m_Interaction.FindAction("Move", throwIfNotFound: true);
         m_Interaction_Zoom = m_Interaction.FindAction("Zoom", throwIfNotFound: true);
         m_Interaction_Pan = m_Interaction.FindAction("Pan", throwIfNotFound: true);
+        m_Interaction_Look = m_Interaction.FindAction("Look", throwIfNotFound: true);
     }
 
     ~@InputSystem()
@@ -440,11 +537,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Interaction;
     private List<IInteractionActions> m_InteractionActionsCallbackInterfaces = new List<IInteractionActions>();
     private readonly InputAction m_Interaction_RoomShift;
+    private readonly InputAction m_Interaction_ChangeLevel;
     private readonly InputAction m_Interaction_Right_Trigger;
     private readonly InputAction m_Interaction_Left_Trigger;
     private readonly InputAction m_Interaction_Move;
     private readonly InputAction m_Interaction_Zoom;
     private readonly InputAction m_Interaction_Pan;
+    private readonly InputAction m_Interaction_Look;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interaction".
     /// </summary>
@@ -460,6 +559,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interaction/RoomShift".
         /// </summary>
         public InputAction @RoomShift => m_Wrapper.m_Interaction_RoomShift;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/ChangeLevel".
+        /// </summary>
+        public InputAction @ChangeLevel => m_Wrapper.m_Interaction_ChangeLevel;
         /// <summary>
         /// Provides access to the underlying input action "Interaction/Right_Trigger".
         /// </summary>
@@ -480,6 +583,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interaction/Pan".
         /// </summary>
         public InputAction @Pan => m_Wrapper.m_Interaction_Pan;
+        /// <summary>
+        /// Provides access to the underlying input action "Interaction/Look".
+        /// </summary>
+        public InputAction @Look => m_Wrapper.m_Interaction_Look;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -509,6 +616,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @RoomShift.started += instance.OnRoomShift;
             @RoomShift.performed += instance.OnRoomShift;
             @RoomShift.canceled += instance.OnRoomShift;
+            @ChangeLevel.started += instance.OnChangeLevel;
+            @ChangeLevel.performed += instance.OnChangeLevel;
+            @ChangeLevel.canceled += instance.OnChangeLevel;
             @Right_Trigger.started += instance.OnRight_Trigger;
             @Right_Trigger.performed += instance.OnRight_Trigger;
             @Right_Trigger.canceled += instance.OnRight_Trigger;
@@ -524,6 +634,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Pan.started += instance.OnPan;
             @Pan.performed += instance.OnPan;
             @Pan.canceled += instance.OnPan;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
         }
 
         /// <summary>
@@ -538,6 +651,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @RoomShift.started -= instance.OnRoomShift;
             @RoomShift.performed -= instance.OnRoomShift;
             @RoomShift.canceled -= instance.OnRoomShift;
+            @ChangeLevel.started -= instance.OnChangeLevel;
+            @ChangeLevel.performed -= instance.OnChangeLevel;
+            @ChangeLevel.canceled -= instance.OnChangeLevel;
             @Right_Trigger.started -= instance.OnRight_Trigger;
             @Right_Trigger.performed -= instance.OnRight_Trigger;
             @Right_Trigger.canceled -= instance.OnRight_Trigger;
@@ -553,6 +669,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Pan.started -= instance.OnPan;
             @Pan.performed -= instance.OnPan;
             @Pan.canceled -= instance.OnPan;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
         }
 
         /// <summary>
@@ -601,6 +720,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRoomShift(InputAction.CallbackContext context);
         /// <summary>
+        /// Method invoked when associated input action "ChangeLevel" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnChangeLevel(InputAction.CallbackContext context);
+        /// <summary>
         /// Method invoked when associated input action "Right_Trigger" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -635,5 +761,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPan(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLook(InputAction.CallbackContext context);
     }
 }

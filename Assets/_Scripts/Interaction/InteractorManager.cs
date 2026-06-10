@@ -11,7 +11,7 @@ public class InteractorManager : MonoBehaviour
     private InteractionInfoManager m_info;
     private InputSystem input;
 
-    private bool isInspecting = false;
+    public bool isInspecting = false;
 
     private void Awake()
     {
