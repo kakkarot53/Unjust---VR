@@ -46,10 +46,6 @@
     },
     {
       "Type": 0,
-      "Text": "[Unity.InputSystem] - System.Void UnityEngine.InputSystem.FastTouchscreen::.ctor() - High Variable Count of 315"
-    },
-    {
-      "Type": 0,
       "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshPro::GenerateTextMesh() - High Variable Count of 219"
     },
     {
@@ -79,6 +75,10 @@
     {
       "Type": 0,
       "Text": "[Unity.TextMeshPro] - System.Void TMPro.TMP_TextParsingUtilities::.cctor() - High CodeSize of 31711"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.InputSystem] - System.Void UnityEngine.InputSystem.FastTouchscreen::.ctor() - High Variable Count of 315"
     }
   ],
   "CommandLine": "@Library\\Bee\\artifacts\\rsp\\11004580112543761875.rsp"

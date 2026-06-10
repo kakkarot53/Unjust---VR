@@ -292,6 +292,12 @@ public class EnvironmentChange : MonoBehaviour
     {
         switch (_i)
         {
+            case 0:
+                if (AudioController.IsPlaying("BGM_Classroom_Warm")) return;
+
+                AudioController.StopCategory("BGM", 0.5f);
+                AudioController.Play("BGM_Classroom_Warm", 1f, 0, 0);
+                break;
             case 1:
                 if (isColdState == false)
                 {

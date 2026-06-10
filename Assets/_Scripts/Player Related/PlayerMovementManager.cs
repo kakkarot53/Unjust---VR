@@ -1,3 +1,4 @@
+using CS.AudioToolkit;
 using UnityEngine;
 
 public class PlayerMovementManager : MonoBehaviour
@@ -72,6 +73,9 @@ public class PlayerMovementManager : MonoBehaviour
 
         // 3. Combine horizontal movement vectors with vertical physics forces
         Vector3 finalVelocity = (moveDirection * moveSpeed) + (Vector3.up * verticalVelocity);
+
+        if (moveDirection.sqrMagnitude > 0.01f)
+            AudioController.Play("footsteps-walk");
 
         // 4. Send finalized translation vectors to the controller component
         controller.Move(finalVelocity * Time.deltaTime);

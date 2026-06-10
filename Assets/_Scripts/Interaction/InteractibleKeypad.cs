@@ -162,8 +162,8 @@ public class InteractibleKeypad : BaseInteractible
             }
 
             // Clear text data buffers completely
-            keypadValue = "8888";
-            if (pinText != null) pinText.text = keypadValue;
+            keypadValue = "";
+            if (pinText != null) pinText.text = "8888";
 
             // Allow the buttons to be interactible again next time the pad is picked up
             SetButtonsInteractionState(false);

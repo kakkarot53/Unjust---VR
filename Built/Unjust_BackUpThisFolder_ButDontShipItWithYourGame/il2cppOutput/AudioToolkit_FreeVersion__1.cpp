@@ -704,7 +704,7 @@ inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125715
+// Method Definition Index: 125718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass159_0__ctor_mEACF8EF57ADA4E82366DA0829815AE34370192B6 (U3CU3Ec__DisplayClass159_0_tC3D5D75AFCEDFDCFAFA7FC8B5C6A92084329F468* __this, const RuntimeMethod* method) 
 {
 	{
@@ -712,7 +712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass159_0__ctor_mEACF8E
 		return;
 	}
 }
-// Method Definition Index: 125716
+// Method Definition Index: 125719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass159_0_U3C_GetAllCategoriesU3Eb__0_m9181CF4E3B4CCEA518018D5054F290C4FA1178F0 (U3CU3Ec__DisplayClass159_0_tC3D5D75AFCEDFDCFAFA7FC8B5C6A92084329F468* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -775,7 +775,7 @@ IL_0035:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125717
+// Method Definition Index: 125720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0__ctor_m9854737B576E005464E3166721EEBE05DCA11006 (U3CU3Ec__DisplayClass74_0_t2115AC5F3695E9608C82F10DFE27A5D225420D49* __this, const RuntimeMethod* method) 
 {
 	{
@@ -783,7 +783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0__ctor_m9854737
 		return;
 	}
 }
-// Method Definition Index: 125718
+// Method Definition Index: 125721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0_U3CStopAllU3Eb__0_m4D5B218FFF3933B6BF6D8FCF1CBD45BB82AB7F6A (U3CU3Ec__DisplayClass74_0_t2115AC5F3695E9608C82F10DFE27A5D225420D49* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	{
@@ -802,7 +802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0_U3CStopAllU3Eb
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125719
+// Method Definition Index: 125722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass78_0__ctor_mBE7793806EA697F89C3246E578EEF94D3D159ADD (U3CU3Ec__DisplayClass78_0_tF64E3E4507A6A4C2F5FD2E63B011DF3A38C2CD94* __this, const RuntimeMethod* method) 
 {
 	{
@@ -810,7 +810,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass78_0__ctor_mBE77938
 		return;
 	}
 }
-// Method Definition Index: 125720
+// Method Definition Index: 125723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass78_0_U3CStopChannelU3Eb__0_m91D4DCECB9132918DB08138860EF1764E17D70CA (U3CU3Ec__DisplayClass78_0_tF64E3E4507A6A4C2F5FD2E63B011DF3A38C2CD94* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -846,7 +846,7 @@ IL_001b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125721
+// Method Definition Index: 125724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass79_0__ctor_m5C0FC83D8FE8915E60EAF98173DA4E0B8A7E9A5C (U3CU3Ec__DisplayClass79_0_t25EE1751EEA877B0862FC3AAFB74C5935D9CA4CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -854,7 +854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass79_0__ctor_m5C0FC83
 		return;
 	}
 }
-// Method Definition Index: 125722
+// Method Definition Index: 125725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass79_0_U3CPauseAllU3Eb__0_m84784B3CDD4F653DA4005D5CE0C54A542D743751 (U3CU3Ec__DisplayClass79_0_t25EE1751EEA877B0862FC3AAFB74C5935D9CA4CC* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	{
@@ -873,7 +873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass79_0_U3CPauseAllU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125723
+// Method Definition Index: 125726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass80_0__ctor_m10DA2AFE1F3A5E790B8CB6B5331DE0FB2A28592A (U3CU3Ec__DisplayClass80_0_tD6909436B50EF80A025518F8B7C33E2A377682D7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -881,7 +881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass80_0__ctor_m10DA2AF
 		return;
 	}
 }
-// Method Definition Index: 125724
+// Method Definition Index: 125727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass80_0_U3CPauseChannelU3Eb__0_m0C4BC4B2C56C4459F7284656192B0C3A085A57FF (U3CU3Ec__DisplayClass80_0_tD6909436B50EF80A025518F8B7C33E2A377682D7* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -917,7 +917,7 @@ IL_001b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125725
+// Method Definition Index: 125728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass81_0__ctor_m787698C6618E813F95CE5DF070B644A49A2AC8EE (U3CU3Ec__DisplayClass81_0_t373031A2F8DF9AF1118A25A08B40059D7B3798B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -925,7 +925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass81_0__ctor_m787698C
 		return;
 	}
 }
-// Method Definition Index: 125726
+// Method Definition Index: 125729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass81_0_U3CUnpauseChannelU3Eb__0_m6D03CA6C5FAD31E85E0748013C2AACDEFB7D26C3 (U3CU3Ec__DisplayClass81_0_t373031A2F8DF9AF1118A25A08B40059D7B3798B8* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -961,7 +961,7 @@ IL_001b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125727
+// Method Definition Index: 125730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass82_0__ctor_mB36E51C07D5646D1643C9BFEF383797589AAE847 (U3CU3Ec__DisplayClass82_0_tC29996CF16094AB9B76E50E62462B270AE62BED0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -969,7 +969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass82_0__ctor_mB36E51C
 		return;
 	}
 }
-// Method Definition Index: 125728
+// Method Definition Index: 125731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass82_0_U3CUnpauseAllU3Eb__0_mFC3918063AFD10D30F3539418DF2717A3401F516 (U3CU3Ec__DisplayClass82_0_tC29996CF16094AB9B76E50E62462B270AE62BED0* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1034,7 +1034,7 @@ IL_0031:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125729
+// Method Definition Index: 125732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass91_0__ctor_mC24CCD339AE503F8CEA5893D4CF91A335DA73025 (U3CU3Ec__DisplayClass91_0_t42BE08885B5C5979C6D8A6A8BCB255F9ECB3C4BF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1042,7 +1042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass91_0__ctor_mC24CCD3
 		return;
 	}
 }
-// Method Definition Index: 125730
+// Method Definition Index: 125733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass91_0_U3CGetPlayingAudioObjectsU3Eb__0_m8139A75CE60B32875F1974FFB1CEAE4AE8584FC2 (U3CU3Ec__DisplayClass91_0_t42BE08885B5C5979C6D8A6A8BCB255F9ECB3C4BF* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1072,7 +1072,7 @@ IL_0015:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125731
+// Method Definition Index: 125734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass92_0__ctor_m6AC65F948AC59F56685C7B16CBF84EDDFFF22A0B (U3CU3Ec__DisplayClass92_0_t3A299412426467FDA76FBBA76C3B994D337DA50F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1080,7 +1080,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass92_0__ctor_m6AC65F9
 		return;
 	}
 }
-// Method Definition Index: 125732
+// Method Definition Index: 125735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass92_0_U3CGetPlayingAudioObjectsInCategoryU3Eb__0_m255C9E1D832039E0495CAB3E05936B2915390478 (U3CU3Ec__DisplayClass92_0_t3A299412426467FDA76FBBA76C3B994D337DA50F* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1108,7 +1108,7 @@ IL_0010:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125733
+// Method Definition Index: 125736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass93_0__ctor_m4DD81268BF73857F6295BB4F23BB5BE0B68FC694 (U3CU3Ec__DisplayClass93_0_t864684DDD6153D93BAE4DC0CA6DA74D0A239DAA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1116,7 +1116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass93_0__ctor_m4DD8126
 		return;
 	}
 }
-// Method Definition Index: 125734
+// Method Definition Index: 125737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass93_0_U3CGetPlayingAudioObjectsU3Eb__0_mBAE64B7AF4BB8A8127405B151DF8FC55CA841A2D (U3CU3Ec__DisplayClass93_0_t864684DDD6153D93BAE4DC0CA6DA74D0A239DAA2* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1251,7 +1251,7 @@ IL_0062:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125735
+// Method Definition Index: 125738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_0__ctor_m785C05AB10A938DECF7832AD924505B84F2122EA (U3CU3Ec__DisplayClass94_0_t5A6C392AAB0AF0A604B69FB873E4517E39B33D89* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1259,7 +1259,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_0__ctor_m785C05A
 		return;
 	}
 }
-// Method Definition Index: 125736
+// Method Definition Index: 125739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_0_U3CInvokeForAllPlayingAudioObjectsU3Eb__0_m6781601B22A1C269783432DE76AB488293D99C28 (U3CU3Ec__DisplayClass94_0_t5A6C392AAB0AF0A604B69FB873E4517E39B33D89* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1360,7 +1360,7 @@ IL_003e:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125737
+// Method Definition Index: 125740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass95_0__ctor_m144E608035E302FA9066529B44CAB54730FE504B (U3CU3Ec__DisplayClass95_0_t4905DE377A1C016527B5661A5C818B5B95A83905* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1368,7 +1368,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass95_0__ctor_m144E608
 		return;
 	}
 }
-// Method Definition Index: 125738
+// Method Definition Index: 125741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass95_0_U3CGetPlayingAudioObjectsCountU3Eb__0_m7526986D0C2F3C316E078A2EA68FAAA3BB24AD55 (U3CU3Ec__DisplayClass95_0_t4905DE377A1C016527B5661A5C818B5B95A83905* __this, AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* ___0_o, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1408,7 +1408,7 @@ IL_0028:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125739
+// Method Definition Index: 125742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_CurrentInspectorSelection__ctor_mCC3963C78D949108186FE84CFE9418A4F2BADB53 (AudioController_CurrentInspectorSelection_t40A6289B5CDE52A3573447F0FE51070B23C16BDA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1429,7 +1429,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_CurrentInspectorSelectio
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125740
+// Method Definition Index: 125743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem__ctor_m0B6A47990ED0CCFA26AE4128372DFFE7415CDD53 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1460,7 +1460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem__ctor_m0B6A47990ED0CCFA26AE412
 		return;
 	}
 }
-// Method Definition Index: 125741
+// Method Definition Index: 125744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem__ctor_m49231DAFB0802725B6F195D324F5280CF540EB48 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* ___0_orig, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1622,7 +1622,7 @@ IL_0209:
 		return;
 	}
 }
-// Method Definition Index: 125742
+// Method Definition Index: 125745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_set_category_m88821D53218E1EA93252E809FDE3BE87873B8150 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, AudioCategory_t27262B777DBB13E4A5529A1CC2130CB4778E4782* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1632,7 +1632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_set_category_m88821D53218E1EA9
 		return;
 	}
 }
-// Method Definition Index: 125743
+// Method Definition Index: 125746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioCategory_t27262B777DBB13E4A5529A1CC2130CB4778E4782* AudioItem_get_category_mC0047B79DF8D0580D3ECE97624A5947F530134CE (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, const RuntimeMethod* method) 
 {
 	AudioCategory_t27262B777DBB13E4A5529A1CC2130CB4778E4782* V_0 = NULL;
@@ -1648,7 +1648,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 125744
+// Method Definition Index: 125747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_AddAudioSubItem_m92E48A55A19DAC45A5677588E1DB1C44926A4622 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* ___0_audioSubItem, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1669,7 +1669,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_AddAudioSubItem_m92E48A55A19DA
 		return;
 	}
 }
-// Method Definition Index: 125745
+// Method Definition Index: 125748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_Awake_mF2650B722CA4428E92149D030F6E18A845B10048 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1692,7 +1692,7 @@ IL_0017:
 		return;
 	}
 }
-// Method Definition Index: 125746
+// Method Definition Index: 125749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_ResetSequence_m718428C85226F2B32E7A250AE81EDC1400BFE433 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1700,7 +1700,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_ResetSequence_m718428C85226F2B
 		return;
 	}
 }
-// Method Definition Index: 125747
+// Method Definition Index: 125750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem__Initialize_m7BBF50F234F85FE79F5042B3C375D8A6BF86629B (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, AudioCategory_t27262B777DBB13E4A5529A1CC2130CB4778E4782* ___0_categ, const RuntimeMethod* method) 
 {
 	{
@@ -1710,7 +1710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem__Initialize_m7BBF50F234F85FE79
 		return;
 	}
 }
-// Method Definition Index: 125748
+// Method Definition Index: 125751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem__NormalizeSubItems_m9AF4DB70BAB5D0A7CA7C173DC1688B397AAAAE39 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -2026,7 +2026,7 @@ IL_0149:
 		return;
 	}
 }
-// Method Definition Index: 125749
+// Method Definition Index: 125752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioItem__IsValidSubItem_m5EB6AEA6A6BC88F3F1341C60CEF3E95AEA6A6234 (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* ___0_item, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2124,7 +2124,7 @@ IL_0044:
 		return L_13;
 	}
 }
-// Method Definition Index: 125750
+// Method Definition Index: 125753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioItem_UnloadAudioClip_mD66BE60356EB11EB806D1399DA715641C2E4E647 (AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2246,7 +2246,7 @@ IL_005a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125751
+// Method Definition Index: 125754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSubItem__ctor_m259BEA24B96E7C8A7260E28C02D605DF8B41C4B0 (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2281,7 +2281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSubItem__ctor_m259BEA24B96E7C8A7260
 		return;
 	}
 }
-// Method Definition Index: 125752
+// Method Definition Index: 125755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSubItem__ctor_m2DDF25DE5FD368B06406C7B631688345CE3EC31C (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* __this, AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* ___0_orig, AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* ___1_item, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2464,7 +2464,7 @@ IL_01cf:
 		return;
 	}
 }
-// Method Definition Index: 125753
+// Method Definition Index: 125756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioSubItem_get__SummedProbability_mBA410E04F945D795AE4DD42BA0F2F39C20D06F7A (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -2480,7 +2480,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 125754
+// Method Definition Index: 125757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSubItem_set__SummedProbability_m678BE53B19C8DD9A4AD3E8FEBAC23843EF2E2C99 (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2489,7 +2489,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSubItem_set__SummedProbability_m678
 		return;
 	}
 }
-// Method Definition Index: 125755
+// Method Definition Index: 125758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSubItem_set_item_m645FEC3BF75A7E9A5A5F1853AE527295411D3BB6 (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* __this, AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2499,7 +2499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSubItem_set_item_m645FEC3BF75A7E9A5
 		return;
 	}
 }
-// Method Definition Index: 125756
+// Method Definition Index: 125759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* AudioSubItem_get_item_mB4D32BEF83BC8A4841F11F78CBF389A0EFF0B49D (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* __this, const RuntimeMethod* method) 
 {
 	AudioItem_t4AEDC9D5F139B9023AF7EC276D9BAC9AE9E8549A* V_0 = NULL;
@@ -2515,7 +2515,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 125757
+// Method Definition Index: 125760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AudioSubItem_ToString_mB40A22B74EE02034AEB4F4BE1597E1A9DF841AA9 (AudioSubItem_tC73B9AD5DA65F293B6F8724D024C3F7B8DCD922E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2570,7 +2570,7 @@ IL_003a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 125758
+// Method Definition Index: 125761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Playlist__ctor_mF0470BC71708699C8C3EDCA7DD5E287350DEFD2F (Playlist_tF61F12599935AC849CBCEF13D73533289CB5E78D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2588,7 +2588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Playlist__ctor_mF0470BC71708699C8C3EDCA7
 		return;
 	}
 }
-// Method Definition Index: 125759
+// Method Definition Index: 125762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Playlist__ctor_m5745245051E584A1680CECB210A8D77DAD423536 (Playlist_tF61F12599935AC849CBCEF13D73533289CB5E78D* __this, String_t* ___0_name, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___1_playlistItems, const RuntimeMethod* method) 
 {
 	{
@@ -2605,7 +2605,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Playlist__ctor_m5745245051E584A1680CECB2
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 125467
+// Method Definition Index: 125470
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AudioObject_get_channel_m7CC1B6B1F7085979D4E5B0D8B79672560080CBE6_inline (AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2613,7 +2613,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AudioObject_get_channel_m
 		return L_0;
 	}
 }
-// Method Definition Index: 125461
+// Method Definition Index: 125464
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AudioObject_get_audioID_m6369256F6316F5510B169EA5D1812721C48D5D81_inline (AudioObject_t8CEBDFDDA04A65B542D335A72D76113B48E606CF* __this, const RuntimeMethod* method) 
 {
 	{
