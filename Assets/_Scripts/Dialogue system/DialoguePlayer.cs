@@ -13,6 +13,14 @@ public class DialoguePlayer : MonoBehaviour
 
     private Coroutine currDialogueRoutine;
     public bool IsPlaying { get; private set; }
+
+    public static DialoguePlayer instance;
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
+
     private void Start()
     {
         IsPlaying = false;

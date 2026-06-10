@@ -6774,14 +6774,14 @@ struct DiagnosticTrace_t141E9437BC3E97C22F2459F2870D78816201CC8B  : public Runti
 struct ExceptionUtility_tE7E4F30ECBAEA39D76EAACF4F048A4090F11B5AA  : public RuntimeObject
 {
 };
-struct U3CPlayAllDialoguesRoutineU3Ed__13_t8799372E255039916974E5CE6FB5017DE4211494  : public RuntimeObject
+struct U3CPlayAllDialoguesRoutineU3Ed__15_tEB83815CA8B2E3B8C5A1B8CCE342087E86633C20  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	DialoguePlayer_tDA5979EC8FE116D78FBA735B1282A17DFF358BD3* ___U3CU3E4__this;
 	int32_t ___U3CiU3E5__2;
 };
-struct U3CTypeSentenceRoutineU3Ed__14_tF7B11CFD4EB7143DBC1F49212E3A0739EDE64728  : public RuntimeObject
+struct U3CTypeSentenceRoutineU3Ed__16_t4132A54C31F672FA90DC506DD448E42F18257637  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -7251,13 +7251,13 @@ struct ReallocateInstances_000002A0U24BurstDirectCall_t7A4EAF94ED68CE68F1095F542
 struct DebugView_tBCF93007F0D032258FA7D10775976BC99EF08FB9  : public RuntimeObject
 {
 };
-struct U3CAutoQuitFocusDelayU3Ed__31_t326E978B582F105D94AD86EED5F1E1136D3C05DE  : public RuntimeObject
+struct U3CAutoQuitFocusDelayU3Ed__32_tB59823630226E0111AAA4F42C2437F95F03DC5E3  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	InteractibleKeypad_tB7F01C2F0D77FD52F753C4F11C6EE4B0FDF9A464* ___U3CU3E4__this;
 };
-struct U3CFlashIncorrectIndicatorU3Ed__30_t46DD56EAC0EFA14544854AC88D6264A3DBBB29BB  : public RuntimeObject
+struct U3CFlashIncorrectIndicatorU3Ed__31_t26A2E283F1EFC6084D276D64F1ECAD1B5742EE41  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -7269,7 +7269,7 @@ struct U3CInitializeButtonsDelayedU3Ed__25_tEAAD08ADE10155C15097D61E50A740F92A37
 	RuntimeObject* ___U3CU3E2__current;
 	InteractibleKeypad_tB7F01C2F0D77FD52F753C4F11C6EE4B0FDF9A464* ___U3CU3E4__this;
 };
-struct U3CHandlePowerTransitionU3Ed__10_tC23081A675C1F5F6E840344D51151A8C9B9CF40B  : public RuntimeObject
+struct U3CHandlePowerTransitionU3Ed__13_tB258F0C92BD65241E753FF3173948AB19F947D33  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -33873,7 +33873,7 @@ struct U3CTransitionObjectU3Ed__13_t083C7C4C8B03E0BDDC75BD17F17E2960062DE608  : 
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___targetRotation;
 	bool ___enteringInspection;
 };
-struct U3CTransitionObjectU3Ed__32_tF7E819893D9D1970CB6F57D3639868D80CCD74E9  : public RuntimeObject
+struct U3CTransitionObjectU3Ed__33_t3E70AD97F20E69892CF632D2DC8C05AA8EAD469F  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -48507,6 +48507,9 @@ struct BaseInteractible_t6D7A1A876CCD3688990CF1036395810E28939448  : public Mono
 	int32_t ___defaultLayerIndex;
 	bool ___isInteracting;
 	bool ___canInteract;
+	int32_t ___levelID;
+	bool ___oriCanInteract;
+	UnjustGameManager_tB840D9D01A3BDAF626C9817C5002BB2FFE6FC965* ___m_game;
 };
 struct BaseSpeechService_tA2207629DC2C3D11FC9F97A9493914FD37C05433  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -50850,7 +50853,6 @@ struct SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358  : public MonoB
 	InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* ___startDoor;
 	InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024* ___finishDoor;
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___extraDecor;
-	EnvironmentChange_tBE063E06E47C2B6B52F82D294409030A01AE9471* ___m_post;
 	int32_t ___disabledCount;
 	UnjustGameManager_tB840D9D01A3BDAF626C9817C5002BB2FFE6FC965* ___m_game;
 };
@@ -51894,6 +51896,7 @@ struct InteractibleDoor_t5104E7FD70D69813355F055E15D0D9A4F90E8024  : public Base
 	float ___doorOpenAngle;
 	float ___doorOpenTime;
 	InteractibleKeypad_tB7F01C2F0D77FD52F753C4F11C6EE4B0FDF9A464* ___m_keypad;
+	bool ___isOpen;
 };
 struct InteractibleGavel_t632C5F5CA9F7997A816FF868F22A04EF8AF0F3D5  : public BaseInteractible_t6D7A1A876CCD3688990CF1036395810E28939448
 {
@@ -51958,6 +51961,7 @@ struct InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB  : public BaseIn
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audSrc;
 	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___powerRoutine;
 	SyncedTVManager_t79776532E7858B764BB6B70DF177C63F01E72358* ___m_sync;
+	float ___scaleMult;
 };
 struct Interface_t1933710862740A9C3915823DC12B6E0C639EBCC6  : public Controller_tD1D864C815FC4FCDC85F17939716E36A88B39386
 {
@@ -58439,6 +58443,10 @@ struct DebugManager_tB497DAE8D9055CB6B970EBD98704022045F1E608_StaticFields
 	DebugManager_tB497DAE8D9055CB6B970EBD98704022045F1E608* ___U3CInstanceU3Ek__BackingField;
 	Action_1_tD69CAD284EC33F961BA808B620C80788EC03F443* ___OnReady;
 };
+struct DialoguePlayer_tDA5979EC8FE116D78FBA735B1282A17DFF358BD3_StaticFields
+{
+	DialoguePlayer_tDA5979EC8FE116D78FBA735B1282A17DFF358BD3* ___instance;
+};
 struct DynamicEntityKeywordRegistry_t610EF6621FA40BD297502CD7A30337A625A57C28_StaticFields
 {
 	DynamicEntityKeywordRegistry_t610EF6621FA40BD297502CD7A30337A625A57C28* ___instance;
@@ -63719,11 +63727,11 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize13222 = { sizeof(CourtRoomTr
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13223;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize13223 = { sizeof(DialogueDataContainer_tC702A39D215B4CF4B529FA7D5D2C9C7CD81BE4A0), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13224;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize13224 = { sizeof(U3CPlayAllDialoguesRoutineU3Ed__13_t8799372E255039916974E5CE6FB5017DE4211494), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize13224 = { sizeof(U3CPlayAllDialoguesRoutineU3Ed__15_tEB83815CA8B2E3B8C5A1B8CCE342087E86633C20), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13225;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize13225 = { sizeof(U3CTypeSentenceRoutineU3Ed__14_tF7B11CFD4EB7143DBC1F49212E3A0739EDE64728), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize13225 = { sizeof(U3CTypeSentenceRoutineU3Ed__16_t4132A54C31F672FA90DC506DD448E42F18257637), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13226;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize13226 = { sizeof(DialoguePlayer_tDA5979EC8FE116D78FBA735B1282A17DFF358BD3), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize13226 = { sizeof(DialoguePlayer_tDA5979EC8FE116D78FBA735B1282A17DFF358BD3), -1, sizeof(DialoguePlayer_tDA5979EC8FE116D78FBA735B1282A17DFF358BD3_StaticFields), 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13227;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize13227 = { sizeof(U3CFadeOutTextU3Ed__23_t16028E3D9E0672560948AF253A501D75510605DA), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13228;
@@ -63747,19 +63755,19 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize13236 = { sizeof(U3CTransiti
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13237;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize13237 = { sizeof(InteractibleInspect_tE5B178B88A89389CA94D727EB9B9CFDBB7BFC2C8), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13238;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize13238 = { sizeof(U3CAutoQuitFocusDelayU3Ed__31_t326E978B582F105D94AD86EED5F1E1136D3C05DE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize13238 = { sizeof(U3CAutoQuitFocusDelayU3Ed__32_tB59823630226E0111AAA4F42C2437F95F03DC5E3), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13239;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize13239 = { sizeof(U3CFlashIncorrectIndicatorU3Ed__30_t46DD56EAC0EFA14544854AC88D6264A3DBBB29BB), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize13239 = { sizeof(U3CFlashIncorrectIndicatorU3Ed__31_t26A2E283F1EFC6084D276D64F1ECAD1B5742EE41), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13240;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize13240 = { sizeof(U3CInitializeButtonsDelayedU3Ed__25_tEAAD08ADE10155C15097D61E50A740F92A37C34D), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13241;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize13241 = { sizeof(U3CTransitionObjectU3Ed__32_tF7E819893D9D1970CB6F57D3639868D80CCD74E9), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize13241 = { sizeof(U3CTransitionObjectU3Ed__33_t3E70AD97F20E69892CF632D2DC8C05AA8EAD469F), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13242;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize13242 = { sizeof(InteractibleKeypad_tB7F01C2F0D77FD52F753C4F11C6EE4B0FDF9A464), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13243;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize13243 = { sizeof(InteractibleKeypadButton_t8D944DA5A9E2AFD8A1F00DAF2D08019B4A33CE51), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13244;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize13244 = { sizeof(U3CHandlePowerTransitionU3Ed__10_tC23081A675C1F5F6E840344D51151A8C9B9CF40B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize13244 = { sizeof(U3CHandlePowerTransitionU3Ed__13_tB258F0C92BD65241E753FF3173948AB19F947D33), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13245;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize13245 = { sizeof(InteractibleTV_t5E77E5F8BD4D906B826B0107A180CC4FBF91F1CB), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize13246;

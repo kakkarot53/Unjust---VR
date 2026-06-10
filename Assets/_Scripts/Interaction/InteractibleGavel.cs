@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
-
+using CS.AudioToolkit;
 public class InteractibleGavel : BaseInteractible
 {
     [Header("Timeline Settings")]
@@ -52,8 +52,7 @@ public class InteractibleGavel : BaseInteractible
             EnvironmentChange.instance.TriggerDimensionShift();
             EnvironmentChange.instance.StartHeadacheEffect();
 
-            //if(gavelClip != null) 
-                //do smy here
+            AudioController.Play("gavel-hit");
 
             isInteracting = false;
             gameObject.layer = originalLayerIndex;

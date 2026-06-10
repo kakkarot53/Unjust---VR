@@ -1,6 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
-
+using CS.AudioToolkit;
 public class InteractibleKeypadButton : BaseInteractible
 {
     [SerializeField] private string stringValue;
@@ -50,6 +50,9 @@ public class InteractibleKeypadButton : BaseInteractible
 
             // Fire character data payload straight up into manager
             m_keypad.ButtonInteract(stringValue);
+
+            //play audio
+            AudioController.Play("keypad_press");
 
             LeanTween.moveLocalZ(this.gameObject, pressedLocalZ, 0.08f)
             .setEase(LeanTweenType.easeOutQuad)

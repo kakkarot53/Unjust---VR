@@ -56,8 +56,8 @@ public class SyncedTVManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if(m_game.currentRoomIndex == 2)
-        //    return;
+        if (!startDoor.isOpen)
+            return;
 
         if (other.CompareTag("Player"))
         {

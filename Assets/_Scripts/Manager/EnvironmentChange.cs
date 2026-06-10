@@ -1,3 +1,5 @@
+using CS.AudioToolkit;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -109,6 +111,9 @@ public class EnvironmentChange : MonoBehaviour
         CacheLightBaselines(coldLights, coldLightBaselines);
 
         m_Game.OnRoomChange += ChangePost;
+        m_Game.OnRoomChange += ChangeAmbience;
+        //just in case
+        AudioController.Play("BGM_Classroom_Warm", 1f, 0, 0);
     }
 
     private void Update()
@@ -184,6 +189,8 @@ public class EnvironmentChange : MonoBehaviour
         {
             coldVolume.weight = isColdState ? 1 : 0;//Mathf.Lerp(0f, 1f, progress) : Mathf.Lerp(1f, 0f, progress);
         }
+
+        ChangeAmbience(1);
     }
 
     #endregion
@@ -195,6 +202,8 @@ public class EnvironmentChange : MonoBehaviour
 
         isGlitching = true;
         glitchTimer = 0f;
+
+        AudioController.Play("headache");
     }
 
     private void AnimateHeadacheEffect()
@@ -275,6 +284,33 @@ public class EnvironmentChange : MonoBehaviour
                 break;
             case 3:
                 if (shadows != null) shadows.active = false;
+                break;
+        }
+    }
+
+    private void ChangeAmbience(int _i)
+    {
+        switch (_i)
+        {
+            case 1:
+                if (isColdState == false)
+                {
+                    if (AudioController.IsPlaying("BGM_Classroom_Warm")) return;
+
+                    AudioController.StopCategory("BGM", 0.5f);
+                    AudioController.Play("BGM_Classroom_Warm", 1f, 0, 0);
+                }
+                else
+                {
+                    if (AudioController.IsPlaying("Loopable creepy")) return;
+
+                    AudioController.StopCategory("BGM", 0.5f);
+                    AudioController.Play("Loopable creepy", 1f, 0, 0);
+                }
+                break;
+            case 2:
+                break;
+            case 3:
                 break;
         }
     }

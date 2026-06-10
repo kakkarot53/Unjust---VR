@@ -18,7 +18,7 @@ public class InteractibleDoor : BaseInteractible
     private float doorOpenTime = .5f;
 
     private InteractibleKeypad m_keypad;
-
+    public bool isOpen;
     protected override void Start()
     {
         base.Start();
@@ -32,6 +32,7 @@ public class InteractibleDoor : BaseInteractible
 
             m_keypad.OnCorrectPassword += OpenDoor;
         }
+        isOpen = false;
     }
 
     public override void Interact()
@@ -48,16 +49,18 @@ public class InteractibleDoor : BaseInteractible
 
     public void CloseDoor()
     {
-        //AudioController.Play("door-close");
+        AudioController.Play("door-close");
 
         foreach (GameObject d in doors)
         {
             LeanTween.rotateLocal(d, Vector3.zero, doorOpenTime).setEaseInOutQuad();
         }
-        Debug.Log("Closing doors");
+        isOpen = false;
+
     }
     public void OpenDoor()
     {
+        AudioController.Play("door-open");
 
         for (int i = 0; i < doors.Length; i++)
         {
@@ -67,7 +70,7 @@ public class InteractibleDoor : BaseInteractible
             // Rotate the door around its local Y-axis by the specified angle over the defined time
             LeanTween.rotateAroundLocal(doors[i], Vector3.up, rotationAngle, doorOpenTime).setEaseInOutQuad();
             this.SetCanInteract(false);
-
+            isOpen = true;
         }
     }
 
