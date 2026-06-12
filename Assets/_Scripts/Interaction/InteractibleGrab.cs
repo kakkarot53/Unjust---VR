@@ -1,14 +1,16 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class InteractibleGrab : BaseInteractible
 {
     //so it looks a bit better
-    [Header("Grab Configurations")]
-    [SerializeField] private float smoothSpeed = 120f;
+    //[Header("Grab Configurations")]
+    private float smoothSpeed = 240f;
 
     private Rigidbody rb;
     private Transform handHoldAnchor;
     private bool isGrabbed = false;
+    private Vector3 oriPos;
 
     public bool IsCurrentlyHeld => isGrabbed;
 
@@ -17,7 +19,11 @@ public class InteractibleGrab : BaseInteractible
         base.Awake();
         rb = GetComponent<Rigidbody>();
     }
-
+    protected override void Start()
+    {
+        base.Start();
+        oriPos = transform.position;
+    }
     public override void Interact(Transform interactorTransform)
     {
         if (!CanInteract()) return;
@@ -32,8 +38,8 @@ public class InteractibleGrab : BaseInteractible
 
             // change physics param
             rb.useGravity = false;
-            rb.linearDamping = 12f;
-            rb.angularDamping = 12f;
+            rb.linearDamping = 8f;
+            rb.angularDamping = 8f;
         }
         else
         {
@@ -44,7 +50,24 @@ public class InteractibleGrab : BaseInteractible
             rb.angularDamping = 0.05f;
         }
     }
+    protected override void ResetInteractibleState(int _id)
+    {
+        base.ResetInteractibleState(_id);
 
+        isGrabbed = false;
+        handHoldAnchor = null;
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.useGravity = true;
+            rb.linearDamping = 0.05f;
+            rb.angularDamping = 0.05f;
+        }
+
+        this.transform.position = oriPos;
+    }
     private void FixedUpdate()
     {
         //dont run shit if not grabbing anything

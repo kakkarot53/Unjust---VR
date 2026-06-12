@@ -1,5 +1,6 @@
 using CS.AudioToolkit;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -32,9 +33,6 @@ public class EnvironmentChange : MonoBehaviour
 
     [Header("Headache Effect")]
     [SerializeField] private Volume globalVolume; //for chromatic abberation to kinda blur 
-    // give headache effect
-    [SerializeField] private AudioSource mainEars; 
-    [SerializeField] private AudioClip headachePing;
     [Header("Headache Volume Effects")]
     [SerializeField] private float startupDur = 0.5f;           // How fast the screen distorts 
     [SerializeField] private float fadeDur = 1.2f;              // How fast the screen recovers
@@ -127,26 +125,11 @@ public class EnvironmentChange : MonoBehaviour
     #region shifting effects
     public void TriggerDimensionShift()
     {
-        //isWaveExpanding = true;
-        //waveRadius = 0f;
-
-        // Play sound cues accompanying the physical rip
-        if (mainEars != null && headachePing != null)
-        {
-            mainEars.PlayOneShot(headachePing);
-        }
-
-        // Trigger the visual burst of mist particles inside VFX Graph
-        //if (roomVFX != null)
-        //{
-        //    roomVFX.SendEvent("SpawnEvent");
-        //}
-
-        // Swap lighting states and toggle GameObjects instantly
+        //initially didnt use the audio system so thats why it looks weird af
         TemperatureShift();
     }
 
-    public void TemperatureShift()
+    private void TemperatureShift()
     {
         isColdState = !isColdState;
 
@@ -203,7 +186,7 @@ public class EnvironmentChange : MonoBehaviour
         isGlitching = true;
         glitchTimer = 0f;
 
-        AudioController.Play("headache");
+        AudioController.Play("ping");
     }
 
     private void AnimateHeadacheEffect()
@@ -250,6 +233,56 @@ public class EnvironmentChange : MonoBehaviour
     }
     #endregion
 
+    #region Global Transition Flash Effect
+    /// fadeOutDuration => How fast the screen go white
+    /// fadeInDuration  => How fast the screen returns to normal 
+    /// maxPostValue    => The peak exposure value for the blinding effect
+    /// onFlashPeak     => The method block to execute while the screen is fully obscured
+    public void PlayTransitionFlash(float fadeOutDuration, float fadeInDuration, float maxPostValue, Action onFlashPeak)
+    {
+        AudioController.Play("ping");
+
+        if (colorAdjustments == null)
+        {
+            Debug.LogError("[EnvironmentChange] Cannot execute flash transition: ColorAdjustments component reference is missing!");
+            // Fallback: If post processing is broken, execute the action immediately so the player isn't softlocked!
+            onFlashPeak?.Invoke();
+            return;
+        }
+
+        StartCoroutine(FlashTransitionRoutine(fadeOutDuration, fadeInDuration, maxPostValue, onFlashPeak));
+    }
+
+    private IEnumerator FlashTransitionRoutine(float fadeOut, float fadeIn, float peakExposure, Action onFlashPeak)
+    {
+        float elapsed = 0f;
+        float startExposure = colorAdjustments.postExposure.value;
+
+        while (elapsed < fadeOut)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeOut;
+            colorAdjustments.postExposure.value = Mathf.Lerp(startExposure, peakExposure, t);
+            yield return null;
+        }
+        colorAdjustments.postExposure.value = peakExposure;
+
+        onFlashPeak?.Invoke();
+
+        yield return new WaitForSeconds(0.1f);
+
+        elapsed = 0f;
+        while (elapsed < fadeIn)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeIn;
+            colorAdjustments.postExposure.value = Mathf.Lerp(peakExposure, startExposure, t);
+            yield return null;
+        }
+        colorAdjustments.postExposure.value = startExposure;
+    }
+    #endregion
+
     private void CacheLightBaselines(Light[] lights, Dictionary<Light, float> targetDictionary)
     {
         if (lights == null) return;
@@ -275,6 +308,10 @@ public class EnvironmentChange : MonoBehaviour
     {
         switch (_i)
         {
+            case 0:
+                if (isColdState == true)
+                    TemperatureShift();
+                break;
             case 1:
                 if (isColdState == true)
                     TemperatureShift();
@@ -317,6 +354,10 @@ public class EnvironmentChange : MonoBehaviour
             case 2:
                 break;
             case 3:
+                if (AudioController.IsPlaying("BGM_court")) return;
+
+                AudioController.StopCategory("BGM", 0.5f);
+                AudioController.Play("BGM_court", 1f, 0, 0);
                 break;
         }
     }

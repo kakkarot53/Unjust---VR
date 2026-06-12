@@ -49,7 +49,8 @@ public class InteractibleDoor : BaseInteractible
 
     public void CloseDoor()
     {
-        AudioController.Play("door_close");
+        if(isOpen)
+            AudioController.Play("door_close");
 
         foreach (GameObject d in doors)
         {
@@ -60,7 +61,8 @@ public class InteractibleDoor : BaseInteractible
     }
     public void OpenDoor()
     {
-        AudioController.Play("door_open");
+        if(!isOpen)
+            AudioController.Play("door_open");
 
         for (int i = 0; i < doors.Length; i++)
         {

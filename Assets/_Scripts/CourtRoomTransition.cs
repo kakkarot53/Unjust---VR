@@ -15,10 +15,8 @@ public class CourtRoomTransition : MonoBehaviour
 
     private void OnEnable()
     {
-        // FIX 1: Reset state variables so the script knows it's allowed to run again
         isTransitioning = false;
 
-        // FIX 2: Safety check to ensure we don't double-start a coroutine
         if (timeoutCoroutine != null)
         {
             StopCoroutine(timeoutCoroutine);
@@ -38,70 +36,54 @@ public class CourtRoomTransition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // If the player walks into the zone manually before the 2 seconds are up
         if (!isTransitioning && other.CompareTag("Player"))
         {
-            // Stop the ticking timeout fallback so it doesn't try to fire twice!
             if (timeoutCoroutine != null) StopCoroutine(timeoutCoroutine);
-
-            StartCoroutine(FlashAndTeleportRoutine());
+            ExecuteTransition();
         }
     }
+
     private IEnumerator TimeoutFallbackRoutine()
     {
-        // 1. Wait for 2 seconds while the player stands around
         yield return new WaitForSeconds(2.0f);
 
-        // 2. If they haven't touched the collider yet, force execution right now!
         if (!isTransitioning)
         {
             Debug.Log("<color=yellow>[Transition Timeout]</color> Player didn't enter zone. Forcing courtroom teleport!");
-            StartCoroutine(FlashAndTeleportRoutine());
+            ExecuteTransition();
         }
     }
 
-    private IEnumerator FlashAndTeleportRoutine()
+    private void ExecuteTransition()
     {
         isTransitioning = true;
 
-        if (EnvironmentChange.instance == null || EnvironmentChange.instance.colorAdjustments == null)
+        if (EnvironmentChange.instance != null)
         {
-            Debug.LogError("[Transition] EnvironmentChange or ColorAdjustments is missing!");
-            yield break;
+            // Call the isolated flash method on EnvironmentChange
+            EnvironmentChange.instance.PlayTransitionFlash(
+                fadeOutDuration,
+                fadeInDuration,
+                maxPostValue,
+                () => {
+                    UnjustGameManager.instance.RequestChangeRoom(3, true);
+                }
+            );
+
+            StartCoroutine(DisableAfterDelay(fadeOutDuration + fadeInDuration + 0.2f));
         }
-
-        float elapsed = 0f;
-        float startPost = EnvironmentChange.instance.colorAdjustments.postExposure.value;
-
-        // FLASH OUT: Blinding screen shift
-        while (elapsed < fadeOutDuration)
+        else
         {
-            elapsed += Time.deltaTime;
-            float t = elapsed / fadeOutDuration;
-            EnvironmentChange.instance.colorAdjustments.postExposure.value = Mathf.Lerp(startPost, maxPostValue, t);
-            yield return null;
-        }
-        EnvironmentChange.instance.colorAdjustments.postExposure.value = maxPostValue;
+            Debug.LogError("[Transition Manager] EnvironmentChange instance could not be found!");
 
-        // THE WARP: Force SetupRoom on index 3 (Courtroom)
-        if (UnjustGameManager.instance != null)
-        {
             UnjustGameManager.instance.RequestChangeRoom(3, true);
+            gameObject.SetActive(false);
         }
+    }
 
-        yield return new WaitForSeconds(0.1f);
-
-        elapsed = 0f;
-        while (elapsed < fadeInDuration)
-        {
-            elapsed += Time.deltaTime;
-            float t = elapsed / fadeInDuration;
-            EnvironmentChange.instance.colorAdjustments.postExposure.value = Mathf.Lerp(maxPostValue, startPost, t);
-            yield return null;
-        }
-        EnvironmentChange.instance.colorAdjustments.postExposure.value = startPost;
-
-        // Clean up this transition manager gameobject
-        this.gameObject.SetActive(false);
+    private IEnumerator DisableAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(false);
     }
 }
