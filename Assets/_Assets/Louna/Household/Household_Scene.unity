@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: 597a675a-3557-4ede-acf1-91f1fb145d8a
+  instanceId: 7dfcfe6d-33ec-4009-a30a-57fb3d8d5e2b
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -33858,7 +33858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 5817f7c0-f2a5-45f9-a5ca-64264e0166e8
-  instanceId: 34b3a2dc-f80b-4bf8-a37e-95c97d82c92d
+  instanceId: a7814e32-7015-4e91-995f-f4c0c8875c4c
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -38739,7 +38739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: e47682b9-c270-40b1-b16d-90b627a5ce1b
-  instanceId: 7b35d837-18fe-4aaf-a842-02d78d3cb9f8
+  instanceId: 8074f124-698d-4b07-9026-8e4e75fab060
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -43195,7 +43195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 81f55626-5fad-45e9-a1df-184f330da7ba
-  instanceId: bc8d98e3-51aa-4437-8c7c-40e843668658
+  instanceId: 7ad72147-45f7-4a7d-a555-06d5feac1336
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 2063f481-1b63-4eda-9ee8-a00df98536bc
@@ -51398,7 +51398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 5817f7c0-f2a5-45f9-a5ca-64264e0166e8
-  instanceId: be75affc-7dfb-4a40-a166-0b17aea941df
+  instanceId: ba585602-ca06-412d-979f-f4b078fa86db
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -58962,7 +58962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: db916a2e-c955-48b2-8c80-c560e6a5efde
+  instanceId: 31f6a829-08fa-46af-92e3-d4c21ae19580
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -81246,6 +81246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824444822}
   - component: {fileID: 1824444821}
+  - component: {fileID: 1824444823}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -81265,8 +81266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
-  m_IsGlobal: 1
-  priority: 0
+  m_IsGlobal: 0
+  priority: 2
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: bb4686f6e5ef19841a4441360dcc149d, type: 2}
@@ -81279,12 +81280,33 @@ Transform:
   m_GameObject: {fileID: 1824444820}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 520.6747, y: 32.50671, z: 409.82922}
+  m_LocalPosition: {x: 4.8, y: 0, z: 4.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1824444823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824444820}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 49.52955, y: 13.821427, z: 64.21007}
+  m_Center: {x: 19.923717, y: 6.4107137, z: -6.7593536}
 --- !u!1 &1826394627
 GameObject:
   m_ObjectHideFlags: 0

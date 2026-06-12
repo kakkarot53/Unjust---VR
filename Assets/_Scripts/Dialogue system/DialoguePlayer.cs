@@ -17,6 +17,7 @@ public class DialoguePlayer : MonoBehaviour
 
     private DialogueItem[] currentLines;
     private Coroutine currDialogueRoutine;
+    private Coroutine cutsceneClearRoutine;
     private AudioSource currVoice;
     public bool IsPlaying { get; private set; }
 
@@ -138,6 +139,48 @@ public class DialoguePlayer : MonoBehaviour
             Destroy(currVoice.gameObject);
             currVoice = null;
         }
+    }
+
+    public void PlayCutsceneDialogue(string name, DialogueItem[] cutsceneLine, float customSpeed, float customWait)
+    {
+        if (cutsceneClearRoutine != null)
+        {
+            StopCoroutine(cutsceneClearRoutine);
+            cutsceneClearRoutine = null;
+        }
+
+        if (currDialogueRoutine != null)
+        {
+            StopCoroutine(currDialogueRoutine);
+        }
+
+        currentLines = cutsceneLine;
+        IsPlaying = true;
+        textBg.SetActive(true); 
+
+        currDialogueRoutine = StartCoroutine(CutsceneTypeRoutine(name, cutsceneLine[0].text, customSpeed, customWait));
+    }
+
+    private IEnumerator CutsceneTypeRoutine(string chName,string text, float customSpeed, float customWait)
+    {
+        m_Text.text = chName!="" ? $"{chName}\n" : "" ;
+        foreach (char letter in text.ToCharArray())
+        {
+            m_Text.text += letter;
+            yield return new WaitForSeconds(customSpeed); 
+        }
+
+        currDialogueRoutine = null;
+        if (cutsceneClearRoutine != null) StopCoroutine(cutsceneClearRoutine);
+        cutsceneClearRoutine = StartCoroutine(AutoClearCutsceneTextAfterDelay(customWait));
+    }
+
+    private IEnumerator AutoClearCutsceneTextAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        EndDialogue();
+        cutsceneClearRoutine = null;
     }
 
     private void EndDialogue()

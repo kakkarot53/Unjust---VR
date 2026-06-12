@@ -172,16 +172,8 @@ public class ScaleManager : MonoBehaviour
             })
             .setOnComplete(() =>
             {
-                OnPuzzleSolved?.Invoke();
-
-                EnvironmentChange.instance.PlayTransitionFlash(0.4f, 0.6f, 10f,
-                    () => {
-                        if (UnjustGameManager.instance != null)
-                        {
-                            UnjustGameManager.instance.RequestChangeRoom(0, true);
-                        }
-                    }
-                );
+                AudioController.Play("ping");
+                EnvironmentChange.instance.StartEyeCloseEffect(.8f, 2f, .5f, 1f, 1f, 4);
             });
 
 

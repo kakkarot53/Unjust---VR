@@ -56,6 +56,8 @@ public class EnvironmentChange : MonoBehaviour
     private ShadowsMidtonesHighlights shadows;
     //private DepthOfField depthOfField;
 
+    private Coroutine singleGaspRoutine;
+
     private InputSystem input;
 
     public bool isColdState = false;
@@ -91,8 +93,11 @@ public class EnvironmentChange : MonoBehaviour
         }
 
         input.Interaction.RoomShift.started += ctx => {
-            TriggerDimensionShift();
-            StartHeadacheEffect();
+            AudioController.Play("ping");
+            StartEyeCloseEffect(.8f, 2f, .5f, 1f, 1f, -1);
+            
+            //TriggerDimensionShift();
+            //StartHeadacheEffect();
         };
     }
 
@@ -233,7 +238,7 @@ public class EnvironmentChange : MonoBehaviour
     }
     #endregion
 
-    #region Global Transition Flash Effect
+    #region Flashbang
     /// fadeOutDuration => How fast the screen go white
     /// fadeInDuration  => How fast the screen returns to normal 
     /// maxPostValue    => The peak exposure value for the blinding effect
@@ -280,6 +285,126 @@ public class EnvironmentChange : MonoBehaviour
             yield return null;
         }
         colorAdjustments.postExposure.value = startExposure;
+    }
+    #endregion
+
+    #region Eye close Fade Out
+
+    /// <summary>
+    /// Effect 1: Closes eyes completely using distinct close/open speeds and custom intensity bounds.
+    /// </summary>
+    /// <param name="closingDuration">How long it takes to blink shut to black.</param>
+    /// <param name="closedDuration">How long it closes the eyes </param>
+    /// <param name="openDuration">How long it takes to blink open back to baseline.</param>
+    /// <param name="maxIntensity">Target tightness of the vignette (1.0f is pure black).</param>
+    /// <param name="maxSmoothness">Target blurriness of the eyelid edge.</param>
+    /// <param name="targetRoomID">Pass -1 to skip room transition, or a valid index to warp.</param>
+    public void StartEyeCloseEffect(float closingDuration, float closedDuration, float openDuration, float maxIntensity, float maxSmoothness, int targetRoomID)
+    {
+        if (vignette == null)
+        {
+            if (targetRoomID >= 0) UnjustGameManager.instance.RequestChangeRoom(targetRoomID, true);
+            return;
+        }
+
+        StartCoroutine(EyeCloseRoutine(closingDuration, closedDuration, openDuration, maxIntensity, maxSmoothness, targetRoomID));
+    }
+
+    private IEnumerator EyeCloseRoutine(float closingDur, float closedDur, float openDur, float peakIntens, float peakSmooth, int targetRoomID)
+    {
+        float elapsed = 0f;
+        float startIntensity = vignette.intensity.value;
+        float startSmoothness = vignette.smoothness.value;
+
+        // 1. Eyelids clamping down shut
+        while (elapsed < closingDur)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / closingDur;
+
+            vignette.intensity.value = Mathf.Lerp(startIntensity, peakIntens, t);
+            vignette.smoothness.value = Mathf.Lerp(startSmoothness, peakSmooth, t);
+            yield return null;
+        }
+
+        // Snap precisely to the requested peak parameters
+        vignette.intensity.value = peakIntens;
+        vignette.smoothness.value = peakSmooth;
+
+        shadows.active = true;
+        yield return new WaitForSeconds(closedDur *.75f);
+
+        // 2. Perform the critical data warp mid-blackout frame
+        if (targetRoomID >= 0)
+        {
+            UnjustGameManager.instance.RequestChangeRoom(targetRoomID, true);
+        }
+
+        // Settle buffer padding frame gap
+        yield return new WaitForSeconds(closedDur * .25f);
+        shadows.active = false;
+
+        // 3. Eyelids fluttering back open to default room visibility parameters
+        elapsed = 0f;
+        while (elapsed < openDur)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / openDur;
+
+            vignette.intensity.value = Mathf.Lerp(peakIntens, minVignette, t);
+            vignette.smoothness.value = Mathf.Lerp(peakSmooth, 0.35f, t);
+            yield return null;
+        }
+
+        vignette.intensity.value = minVignette;
+        vignette.smoothness.value = 0.35f;
+    }
+    #endregion
+
+    #region hard breathing
+    public void ExecuteSingleGaspPulse(float peakTime, float holdTime, float fadeTime, float maxIntens, float maxSmooth)
+    {
+        if (vignette == null) return;
+
+        if (singleGaspRoutine != null) StopCoroutine(singleGaspRoutine); //just in case accidentally piled up so clear prev and play a new one
+
+        singleGaspRoutine = StartCoroutine(SingleGaspRoutine(peakTime, holdTime, fadeTime, maxIntens, maxSmooth));
+    }
+
+    private IEnumerator SingleGaspRoutine(float peakTime, float holdTime, float fadeTime, float targetIntens, float targetSmooth)
+    {
+        float elapsed = 0f;
+
+        // --- CONTRACT IN: Sharp, sudden panic grab ---
+        while (elapsed < peakTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / peakTime;
+            float smoothT = Mathf.SmoothStep(0f, 1f, t);
+
+            vignette.intensity.value = Mathf.Lerp(minVignette, targetIntens, smoothT);
+            vignette.smoothness.value = Mathf.Lerp(0.2f, targetSmooth, smoothT);
+            yield return null;
+        }
+        yield return new WaitForSeconds(holdTime);
+
+        elapsed = 0f;
+        // --- RELAX OUT: Sinking slowly back to the room baseline ---
+        while (elapsed < fadeTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeTime;
+            float smoothT = Mathf.SmoothStep(0f, 1f, t);
+
+            vignette.intensity.value = Mathf.Lerp(targetIntens, minVignette, smoothT);
+            vignette.smoothness.value = Mathf.Lerp(targetSmooth, 0.35f, smoothT);
+            yield return null;
+        }
+
+        // Lock safely back down to base clear room vision configurations
+        vignette.intensity.value = minVignette;
+        vignette.smoothness.value = 0.35f;
+        singleGaspRoutine = null;
     }
     #endregion
 
@@ -333,6 +458,7 @@ public class EnvironmentChange : MonoBehaviour
                 if (AudioController.IsPlaying("BGM_Classroom_Warm")) return;
 
                 AudioController.StopCategory("BGM", 0.5f);
+                AudioController.StopCategory("SFX", 0.5f);
                 AudioController.Play("BGM_Classroom_Warm", 1f, 0, 0);
                 break;
             case 1:
@@ -358,6 +484,9 @@ public class EnvironmentChange : MonoBehaviour
 
                 AudioController.StopCategory("BGM", 0.5f);
                 AudioController.Play("BGM_court", 1f, 0, 0);
+                break;
+            case 4:
+                AudioController.StopCategory("BGM", 0.5f);
                 break;
         }
     }
