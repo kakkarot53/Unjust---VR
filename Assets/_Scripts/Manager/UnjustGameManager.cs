@@ -103,7 +103,7 @@ public class UnjustGameManager : MonoBehaviour
         if (roomDatabase[roomIndex].startRoomDialogue != null)
         {
             DialogueItem[] setupLines = roomDatabase[roomIndex].startRoomDialogue.dialogue;
-            DialoguePlayer.instance.PlayDialogueSequence(setupLines, .5f);
+            DialoguePlayer.instance.PlayDialogueSequence(roomDatabase[roomIndex].startRoomDialogue, roomDatabase[roomIndex].dialogueStartDelay);
         }
 
         OnRoomChange?.Invoke(currentRoomIndex);
@@ -183,4 +183,5 @@ public class RoomData
     public Transform roomStartAnchor;
 
     public DialogueObject startRoomDialogue;
+    public float dialogueStartDelay;
 }

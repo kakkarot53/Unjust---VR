@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19684ad56730a9a43827258bda3b3f2f, type: 3}
-  m_Name: WakeUpDialogue
+  m_Name: 0_2 room shift dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueObject
   ID: 0
   dialogue:
-  - text: 
-    dialogueAudioName: 
-  - text: 
-    dialogueAudioName: 
+  - text: "why can\u2019t I speak ?"
+    dialogueAudio: {fileID: 8300000, guid: 1534ddba217510547acbca6fb1fdcf30, type: 3}
+  - text: "Something\u2019s going on in this classroom\u2026"
+    dialogueAudio: {fileID: 0}
+  - text: ' I need to find a way out of here.'
+    dialogueAudio: {fileID: 0}

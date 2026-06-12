@@ -49,16 +49,16 @@ public class EnvironmentChange : MonoBehaviour
     //[SerializeField] private float minFocalLen = 1f;        // Depth of Field bounds
     //[SerializeField] private float peakFocalLen = 25f;
 
-    public ChromaticAberration chromaticAberration;
-    public LensDistortion lensDistortion;
-    public ColorAdjustments colorAdjustments;
-    public Vignette vignette;
-    public ShadowsMidtonesHighlights shadows;
+    private ChromaticAberration chromaticAberration;
+    private LensDistortion lensDistortion;
+    private ColorAdjustments colorAdjustments;
+    private Vignette vignette;
+    private ShadowsMidtonesHighlights shadows;
     //private DepthOfField depthOfField;
 
     private InputSystem input;
 
-    private bool isColdState = false;
+    public bool isColdState = false;
 
     private float glitchTimer = 0f;
     private bool isGlitching = false;

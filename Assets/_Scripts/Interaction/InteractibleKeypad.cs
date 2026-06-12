@@ -32,14 +32,18 @@ public class InteractibleKeypad : BaseInteractible
     [Header("flashlight")]
     [SerializeField] Light playerFlash;
 
+    [Header("Extra dialogue")]
+    [SerializeField] DialogueObject dialogueObj;
+
     private Collider myCollider;
     private Vector3 oripos;
     private Vector3 oriScale;
     private float orilightRange;
     private Quaternion oriRot;
     private PlayerMovementManager m_move;
-    private Coroutine lerpRoutine;
+    private EnvironmentChange m_change;
 
+    private Coroutine lerpRoutine;
     public Action OnCorrectPassword;
     
     protected override void Start()
@@ -52,6 +56,7 @@ public class InteractibleKeypad : BaseInteractible
         orilightRange = indicatorLight.range;
 
         m_move = PlayerMovementManager.instance;
+        m_change = EnvironmentChange.instance;
 
         myCollider = GetComponent<Collider>();
 
@@ -73,6 +78,12 @@ public class InteractibleKeypad : BaseInteractible
 
     public override void Interact()
     {
+        if (m_change.isColdState == false)
+        {
+            DialoguePlayer.instance.PlayDialogueSequence(dialogueObj, 0.1f);
+            return;
+        }
+        
         if (lerpRoutine != null)
             return;
 

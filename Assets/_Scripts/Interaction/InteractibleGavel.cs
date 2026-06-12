@@ -7,21 +7,29 @@ public class InteractibleGavel : BaseInteractible
     [Header("Timeline Settings")]
     [SerializeField] private PlayableDirector gavelTimeline;
 
-    [SerializeField] private AudioClip gavelClip;
+    [SerializeField] private DialogueObject dialogueObj;
 
     private bool isAnimationPlaying = false;
 
-    protected override void Start()
-    {
-        base.Start();
+    //protected override void Start()
+    //{
+    //    base.Start();
 
+    //    if (gavelTimeline != null)
+    //    {
+    //        gavelTimeline.stopped += OnTimelineFinished;
+    //    }
+    //}
+
+    private void OnEnable()
+    {
         if (gavelTimeline != null)
         {
             gavelTimeline.stopped += OnTimelineFinished;
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         if (gavelTimeline != null)
         {
@@ -47,12 +55,16 @@ public class InteractibleGavel : BaseInteractible
     {
         if (director == gavelTimeline)
         {
+            DialoguePlayer.instance.ForceEndDialogue();
+
             isAnimationPlaying = false;
 
             EnvironmentChange.instance.TriggerDimensionShift();
             EnvironmentChange.instance.StartHeadacheEffect();
 
             AudioController.Play("gavel-hit");
+
+            DialoguePlayer.instance.PlayDialogueSequence(dialogueObj, 0);
 
             isInteracting = false;
             gameObject.layer = originalLayerIndex;

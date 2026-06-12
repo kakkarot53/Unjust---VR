@@ -12,5 +12,5 @@ public class DialogueObject : ScriptableObject
 public class DialogueItem
 {
     [TextArea(3, 5)] public string text;
-    public string dialogueAudioName;
+    public AudioClip dialogueAudio;
 }
