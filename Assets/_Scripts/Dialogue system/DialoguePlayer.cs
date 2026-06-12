@@ -1,16 +1,18 @@
-using UnityEngine;
-using TMPro;
+using CS.AudioToolkit;
 using System.Collections;
+using TMPro;
+using UnityEngine;
 public class DialoguePlayer : MonoBehaviour
 {
+    [Header("UI Component Targets")]
     [SerializeField] TMP_Text m_Text;
     [SerializeField] GameObject textBg;
-    [SerializeField][TextArea(3, 5)] private string[] dialogues;
 
     [Header("Settings")]
     [SerializeField] private float textSpeed = 0.05f;          
     [SerializeField] private float nextDialogueDelay = 2.0f;
 
+    private DialogueItem[] currentLines;
     private Coroutine currDialogueRoutine;
     public bool IsPlaying { get; private set; }
 
@@ -24,64 +26,57 @@ public class DialoguePlayer : MonoBehaviour
     private void Start()
     {
         IsPlaying = false;
-        if (dialogues != null && dialogues.Length > 0)
-        {
-            PlayDialogue();
-        }
-        else
-        {
-            textBg.SetActive(false);
-        }
+        textBg.SetActive(false);
     }
-
-    public void InjectandPlay(string[] newDialogues)
+    public void PlayDialogueSequence(DialogueItem[] newLines, float initDelay)
     {
-        // Safety check 
-        if (newDialogues == null || newDialogues.Length == 0)
-        {
-            Debug.LogWarning("InjectandPlay called with empty or null dialogue array.");
-            return;
-        }
+        if (newLines == null || newLines.Length == 0) return;
 
-        // 1. Force stop any running type-writer effects or delay counts instantly
         if (currDialogueRoutine != null)
         {
-            StopCoroutine(currDialogueRoutine);
-            currDialogueRoutine = null;
-        }
-
-        // 2. Overwrite the old array reference with the new, injected dataset
-        this.dialogues = newDialogues;
-
-        // 3. Flip IsPlaying to false so PlayDialogue passes its guard clauses, then start it up
-        IsPlaying = false;
-        PlayDialogue();
-    }
-
-    private void PlayDialogue()
-    {
-        if (IsPlaying)
-            return;
-
-        textBg.SetActive(true);
-        if (currDialogueRoutine != null)
-        {
+            // Kill active voice lines instantly if a new interaction forces an interruption override
+            StopCurrentVoiceLine();
             StopCoroutine(currDialogueRoutine);
         }
 
-        currDialogueRoutine = StartCoroutine(PlayAllDialoguesRoutine());
+        currentLines = newLines;
+        currDialogueRoutine = StartCoroutine(PlayAllDialoguesRoutine(initDelay));
     }
 
-    private IEnumerator PlayAllDialoguesRoutine()
+    private IEnumerator PlayAllDialoguesRoutine(float initDelay)
     {
         IsPlaying = true;
+        textBg.SetActive(false);
+        m_Text.text = "";
 
-        for (int i = 0; i < dialogues.Length; i++)
+        if (initDelay > 0f)
         {
-            // Run the character-by-character animation and wait until it completely finishes typing
-            yield return StartCoroutine(TypeSentenceRoutine(dialogues[i]));
+            yield return new WaitForSeconds(initDelay);
+        }
 
-            // Sentence is fully typed! Wait for the player to read it before clearing/moving on
+        textBg.SetActive(true);
+
+        for (int i = 0; i < currentLines.Length; i++)
+        {
+            DialogueItem currentItem = currentLines[i];
+            bool hasAudio = !string.IsNullOrEmpty(currentItem.dialogueAudioName);
+
+            // type the car one by one
+            Coroutine typeRoutine = StartCoroutine(TypeSentenceRoutine(currentItem.text));
+
+            // play audio
+            if (hasAudio)
+            {
+                AudioController.Play(currentItem.dialogueAudioName);
+                while (AudioController.IsPlaying(currentItem.dialogueAudioName))
+                {
+                    yield return null; // Wait until voice is finished
+                }
+            }
+
+            // wait till it finished typing
+            yield return typeRoutine;
+            // wait till delay is finished
             yield return new WaitForSeconds(nextDialogueDelay);
         }
 
@@ -89,15 +84,23 @@ public class DialoguePlayer : MonoBehaviour
     }
     private IEnumerator TypeSentenceRoutine(string text)
     {
-        m_Text.text = ""; // Clear the text field before typing starts
-
+        m_Text.text = "";
         foreach (char letter in text.ToCharArray())
         {
             m_Text.text += letter;
-
-            // maybe add sound here
-
             yield return new WaitForSeconds(textSpeed);
+        }
+    }
+    private void StopCurrentVoiceLine()
+    {
+        if (currentLines == null || currDialogueRoutine == null) return;
+
+        foreach (var line in currentLines)
+        {
+            if (!string.IsNullOrEmpty(line.dialogueAudioName) && AudioController.IsPlaying(line.dialogueAudioName))
+            {
+                AudioController.Stop(line.dialogueAudioName, 0.1f);
+            }
         }
     }
 
@@ -106,6 +109,7 @@ public class DialoguePlayer : MonoBehaviour
         m_Text.text = "";
         IsPlaying = false;
         currDialogueRoutine = null;
+        currentLines = null;
         textBg.SetActive(false);
     }
 }

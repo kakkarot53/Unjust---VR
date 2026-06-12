@@ -50,6 +50,7 @@ public class UnjustGameManager : MonoBehaviour
 
         trialCounter = 0;
         RequestChangeRoom(0, true);
+        TriggerRoomTutorials(0);
     }
 
     // Safety fix: Unsubscribe or disable input to prevent garbage collection memory leaks
@@ -73,7 +74,7 @@ public class UnjustGameManager : MonoBehaviour
             return;
 
         // enable disable room
-        for(int i = 0; i < roomDatabase.Count; i++)
+        for (int i = 0; i < roomDatabase.Count; i++)
         {
             if (i >= roomIndex - 1 && i <= roomIndex + 1)
             {
@@ -98,6 +99,12 @@ public class UnjustGameManager : MonoBehaviour
         trialCounter = roomIndex;
 
         TriggerRoomTutorials(roomIndex);
+
+        if (roomDatabase[roomIndex].startRoomDialogue != null)
+        {
+            DialogueItem[] setupLines = roomDatabase[roomIndex].startRoomDialogue.dialogue;
+            DialoguePlayer.instance.PlayDialogueSequence(setupLines, .5f);
+        }
 
         OnRoomChange?.Invoke(currentRoomIndex);
     }
@@ -126,7 +133,7 @@ public class UnjustGameManager : MonoBehaviour
             m_info.AddText("Use ");
             m_info.AddSprite("rstick");
             m_info.AddText(" to move around");
-            m_info.RequestInfoDisappear(15f, 1f);
+            m_info.RequestInfoDisappear(25f, 1f);
         }
         else
         {
@@ -174,4 +181,6 @@ public class RoomData
     public GameObject roomObject;
 
     public Transform roomStartAnchor;
+
+    public DialogueObject startRoomDialogue;
 }
