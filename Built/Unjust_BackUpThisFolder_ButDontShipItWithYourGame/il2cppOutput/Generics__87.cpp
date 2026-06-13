@@ -6548,7 +6548,7 @@ IL2CPP_EXTERN_C  NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 FixedLi
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 105614
+// Method Definition Index: 105617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedPool_1_get_CountAll_m21D71468995033D2857ED4058B18A6570C50D283_gshared (FixedPool_1_t9D1CE63179C7AD24D9C93D209F08416BFE7808B6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6558,7 +6558,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedPool_1_get_CountAll_m21D71468995
 		return ((int32_t)(((RuntimeArray*)L_0)->max_length));
 	}
 }
-// Method Definition Index: 105615
+// Method Definition Index: 105618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedPool_1_get_CountActive_m2BAB807244AC1FA96C1F31C57A11E9C8F7F3E7B9_gshared (FixedPool_1_t9D1CE63179C7AD24D9C93D209F08416BFE7808B6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6567,7 +6567,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedPool_1_get_CountActive_m2BAB8072
 		return L_0;
 	}
 }
-// Method Definition Index: 105616
+// Method Definition Index: 105619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FixedPool_1__ctor_mBF806710BA5FA20823F3C2922519E6F9FE4803B0_gshared (FixedPool_1_t9D1CE63179C7AD24D9C93D209F08416BFE7808B6* __this, RuntimeObject* ___0_primitive, int32_t ___1_size, Callbacks_t166220914FE5505031E79F719C507389ECC57DC8 ___2_callbacks, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -6646,7 +6646,7 @@ IL_0060:
 		return;
 	}
 }
-// Method Definition Index: 105617
+// Method Definition Index: 105620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FixedPool_1_Get_m33E12EB11EE04358FB0B3CDDCEE7277471DA68FE_gshared (FixedPool_1_t9D1CE63179C7AD24D9C93D209F08416BFE7808B6* __this, const RuntimeMethod* method) 
 {
 	RuntimeObject* V_0 = NULL;
@@ -6708,7 +6708,7 @@ IL_0066:
 		return L_14;
 	}
 }
-// Method Definition Index: 105618
+// Method Definition Index: 105621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FixedPool_1_Release_mD44D583B719660CEE7623F1A63A28FD2F077FB25_gshared (FixedPool_1_t9D1CE63179C7AD24D9C93D209F08416BFE7808B6* __this, RuntimeObject* ___0_t, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;

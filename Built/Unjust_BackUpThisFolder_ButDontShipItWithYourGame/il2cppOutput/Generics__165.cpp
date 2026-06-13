@@ -18925,7 +18925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointerInteractor_2__ctor_mD1D48ED97DFCD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 105626
+// Method Definition Index: 105629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PoolManager_2_AddPool_mA65BC92A382DD6F72D7109FB07EBBF4843524B10_gshared (PoolManager_2_tAB4D4EE3B11775BC43CDDBA9EE76AC5F6B740B10* __this, RuntimeObject* ___0_primitive, RuntimeObject* ___1_pool, const RuntimeMethod* method) 
 {
 	{
@@ -18939,7 +18939,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PoolManager_2_AddPool_mA65BC92A382DD6F72
 		return;
 	}
 }
-// Method Definition Index: 105627
+// Method Definition Index: 105630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PoolManager_2_ContainsPool_mF0F1234BE6589F66ED6F403AD5DC24A47B7804DC_gshared (PoolManager_2_tAB4D4EE3B11775BC43CDDBA9EE76AC5F6B740B10* __this, RuntimeObject* ___0_primitive, const RuntimeMethod* method) 
 {
 	{
@@ -18952,7 +18952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PoolManager_2_ContainsPool_mF0F1234BE658
 		return L_2;
 	}
 }
-// Method Definition Index: 105628
+// Method Definition Index: 105631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PoolManager_2_GetPool_m2F3FD6815921BD324457EB921020D5B19EDE9C87_gshared (PoolManager_2_tAB4D4EE3B11775BC43CDDBA9EE76AC5F6B740B10* __this, RuntimeObject* ___0_primitive, const RuntimeMethod* method) 
 {
 	RuntimeObject* V_0 = NULL;
@@ -18968,7 +18968,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PoolManager_2_GetPool_m2F3FD68
 		return L_3;
 	}
 }
-// Method Definition Index: 105629
+// Method Definition Index: 105632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PoolManager_2__ctor_mD477C9E65BE7EAE9BDACE9ACBB729D8F7AE6FCCE_gshared (PoolManager_2_tAB4D4EE3B11775BC43CDDBA9EE76AC5F6B740B10* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18989,7 +18989,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PoolManager_2__ctor_mD477C9E65BE7EAE9BDA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 105621
+// Method Definition Index: 105624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Pool_1_get_CountInactive_m8B92F25A698BADEB5A6E1FB7C79F837CCDA1CCCC_gshared (Pool_1_tF670DAB862A5246ED23446954ED800A7AAE436D0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19001,7 +19001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Pool_1_get_CountInactive_m8B92F25A698
 		return ((int32_t)il2cpp_codegen_subtract(L_0, L_1));
 	}
 }
-// Method Definition Index: 105624
+// Method Definition Index: 105627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pool_1_Swap_m43571EFAE6F77F0689C34582CE62538394FAA8C8_gshared (Pool_1_tF670DAB862A5246ED23446954ED800A7AAE436D0* __this, int32_t ___0_i0, int32_t ___1_i1, const RuntimeMethod* method) 
 {
 	Entry_tBD650AE5A79A7B47845FCA8FAF1AF4DC94E2502C* V_0 = NULL;
@@ -19059,7 +19059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pool_1_Swap_m43571EFAE6F77F0689C34582CE6
 		return;
 	}
 }
-// Method Definition Index: 105625
+// Method Definition Index: 105628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pool_1__ctor_m2DE7106583E9FEB84D7358CC88644B1C0A1C3979_gshared (Pool_1_tF670DAB862A5246ED23446954ED800A7AAE436D0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31851,7 +31851,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 127782
+// Method Definition Index: 127785
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PointerEvent_get_eventSource_m433AD39B323BF13AE165F5F9D025444092FAEB33_inline (PointerEvent_tC25A522EBDFCAF2CDEEE1D70428C281F78C1FA05* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31859,7 +31859,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PointerEvent_get_eventSou
 		return L_0;
 	}
 }
-// Method Definition Index: 127785
+// Method Definition Index: 127788
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR EventModifiers_t4B1B8EBE011383F2D6236E6B9F99AB156BCE35DD PointerEvent_get_eventModifiers_m5C238F94AA34FB172F4D7256E5D68E838E3C5A05_inline (PointerEvent_tC25A522EBDFCAF2CDEEE1D70428C281F78C1FA05* __this, const RuntimeMethod* method) 
 {
 	{

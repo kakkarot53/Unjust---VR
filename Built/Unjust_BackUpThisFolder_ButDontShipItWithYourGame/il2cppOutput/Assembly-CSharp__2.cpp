@@ -27591,7 +27591,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float SubtitleTimelineMarker_get_
 		return L_0;
 	}
 }
-// Method Definition Index: 104010
+// Method Definition Index: 104013
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_TimeToPeak_mED6317E94A28EB7F5232BBC932FDF7D60935D1F7_inline (VignettePulseMarker_t212C22EB66F6AA8FDE927CAEBD9F56572B5253CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27600,7 +27600,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_Tim
 		return L_0;
 	}
 }
-// Method Definition Index: 104011
+// Method Definition Index: 104014
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_TimeToHold_mE8B42B78F28F896A6C9C892DCEBD0F712992C8D1_inline (VignettePulseMarker_t212C22EB66F6AA8FDE927CAEBD9F56572B5253CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27609,7 +27609,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_Tim
 		return L_0;
 	}
 }
-// Method Definition Index: 104012
+// Method Definition Index: 104015
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_TimeToFade_m27E15DF204CA2ADBF98B07CACDB9C97522D74DC6_inline (VignettePulseMarker_t212C22EB66F6AA8FDE927CAEBD9F56572B5253CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27618,7 +27618,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_Tim
 		return L_0;
 	}
 }
-// Method Definition Index: 104013
+// Method Definition Index: 104016
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_Intensity_mE54297792E1FBDE7ABE89BAEE0B706B6DD1DFB57_inline (VignettePulseMarker_t212C22EB66F6AA8FDE927CAEBD9F56572B5253CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27627,7 +27627,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_Int
 		return L_0;
 	}
 }
-// Method Definition Index: 104014
+// Method Definition Index: 104017
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VignettePulseMarker_get_Smoothness_m41FFEDC82E655F40B8AE0D81D2B216AB79FA50C3_inline (VignettePulseMarker_t212C22EB66F6AA8FDE927CAEBD9F56572B5253CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27899,7 +27899,7 @@ IL_009b:
 		return L_43;
 	}
 }
-// Method Definition Index: 103964
+// Method Definition Index: 103967
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerMovementManager_RequestPlayerMovementEnable_m0E773D0304B9F09C9B3877DE8565DD2E0B001FD8_inline (PlayerMovementManager_t70414594BA3D30A7CAC8CC4C5A667429E110A75E* __this, bool ___0_enable, const RuntimeMethod* method) 
 {
 	{

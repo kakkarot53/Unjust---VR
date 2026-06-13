@@ -93,8 +93,8 @@ public class EnvironmentChange : MonoBehaviour
         }
 
         input.Interaction.RoomShift.started += ctx => {
-            AudioController.Play("ping");
-            StartEyeCloseEffect(.8f, 2f, .5f, 1f, 1f, -1);
+            //AudioController.Play("ping");
+            //StartEyeCloseEffect(.8f, 2f, .5f, 1f, 1f, -1);
             
             //TriggerDimensionShift();
             //StartHeadacheEffect();

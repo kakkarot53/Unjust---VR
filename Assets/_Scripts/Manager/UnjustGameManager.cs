@@ -41,6 +41,10 @@ public class UnjustGameManager : MonoBehaviour
 
             RequestChangeRoom(trialCounter, true);
         };
+
+        input.Interaction.RoomShift.started += ctx => {
+            TriggerRoomTutorials(0);
+        };
     }
 
     private void Start()
@@ -130,10 +134,11 @@ public class UnjustGameManager : MonoBehaviour
         if (roomIndex == 0)
         {
             m_info.ClearAllSpawnedElements();
-            m_info.AddText("Use ");
+            m_info.AddText("Use");
             m_info.AddSprite("rstick");
-            m_info.AddText(" to move around");
-            m_info.RequestInfoDisappear(25f, 1f);
+            m_info.AddText("to walk towards the start cube");
+            m_info.AddText("");
+            m_info.RequestInfoDisappear(60f, 1f);
         }
         else
         {
