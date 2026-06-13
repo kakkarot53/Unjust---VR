@@ -37,9 +37,15 @@ public class TriggerCutscene : MonoBehaviour
     {
         if (director == apartmentCutscene)
         {
-            UnjustGameManager.instance.RequestChangeRoom(5, true);
-            AudioController.Play("gavel-hit");
-            PlayerMovementManager.instance.RequestPlayerMovementEnable(true);
+            EnvironmentChange.instance.StartEyeCloseEffect(.1f, .8f, .1f, .85f, .95f, 5);
+            LeanTween.delayedCall(gameObject, .5f, () =>
+            {
+                AudioController.Play("gavel-hit");
+                LeanTween.delayedCall(gameObject, 0.2f, () =>
+                {
+                    PlayerMovementManager.instance.RequestPlayerMovementEnable(true);
+                });
+            });
         }
     }
 }

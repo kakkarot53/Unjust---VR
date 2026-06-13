@@ -173,7 +173,7 @@ public class ScaleManager : MonoBehaviour
             .setOnComplete(() =>
             {
                 AudioController.Play("ping");
-                EnvironmentChange.instance.StartEyeCloseEffect(.8f, 2f, .5f, 1f, 1f, 4);
+                EnvironmentChange.instance.StartEyeCloseEffect(.8f, 2f, .5f, .85f, .95f, 4);
             });
 
 

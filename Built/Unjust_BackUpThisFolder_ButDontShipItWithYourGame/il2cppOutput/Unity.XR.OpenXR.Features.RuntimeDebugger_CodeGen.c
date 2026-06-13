@@ -34,17 +34,17 @@ static Il2CppMethodPointer s_methodPointers[11] =
 };
 static const int32_t s_InvokerIndices[11] = 
 {
-	33354,
-	20612,
-	13656,
-	15836,
-	25254,
-	26970,
-	25850,
-	33279,
-	33279,
-	20612,
-	33279,
+	33359,
+	20617,
+	13661,
+	15841,
+	25259,
+	26975,
+	25855,
+	33284,
+	33284,
+	20617,
+	33284,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_XR_OpenXR_Features_RuntimeDebugger_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_XR_OpenXR_Features_RuntimeDebugger_CodeGenModule = 

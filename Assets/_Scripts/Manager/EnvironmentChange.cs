@@ -362,6 +362,10 @@ public class EnvironmentChange : MonoBehaviour
     #endregion
 
     #region hard breathing
+    public void ForceStopGaspEffect()
+    {
+        if (singleGaspRoutine != null) StopCoroutine(singleGaspRoutine); //just in case accidentally piled up so clear prev and play a new one
+    }
     public void ExecuteSingleGaspPulse(float peakTime, float holdTime, float fadeTime, float maxIntens, float maxSmooth)
     {
         if (vignette == null) return;
